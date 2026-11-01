@@ -1,0 +1,51 @@
+Remaining evaluation checks: status and available results
+=========================================================
+
+Assessment date: 2026-11-01
+
+24-example inference profiling
+------------------------------
+Status: NOT COMPLETED.
+
+The frozen profiling sample contains 24 XLCoST validation examples across six
+translation directions (four per direction), in
+configs/evaluation/efficiency_profile_sample.json. The repository currently
+contains one-example feasibility profiles for uniform_region_loop,
+uniform_token_loop, and full_sart, all using sample 402. It also contains
+stored-generation summaries over 1,992 Common-Core tasks per seed for seeds
+13, 42, and 87. Those summaries report fixed recurrence depth: 6 for both
+uniform loops and 3 for full_sart, with depth available for 1,990 tasks per
+architecture and seed. They are not the planned 24-example inference-cost
+study and do not support a general accuracy-compute tradeoff claim.
+
+The current execution environment has no nvidia-smi/GPU interface, so the
+requested GPU timing and memory profile could not be run here. Report the
+existing one-example measurements only as feasibility measurements, or
+complete the frozen 24-example profile before making broader efficiency claims.
+
+TransCoder-Test canonical-reference harness audit
+-------------------------------------------------
+Status: NOT COMPLETED; raw candidate audit only.
+
+reports/data/transcoder_test_raw_audit.md and its JSON companion identify
+candidate tasks based on readable target harnesses. They report 327 Common-
+Core candidate problems (1,962 directional tasks) and 415-433 candidates per
+direction for Full-Directional evaluation. The audit explicitly says canonical
+references have not been compiled/executed or repeated, and eligibility has
+not been frozen. Therefore the all-zero model results have not yet been
+distinguished from a harness/evaluation issue.
+
+The pinned TransCoder-Test source and target test files are not present in this
+checkout; only the source artifact manifest is available. Canonical reference
+validation could not be run in this environment. Obtain the pinned artifact,
+run reference solutions through the exact scoring harness with the planned
+repeated-test stability check, freeze the eligible task/test hashes, and then
+recompute the model scores before drawing conclusions from the zero scores.
+
+Files inspected
+---------------
+- configs/evaluation/efficiency_profile_sample.json
+- reports/profiling/verification/*
+- reports/data/transcoder_test_raw_audit.md
+- reports/data/transcoder_test_raw_audit.json
+- content/datasets/transcoder-test/1c21887dc55a88ea6535e669952d419256fbc24a/artifact_manifest.json
