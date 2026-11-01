@@ -1,0 +1,134 @@
+{
+  "ast_coverage": 1.0,
+  "benchmark": "humanevalx",
+  "completed_shards": {
+    "C++-to-Java:00000": {
+      "ast_available": 128,
+      "bytes": 1777125,
+      "mapped_source_tokens": 26907,
+      "path": "data/structural/external/humanevalx/full_directional/C++-to-Java/shard_00000.jsonl",
+      "sha256": "45ad35a5001c1a48f2294e90b825b5750abab54f2700f69df0c82099b79629fe",
+      "source_tokens": 26907,
+      "tasks": 128
+    },
+    "C++-to-Java:00001": {
+      "ast_available": 33,
+      "bytes": 611467,
+      "mapped_source_tokens": 8756,
+      "path": "data/structural/external/humanevalx/full_directional/C++-to-Java/shard_00001.jsonl",
+      "sha256": "8b69c8c7ff5439b599022af1bc062c0ea1c4b05dba741a1bfa00db69550a59b8",
+      "source_tokens": 8756,
+      "tasks": 33
+    },
+    "C++-to-Python:00000": {
+      "ast_available": 128,
+      "bytes": 1761409,
+      "mapped_source_tokens": 27131,
+      "path": "data/structural/external/humanevalx/full_directional/C++-to-Python/shard_00000.jsonl",
+      "sha256": "7ab5e1ffa2c06d9871235053bc29944ea29205104a830dd48f7c6c3b80060664",
+      "source_tokens": 27131,
+      "tasks": 128
+    },
+    "C++-to-Python:00001": {
+      "ast_available": 29,
+      "bytes": 526245,
+      "mapped_source_tokens": 7471,
+      "path": "data/structural/external/humanevalx/full_directional/C++-to-Python/shard_00001.jsonl",
+      "sha256": "f554e2979e57243babc4f24487d93b0485c462eda76658f07990c1f829b59cc1",
+      "source_tokens": 7471,
+      "tasks": 29
+    },
+    "Java-to-C++:00000": {
+      "ast_available": 128,
+      "bytes": 1413500,
+      "mapped_source_tokens": 28959,
+      "path": "data/structural/external/humanevalx/full_directional/Java-to-C++/shard_00000.jsonl",
+      "sha256": "19612150030faecf888e30fd4a724192a82bc284f66c9b30de0f850c06d51274",
+      "source_tokens": 28959,
+      "tasks": 128
+    },
+    "Java-to-C++:00001": {
+      "ast_available": 33,
+      "bytes": 461112,
+      "mapped_source_tokens": 9121,
+      "path": "data/structural/external/humanevalx/full_directional/Java-to-C++/shard_00001.jsonl",
+      "sha256": "a3c792d6ed4228a87414fec6f8dad6d4709c266e084457c3751e6517028bd3ed",
+      "source_tokens": 9121,
+      "tasks": 33
+    },
+    "Java-to-Python:00000": {
+      "ast_available": 128,
+      "bytes": 1393576,
+      "mapped_source_tokens": 29255,
+      "path": "data/structural/external/humanevalx/full_directional/Java-to-Python/shard_00000.jsonl",
+      "sha256": "0273a62bfcfff348483667ac4d42f629c724df80a82b857849741fbdbe43e998",
+      "source_tokens": 29255,
+      "tasks": 128
+    },
+    "Java-to-Python:00001": {
+      "ast_available": 32,
+      "bytes": 426519,
+      "mapped_source_tokens": 8449,
+      "path": "data/structural/external/humanevalx/full_directional/Java-to-Python/shard_00001.jsonl",
+      "sha256": "30610a01f494900017331078bc59d016bf0495e3c82c60faf5bed98221b77fe9",
+      "source_tokens": 8449,
+      "tasks": 32
+    },
+    "Python-to-C++:00000": {
+      "ast_available": 128,
+      "bytes": 1146115,
+      "mapped_source_tokens": 23472,
+      "path": "data/structural/external/humanevalx/full_directional/Python-to-C++/shard_00000.jsonl",
+      "sha256": "b841fe04d1af59bc77b5bef7f4370d4d7c6759aa09da0745441f659ade2ccbe8",
+      "source_tokens": 23472,
+      "tasks": 128
+    },
+    "Python-to-C++:00001": {
+      "ast_available": 29,
+      "bytes": 295132,
+      "mapped_source_tokens": 6009,
+      "path": "data/structural/external/humanevalx/full_directional/Python-to-C++/shard_00001.jsonl",
+      "sha256": "f1692ddd2b5c57b530c7f2f9c6a5b434e6dc4105bea186656720aae035ddaf7e",
+      "source_tokens": 6009,
+      "tasks": 29
+    },
+    "Python-to-Java:00000": {
+      "ast_available": 128,
+      "bytes": 1129699,
+      "mapped_source_tokens": 23325,
+      "path": "data/structural/external/humanevalx/full_directional/Python-to-Java/shard_00000.jsonl",
+      "sha256": "c567e858348e09febdc1e3b649c1adc8f5559d3079ea251d78320cd6773bfd5c",
+      "source_tokens": 23325,
+      "tasks": 128
+    },
+    "Python-to-Java:00001": {
+      "ast_available": 32,
+      "bytes": 324809,
+      "mapped_source_tokens": 6567,
+      "path": "data/structural/external/humanevalx/full_directional/Python-to-Java/shard_00001.jsonl",
+      "sha256": "22cd344e96c638d9d90ea004485fddeb38bae804a192bb36a6ea662a66ff9fc5",
+      "source_tokens": 6567,
+      "tasks": 32
+    }
+  },
+  "configuration_hash": "4606c0af272c1793d5f0aace64236710998073868ecedd8c1c660f7c926d85e5",
+  "failures": [],
+  "input_manifest": "data/manifests/humanevalx_manifest.json",
+  "input_manifest_sha256": "7778e167a64ec3a1494c8884a05049b8a7931833245a4ece4bf9a8dbb385559e",
+  "labels_or_tests_in_model_input": false,
+  "parser": "Tree-sitter semantic AST regions; parser failure uses PROGRAM fallback",
+  "prompt_protocol": "translation_protocol v1",
+  "schema_version": 1,
+  "shard_size": 128,
+  "split": "full_directional",
+  "status": "COMPLETE",
+  "token_mapping_coverage": 1.0,
+  "tokenizer_path": "/home/swaminathanj/research_artifacts/SART/content/models/qwen2.5-coder-7b/0396a76181e127dfc13e5c5ec48a8cee09938b02",
+  "tokenizer_sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+  "totals": {
+    "ast_available": 956,
+    "mapped_source_tokens": 205422,
+    "source_tokens": 205422,
+    "tasks": 956
+  }
+}

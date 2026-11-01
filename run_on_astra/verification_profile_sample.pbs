@@ -1,0 +1,50 @@
+#!/usr/bin/env bash
+#PBS -q gpuq
+#PBS -l select=1:ncpus=8:ngpus=1:mem=64gb
+#PBS -l walltime=04:00:00
+set -euo pipefail
+
+cd /home/swaminathanj/research_artifacts/SART
+mkdir -p logs/verification_profile reports/profiling/verification
+export PATH="$PWD/env/bin:$PATH"
+export TOKENIZERS_PARALLELISM=false
+export OMP_NUM_THREADS=4
+export OPENBLAS_NUM_THREADS=1
+
+lock_dir="/tmp/sart_gpu_locks_${USER}"
+mkdir -p "$lock_dir"
+selected_gpu=""
+while IFS=',' read -r gpu_id free_mib; do
+  gpu_id="${gpu_id//[[:space:]]/}"
+  free_mib="${free_mib//[[:space:]]/}"
+  [[ "$gpu_id" =~ ^[0-9]+$ && "$free_mib" =~ ^[0-9]+$ ]] || continue
+  (( free_mib >= 30000 )) || continue
+  exec 9>"${lock_dir}/gpu_${gpu_id}.lock"
+  if flock -n 9; then
+    selected_gpu="$gpu_id"
+    break
+  fi
+  exec 9>&-
+done < <(nvidia-smi --query-gpu=index,memory.free --format=csv,noheader,nounits | sort -t, -k2,2nr)
+[[ -n "$selected_gpu" ]] || { echo "No free GPU with at least 30 GiB" >&2; exit 75; }
+export CUDA_VISIBLE_DEVICES="$selected_gpu"
+echo "PBS_JOBID=$PBS_JOBID CUDA_VISIBLE_DEVICES=$CUDA_VISIBLE_DEVICES"
+
+validation_root=content/datasets/xlcost/structural_external_clean
+for item in \
+  uniform_region_loop:uniform_region_loop-seed42-28aeabfaf913 \
+  uniform_token_loop:uniform_token_loop-seed42-80a4b3c4e0cc \
+  full_sart:full_sart-seed42-7d9cbd6005d3
+do
+  mode="${item%%:*}"
+  run="${item#*:}"
+  extra=()
+  if [[ "$mode" == full_sart ]]; then extra=(--hard-threshold 0.7); fi
+  env/bin/python scripts/evaluate/profile_inference_cost.py \
+    --checkpoint "checkpoints/confirmatory_7b/${run}/best.pt" \
+    --validation-root "$validation_root" \
+    --sample-index 402 --decode-tokens 32 --device cuda \
+    "${extra[@]}" \
+    --output "reports/profiling/verification/${mode}-seed42-sample402.json" \
+    >"logs/verification_profile/${mode}-seed42-sample402.log" 2>&1
+done

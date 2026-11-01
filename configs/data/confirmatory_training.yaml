@@ -1,0 +1,13 @@
+dataset: XLCoST-program-level
+train_structure_root: content/datasets/xlcost/structural_external_clean
+train_sample_manifest: content/datasets/xlcost/structural_external_clean/train_sample/manifest.json
+validation_structure_root: content/datasets/xlcost/structural_external_clean
+test_structure_root: content/datasets/xlcost/structural_external_clean
+pairing:
+  maximum_pairs_per_problem_per_direction: 1
+  direction_balancing: equal_count
+  seed: 42
+  shared_across_architectures: true
+leakage_report: reports/data/external_leakage_report.json
+never_truncate_over_context: true
+excluded_examples_manifest: reports/data/qwen_token_length_audit.json

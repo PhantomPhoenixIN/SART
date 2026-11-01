@@ -1,0 +1,19 @@
+{
+  "source": "Official PyPy downloads used by the pinned ExecEval Dockerfile at commit dd693865a99bd32448c1ff0c40922951d940a0cd",
+  "license": "MIT (PyPy; see upstream distribution notices)",
+  "artifacts": [
+    {
+      "filename": "pypy2.7-v7.3.9-linux64.tar.bz2",
+      "url": "https://downloads.python.org/pypy/pypy2.7-v7.3.9-linux64.tar.bz2",
+      "sha256": "172a928b0096a7e00b7d58f523f57300c35c3de7f822491e2a7bc845375c23f8",
+      "verified_version": "Python 2.7.18; PyPy 7.3.9"
+    },
+    {
+      "filename": "pypy3.9-v7.3.9-linux64.tar.bz2",
+      "url": "https://downloads.python.org/pypy/pypy3.9-v7.3.9-linux64.tar.bz2",
+      "sha256": "46818cb3d74b96b34787548343d266e2562b531ddbaf330383ba930ff1930ed5",
+      "verified_version": "Python 3.9.12; PyPy 7.3.9"
+    }
+  ],
+  "sandbox_smoke": "Both runtimes launched successfully in the rootless namespace/chroot with read-only runtime mounts."
+}

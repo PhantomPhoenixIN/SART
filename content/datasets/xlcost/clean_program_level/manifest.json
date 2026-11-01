@@ -1,0 +1,105 @@
+{
+  "dropped_training_problem_count": 39,
+  "leakage_report": "reports/data/xlcost_leakage.json",
+  "leakage_report_sha256": "56d35ef29c76ace72d9e8c32fbe709e3e111030454fdaf1de0649ada42fd1243",
+  "output_files": {
+    "test": {
+      "C++-to-Java.jsonl": {
+        "kept": 794,
+        "removed": 0,
+        "sha256": "96c069c05ed875a56b8a2eaf170748dd32924047872e2b3ec3b738513e7f2a99"
+      },
+      "C++-to-Python.jsonl": {
+        "kept": 756,
+        "removed": 0,
+        "sha256": "a2d719397127ef59fdccbb342c612ed8fb99e0ac73397135c478804de81f0e08"
+      },
+      "Java-to-C++.jsonl": {
+        "kept": 794,
+        "removed": 0,
+        "sha256": "67f5f267cea31d1c7c0b8aaf2810a1c2e16a9d119c0625a22f1b19fa10be3a19"
+      },
+      "Java-to-Python.jsonl": {
+        "kept": 759,
+        "removed": 0,
+        "sha256": "bcf62e86e60a214222e2bdda4ed557aa521370becd7c2142235eee36f2917898"
+      },
+      "Python-to-C++.jsonl": {
+        "kept": 756,
+        "removed": 0,
+        "sha256": "0f3e537bceb8054c37c227bde65743e814fe21103cebf18d015cb8ad40bb4943"
+      },
+      "Python-to-Java.jsonl": {
+        "kept": 759,
+        "removed": 0,
+        "sha256": "7adce70669fe3064737da1a77544dd758dc01710180d4560bc2e5a1f433288f9"
+      }
+    },
+    "train": {
+      "C++-to-Java.jsonl": {
+        "kept": 8227,
+        "removed": 39,
+        "sha256": "9ed02ba0486494ec5537a9ec9c6954b20ec707be1d2e0c829c421c736e549b1a"
+      },
+      "C++-to-Python.jsonl": {
+        "kept": 7699,
+        "removed": 38,
+        "sha256": "7d658e1f2961618101fa232d4a24f04e7f239401d93a7126edd95b5ab3813efe"
+      },
+      "Java-to-C++.jsonl": {
+        "kept": 8227,
+        "removed": 39,
+        "sha256": "8a0002db883be389181b2ea07adff3b17ac3ea6f454e52c50498c8871f45b838"
+      },
+      "Java-to-Python.jsonl": {
+        "kept": 7641,
+        "removed": 38,
+        "sha256": "26896ab02440de4a8e859d3454eda5d7f9995529a4418ff8de344eb27dba564d"
+      },
+      "Python-to-C++.jsonl": {
+        "kept": 7699,
+        "removed": 38,
+        "sha256": "ce8af9b71f1401e10a79ecb2f597eb5eac753fafdce24b050345eebd2232043e"
+      },
+      "Python-to-Java.jsonl": {
+        "kept": 7641,
+        "removed": 38,
+        "sha256": "0bc860d224ec6da2cfa463a5e7fbc021103d766c6be8ec1591938dbf4f23cbab"
+      }
+    },
+    "validation": {
+      "C++-to-Java.jsonl": {
+        "kept": 420,
+        "removed": 0,
+        "sha256": "f0a2eb7ec51c057d4aee95aef6dbcdedb89938512133868f38db83a468fe8104"
+      },
+      "C++-to-Python.jsonl": {
+        "kept": 390,
+        "removed": 0,
+        "sha256": "9438189e3767d5792f7a9c8e32cfaad0225c3ee7b5d7b4109f6f2ced517296b3"
+      },
+      "Java-to-C++.jsonl": {
+        "kept": 420,
+        "removed": 0,
+        "sha256": "f462981734bd4a9f0a70090fb6a630e8aa5f8d171c88273a875874fbeeaad0c8"
+      },
+      "Java-to-Python.jsonl": {
+        "kept": 393,
+        "removed": 0,
+        "sha256": "12e97a4b0da15abc7a5551c1731d460a85af5d00cb50bc0dce7a9f9022b90665"
+      },
+      "Python-to-C++.jsonl": {
+        "kept": 390,
+        "removed": 0,
+        "sha256": "edbd3d167fe393a1b3ffb06eeb7805ae33951eb8204881558b5a1c0e696687d0"
+      },
+      "Python-to-Java.jsonl": {
+        "kept": 393,
+        "removed": 0,
+        "sha256": "79c82cfb452e7c7c7f6216f1ac5f6663d9cc69afa73cecf950a4b446a3313322"
+      }
+    }
+  },
+  "schema_version": 1,
+  "status": "COMPLETE"
+}

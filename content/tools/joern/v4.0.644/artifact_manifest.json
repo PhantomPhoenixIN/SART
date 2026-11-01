@@ -1,0 +1,23 @@
+{
+  "artifact": "joern-cli-linux-x86_64.zip",
+  "source": "https://github.com/joernio/joern/releases/download/v4.0.644/joern-cli-linux-x86_64.zip",
+  "release": "v4.0.644",
+  "downloaded_utc": "2026-10-02",
+  "bytes": 1797767736,
+  "sha256": "407358d2ccb506e4b3d8e674456fbc08a734e94add9f8d6a06136de2afae7110",
+  "zip_integrity": "passed",
+  "extracted_to": "content/tools/joern/v4.0.644/joern-cli",
+  "java_runtime": "Temurin 21.0.12.1+1; project-local",
+  "cli_validation": {
+    "joern_help": "passed",
+    "joern_parse_help": "passed",
+    "joern_export_help": "passed",
+    "frontends": {
+      "pysrc2cpg": "passed on Python flow fixture",
+      "javasrc2cpg": "passed on Java flow fixture",
+      "c2cpg.sh": "passed on C++ class/std::vector fixture"
+    },
+    "export": "joern-export --repr all --format neo4jcsv emitted CFG and REACHING_DEF relations"
+  },
+  "integration_note": "The joern-parse dispatcher expects legacy py2cpg.sh/java2cpg.sh names absent in this release; the included official frontends are invoked directly."
+}

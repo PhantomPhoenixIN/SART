@@ -1,0 +1,13 @@
+thresholds: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
+validation_examples_per_direction: 16
+selection_metric: validation_target_loss
+# Freeze one architecture/revision policy from seed 42 and share it across that
+# model's confirmatory seeds; this prevents seed-specific inference budgets.
+calibration_seed: 42
+policy_scope: backbone_revision_and_architecture
+apply_selected_policy_to_all_seeds: true
+compute_constraint:
+  target_mean_recurrent_depth: configured_expected_depth_budget
+  tolerance: 0.05
+tie_breakers: [lower_mean_recurrent_depth, lower_threshold]
+external_metrics_used: false

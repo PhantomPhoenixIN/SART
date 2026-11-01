@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+#PBS -N sart_gpu_probe
+#PBS -q gpuq
+#PBS -l select=1:ncpus=2:ngpus=1:mem=8gb
+#PBS -l walltime=00:10:00
+#PBS -o /home/swaminathanj/research_artifacts/SART/logs/gpu_probe.pbs.stdout
+#PBS -e /home/swaminathanj/research_artifacts/SART/logs/gpu_probe.pbs.stderr
+
+set -euo pipefail
+project_root="/home/swaminathanj/research_artifacts/SART"
+mkdir -p "${project_root}/logs"
+cd "${project_root}"
+export SART_PROBE_OUTPUT="${project_root}/logs/${PBS_JOBID}.gpu_probe.json"
+if [[ -z "${CUDA_VISIBLE_DEVICES:-}" ]]; then
+  export CUDA_VISIBLE_DEVICES=0
+fi
+"${project_root}/env/bin/python" "${project_root}/content/files/gpu_probe.py" \
+  >"${project_root}/logs/${PBS_JOBID}.gpu_probe.stdout" \
+  2>"${project_root}/logs/${PBS_JOBID}.gpu_probe.stderr"
+printf 'SART_GPU_PROBE_OK %s\n' "${PBS_JOBID}" >>"${project_root}/logs/${PBS_JOBID}.gpu_probe.stdout"

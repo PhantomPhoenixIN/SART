@@ -1,0 +1,24 @@
+selection_data: XLCoST_in_domain_validation_only
+metric: validation_target_loss
+shared_optimizer_peft:
+  max_candidates_per_architecture: 4
+  candidates:
+    - {backbone_lr: 1.0e-5, adapter_lr: 5.0e-5, lora_rank: 16}
+    - {backbone_lr: 1.0e-5, adapter_lr: 1.0e-4, lora_rank: 32}
+    - {backbone_lr: 2.0e-5, adapter_lr: 5.0e-5, lora_rank: 32}
+    - {backbone_lr: 2.0e-5, adapter_lr: 1.0e-4, lora_rank: 16}
+architecture_specific_router:
+  max_candidates_per_adaptive_architecture: 2
+  fixed_rmax_for_primary: 6
+  candidates:
+    - {budget_lambda: 0.1, temperature: 1.0}
+    - {budget_lambda: 1.0, temperature: 1.0}
+inference_halting_threshold_validation_grid: [0.3, 0.5, 0.7, 0.9]
+inference_top_k_fraction_validation_grid: [0.25, 0.5, 0.75, 1.0]
+frozen_before_external_inference: true
+retain_all_attempts_in_registry: true
+no_test_set_selection: true
+notes:
+  - The candidate grid is frozen before any pilot execution.
+  - The rank/LR combinations are a small orthogonal screen, not a full Cartesian search.
+  - Dense methods use adapter_lr only for trainable non-backbone adapters; record null where not applicable.

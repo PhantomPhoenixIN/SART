@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+#PBS -N sart_convergence_pilot
+#PBS -q gpuq
+#PBS -l select=1:ncpus=8:ngpus=1:mem=64gb
+#PBS -l walltime=96:00:00
+set -euo pipefail
+
+project_root="/home/swaminathanj/research_artifacts/SART"
+cd "${project_root}"
+mkdir -p logs/convergence_pilot
+export PATH="${project_root}/env/bin:${PATH}"
+export TOKENIZERS_PARALLELISM=false
+export OMP_NUM_THREADS=4
+export OPENBLAS_NUM_THREADS=1
+
+bash scripts/reproduce/capture_environment.sh convergence_pilot_20261002
+env/bin/python src/training/run_translation.py --config configs/training/pilot_dense.yaml
+env/bin/python src/training/run_translation.py --config configs/training/pilot_sart.yaml

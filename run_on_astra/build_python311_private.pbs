@@ -1,0 +1,22 @@
+#!/bin/bash
+#PBS -N sart_python311
+#PBS -q cpuq
+#PBS -l select=1:ncpus=4:mem=24gb
+#PBS -l walltime=12:00:00
+#PBS -j oe
+set -euo pipefail
+cd /home/swaminathanj/research_artifacts/SART
+module load gcc/gcc-12.3.0
+TASK_ROOT=/home/swaminathanj/research_artifacts/SART/content/tools/python3.11
+SOURCE_ROOT="$TASK_ROOT/source/Python-3.11.9"
+mkdir -p "$TASK_ROOT/build" "$TASK_ROOT/stage/opt/python3"
+tar -xf "$TASK_ROOT/source/Python-3.11.9.tar.xz" -C "$TASK_ROOT/source"
+cd "$SOURCE_ROOT"
+./configure --prefix="$TASK_ROOT/stage/opt/python3" --with-ensurepip=no
+make -j4
+make altinstall
+"$TASK_ROOT/stage/opt/python3/bin/python3.11" --version
+"$TASK_ROOT/stage/opt/python3/bin/python3.11" - <<'PY'
+import bz2, json, lzma, sqlite3, sys, zlib
+print(json.dumps({"python": sys.version, "bz2": bz2.__file__, "lzma": lzma.__file__, "sqlite3": sqlite3.sqlite_version, "zlib": zlib.ZLIB_VERSION}))
+PY

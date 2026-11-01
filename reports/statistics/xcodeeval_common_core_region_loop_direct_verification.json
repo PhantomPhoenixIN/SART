@@ -1,0 +1,101 @@
+{
+  "benchmark": "xcodeeval",
+  "split": "common_core",
+  "scope": "exploratory direct paired Region Loop comparisons",
+  "comparisons": {
+    "uniform_token_loop": {
+      "problem_count": 332,
+      "task_pairs": 5976,
+      "seeds": [
+        13,
+        42,
+        87
+      ],
+      "region_loop_mean": 0.28413654618473894,
+      "comparator_mean": 0.26623159303882193,
+      "difference_pp": 1.7904953145916997,
+      "ci95_pp": [
+        -0.33467202141900937,
+        3.965863453815261
+      ],
+      "p_two_sided": 0.003219967800321997,
+      "per_seed_difference_pp": {
+        "13": 3.463855421686747,
+        "42": 0.15060240963855423,
+        "87": 1.7570281124497993
+      }
+    },
+    "dense": {
+      "problem_count": 332,
+      "task_pairs": 5976,
+      "seeds": [
+        13,
+        42,
+        87
+      ],
+      "region_loop_mean": 0.28413654618473894,
+      "comparator_mean": 0.2635542168674699,
+      "difference_pp": 2.0582329317269075,
+      "ci95_pp": [
+        0.05020080321285128,
+        3.965863453815261
+      ],
+      "p_two_sided": 0.002129978700212998,
+      "per_seed_difference_pp": {
+        "13": 2.5100401606425704,
+        "42": 2.86144578313253,
+        "87": 0.8032128514056224
+      }
+    },
+    "full_sart": {
+      "problem_count": 332,
+      "task_pairs": 5976,
+      "seeds": [
+        13,
+        42,
+        87
+      ],
+      "region_loop_mean": 0.28413654618473894,
+      "comparator_mean": 0.25117135207496655,
+      "difference_pp": 3.2965194109772415,
+      "ci95_pp": [
+        1.7235609103078986,
+        4.919678714859437
+      ],
+      "p_two_sided": 9.99990000099999e-06,
+      "per_seed_difference_pp": {
+        "13": 3.413654618473896,
+        "42": 3.313253012048193,
+        "87": 3.1626506024096384
+      }
+    },
+    "mor_style": {
+      "problem_count": 332,
+      "task_pairs": 5976,
+      "seeds": [
+        13,
+        42,
+        87
+      ],
+      "region_loop_mean": 0.28413654618473894,
+      "comparator_mean": 0.2570281124497992,
+      "difference_pp": 2.7108433734939763,
+      "ci95_pp": [
+        0.7028112449799196,
+        4.63520749665328
+      ],
+      "p_two_sided": 6.999930000699993e-05,
+      "per_seed_difference_pp": {
+        "13": 1.4558232931726909,
+        "42": 3.0622489959839356,
+        "87": 3.614457831325301
+      }
+    }
+  },
+  "holm_adjusted_p_values_exploratory_family": {
+    "full_sart": 3.999960000399996e-05,
+    "mor_style": 0.0002099979000209998,
+    "dense": 0.004259957400425996,
+    "uniform_token_loop": 0.004259957400425996
+  }
+}

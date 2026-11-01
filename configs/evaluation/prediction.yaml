@@ -1,0 +1,45 @@
+# Frozen before external model scoring. hard_threshold remains unset until its
+# predefined validation-only calibration is run after the convergence pilot.
+# External generation additionally requires a matching --frozen-protocol record.
+protocol_version: 3
+decoding:
+  batch_size: 2
+  do_sample: true
+  num_beams: 1
+  max_new_tokens: 768
+  temperature: 0.8
+  top_p: 0.95
+  repetition_penalty: 1.0
+  output_cleanup: extract_generated_code_v1
+  hard_threshold: null
+  top_k_fraction: null # mutually exclusive with hard_threshold
+context:
+  source_plus_generation_must_fit_backbone: true
+  overflow_policy: record_failure_without_truncating_or_changing_manifest
+  training_sequence_limit: 2048
+  evaluation_sequence_limit: backbone_config_max_position_embeddings
+resume:
+  one_atomic_json_record_per_task: true
+  require_checkpoint_sha256_match: true
+  require_cache_manifest_sha256_match: true
+  skip_only_verified_completed_records: true
+primary_external_benchmark: xcodeeval
+primary_split: common_core
+functional_metrics:
+  - pass_at_1
+pass_at_1:
+  do_sample: true
+  uses_sample_index: 0
+  num_samples: 1
+  temperature: 0.8
+  top_p: 0.95
+  num_beams: 1
+  seed_rule: sha256(experiment_id|task_id|sample_index) mod 2^32
+lexical_metrics_bundle:
+  metrics: [bleu4, codebleu, exact_match, crystalbleu]
+  bleu4_tokenizer: pygments_language_lexer
+  codebleu_revision: b0edb622f6a52fe9d1edc407be5061d3e1462a7f
+  crystalbleu_tokenizer: pygments_language_lexer
+  crystalbleu_k: 500
+  crystalbleu_common_ngrams_from: frozen_validation_references_for_each_direction
+  aggregation: equal_weight_macro_over_directions

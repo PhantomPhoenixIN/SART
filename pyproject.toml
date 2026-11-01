@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools>=75,<76", "wheel>=0.44,<0.45"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sart-ct"
+version = "0.1.0"
+description = "Structure-adaptive recurrent computation for code translation research"
+requires-python = ">=3.10,<3.12"
+readme = "README.md"
+license = { text = "Research artifact; component data/model licenses apply" }
+dependencies = []
+
+[project.optional-dependencies]
+research = [
+  "accelerate==1.2.1",
+  "click==8.2.1",
+  "codebleu @ git+https://github.com/k4black/codebleu.git@b0edb622f6a52fe9d1edc407be5061d3e1462a7f",
+  "crystalbleu==0.2",
+  "datasets==3.2.0",
+  "huggingface-hub==0.28.1",
+  "matplotlib==3.10.0",
+  "networkx==3.4.2",
+  "nltk==3.9.2",
+  "numpy==1.26.4",
+  "pandas==2.2.3",
+  "peft==0.14.0",
+  "Pygments==2.19.1",
+  "PyYAML==6.0.2",
+  "safetensors==0.5.3",
+  "scikit-learn==1.6.1",
+  "scipy==1.15.1",
+  "statsmodels==0.14.4",
+  "tokenizers==0.21.0",
+  "transformers==4.48.3",
+  "tree-sitter==0.23.2",
+  "tree-sitter-cpp==0.23.4",
+  "tree-sitter-java==0.23.5",
+  "tree-sitter-python==0.23.6",
+]
+dev = ["pytest==8.3.4", "ruff==0.9.4"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+pythonpath = ["."]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]

@@ -1,0 +1,299 @@
+{
+  "amendment": "2026-10-12 user-directed before external scoring: one seeded stochastic candidate per task; Pass@1 only. Protocol v2 five-candidate partial predictions are archived and excluded.",
+  "calibration_constraint": "validation_target_loss among thresholds with realized mean recurrent depth <= configured budget + 0.05",
+  "external_metrics_used_for_selection": false,
+  "external_task_manifests": {
+    "avatar_tc:common_core": "f7403c76d965915fe31fc334382327c389e5667ae5d55e63368c513df1fa4fa0",
+    "avatar_tc:full_directional": "f7403c76d965915fe31fc334382327c389e5667ae5d55e63368c513df1fa4fa0",
+    "humanevalx:common_core": "7778e167a64ec3a1494c8884a05049b8a7931833245a4ece4bf9a8dbb385559e",
+    "humanevalx:full_directional": "7778e167a64ec3a1494c8884a05049b8a7931833245a4ece4bf9a8dbb385559e",
+    "transcoder_test:common_core": "7d48cf690754e1e3ae176a5bc80f6a9c4a10b8be915cb55b13279bc0995f42d6",
+    "transcoder_test:full_directional": "7d48cf690754e1e3ae176a5bc80f6a9c4a10b8be915cb55b13279bc0995f42d6",
+    "xcodeeval:common_core": "7b58147227e21e26575b7c94635f9a174148ef7ee3c956dd963947ed8d8c912b",
+    "xcodeeval:full_directional": "47405c00f71c652eef05d6ebf196c63e9ec730ba9542a69a85042bd6a855258d"
+  },
+  "generation": {
+    "batch_size": 2,
+    "do_sample": true,
+    "eos_token_id_by_revision": {
+      "0396a76181e127dfc13e5c5ec48a8cee09938b02": 151643,
+      "bb9afde76d7945da5745592525db122d4d729eb1": 0,
+      "df3ce67c0e24480f20468b6ef2894622d69eb73b": 151643,
+      "f2ad5164aade432d6d56c24bb71589184d5d613d": 151643
+    },
+    "max_new_tokens": 768,
+    "num_beams": 1,
+    "pass_at_1": {
+      "do_sample": true,
+      "num_beams": 1,
+      "num_samples": 1,
+      "seed_rule": "sha256(experiment_id|task_id|sample_index) mod 2^32",
+      "temperature": 0.8,
+      "top_p": 0.95,
+      "uses_sample_index": 0
+    },
+    "postprocess": "extract_generated_code_v1",
+    "repetition_penalty": 1.0,
+    "temperature": 0.8,
+    "top_p": 0.95
+  },
+  "protocol_version": 3,
+  "routing_calibration_rule": "seed-42 validation calibration per architecture/backbone revision, shared across seeds",
+  "routing_policies": {
+    "0396a76181e127dfc13e5c5ec48a8cee09938b02": {
+      "ast_cfg_sart": {
+        "calibration_path": "/home/swaminathanj/research_artifacts/SART/reports/calibration/0396a76181e127dfc13e5c5ec48a8cee09938b02/ast_cfg_sart-seed42.json",
+        "calibration_seed": 42,
+        "calibration_sha256": "60e93c089153147845a2b35138305717c0500d8cbe2d1475942158477cd2f59c",
+        "hard_threshold": 0.7,
+        "insertion_fraction": 0.5,
+        "max_recurrence": 6,
+        "top_k_fraction": null
+      },
+      "ast_dfg_sart": {
+        "calibration_path": "/home/swaminathanj/research_artifacts/SART/reports/calibration/0396a76181e127dfc13e5c5ec48a8cee09938b02/ast_dfg_sart-seed42.json",
+        "calibration_seed": 42,
+        "calibration_sha256": "b324a73badfb0078dd817e499e08d681645ee7f95806b31d164e4bfbf329a548",
+        "hard_threshold": 0.7,
+        "insertion_fraction": 0.5,
+        "max_recurrence": 6,
+        "top_k_fraction": null
+      },
+      "ast_sart": {
+        "calibration_path": "/home/swaminathanj/research_artifacts/SART/reports/calibration/0396a76181e127dfc13e5c5ec48a8cee09938b02/ast_sart-seed42.json",
+        "calibration_seed": 42,
+        "calibration_sha256": "91f25a39528fb43581ee32dc5ae1e1929f7d13cbdc72ac905c135109030a16b3",
+        "hard_threshold": 0.7,
+        "insertion_fraction": 0.5,
+        "max_recurrence": 6,
+        "top_k_fraction": null
+      },
+      "cfg_sart": {
+        "calibration_path": "/home/swaminathanj/research_artifacts/SART/reports/calibration/0396a76181e127dfc13e5c5ec48a8cee09938b02/cfg_sart-seed42.json",
+        "calibration_seed": 42,
+        "calibration_sha256": "aa770d1facd56c91324581c16e7c273300f8cabbea6955b04202e73d5d64b98f",
+        "hard_threshold": 0.8,
+        "insertion_fraction": 0.5,
+        "max_recurrence": 6,
+        "top_k_fraction": null
+      },
+      "dense": {
+        "hard_threshold": null,
+        "insertion_fraction": 0.5,
+        "max_recurrence": 6,
+        "top_k_fraction": null
+      },
+      "dense_param_match": {
+        "hard_threshold": null,
+        "insertion_fraction": 0.5,
+        "max_recurrence": 6,
+        "top_k_fraction": null
+      },
+      "dfg_sart": {
+        "calibration_path": "/home/swaminathanj/research_artifacts/SART/reports/calibration/0396a76181e127dfc13e5c5ec48a8cee09938b02/dfg_sart-seed42.json",
+        "calibration_seed": 42,
+        "calibration_sha256": "ea4e020cb90cb0dae8182321a4af1f7dcd62e507aa1d08a6f4befb6892a0682f",
+        "hard_threshold": 0.5,
+        "insertion_fraction": 0.5,
+        "max_recurrence": 6,
+        "top_k_fraction": null
+      },
+      "full_sart": {
+        "calibration_path": "/home/swaminathanj/research_artifacts/SART/reports/calibration/0396a76181e127dfc13e5c5ec48a8cee09938b02/full_sart-seed42.json",
+        "calibration_seed": 42,
+        "calibration_sha256": "cfd772c98852be17eca26cb30641f41dc7cb2a86d55f4b1d45a902bb2ce7a8a9",
+        "hard_threshold": 0.7,
+        "insertion_fraction": 0.5,
+        "max_recurrence": 6,
+        "top_k_fraction": null
+      },
+      "mor_style": {
+        "calibration_path": "/home/swaminathanj/research_artifacts/SART/reports/calibration/0396a76181e127dfc13e5c5ec48a8cee09938b02/mor_style-seed42.json",
+        "calibration_seed": 42,
+        "calibration_sha256": "1e3ce8c529202c154d04c359689c873a0403d44180009947051b639fafc82852",
+        "hard_threshold": 0.6,
+        "insertion_fraction": 0.5,
+        "max_recurrence": 6,
+        "top_k_fraction": null
+      },
+      "random_region": {
+        "calibration_path": "/home/swaminathanj/research_artifacts/SART/reports/calibration/0396a76181e127dfc13e5c5ec48a8cee09938b02/random_region-seed42.json",
+        "calibration_seed": 42,
+        "calibration_sha256": "255ec4687e8d174dca8c517916b565b51e433d57543fe776c4edbaf15d5aa306",
+        "hard_threshold": 0.2,
+        "insertion_fraction": 0.5,
+        "max_recurrence": 6,
+        "top_k_fraction": null
+      },
+      "region_adaptive_no_graph": {
+        "calibration_path": "/home/swaminathanj/research_artifacts/SART/reports/calibration/0396a76181e127dfc13e5c5ec48a8cee09938b02/region_adaptive_no_graph-seed42.json",
+        "calibration_seed": 42,
+        "calibration_sha256": "1b698a1d862712c3ad9cf4f1cc8326fe5d8936eb6d8a0ecf99b4ecaab06e886f",
+        "hard_threshold": 0.9,
+        "insertion_fraction": 0.5,
+        "max_recurrence": 6,
+        "top_k_fraction": null
+      },
+      "sart_attention_pool": {
+        "calibration_path": "/home/swaminathanj/research_artifacts/SART/reports/calibration/0396a76181e127dfc13e5c5ec48a8cee09938b02/sart_attention_pool-seed42.json",
+        "calibration_seed": 42,
+        "calibration_sha256": "18b571214826865c131c1971e8cffecf174c246dd02501553dc6b86543d24feb",
+        "hard_threshold": 0.3,
+        "insertion_fraction": 0.5,
+        "max_recurrence": 6,
+        "top_k_fraction": null
+      },
+      "sart_coarse_ontology": {
+        "calibration_path": "/home/swaminathanj/research_artifacts/SART/reports/calibration/0396a76181e127dfc13e5c5ec48a8cee09938b02/sart_coarse_ontology-seed42.json",
+        "calibration_seed": 42,
+        "calibration_sha256": "5683a4dc49f1656449542e89ca87737467924518a9e92894737a1f35a41e83ce",
+        "hard_threshold": 0.3,
+        "insertion_fraction": 0.5,
+        "max_recurrence": 6,
+        "top_k_fraction": null
+      },
+      "sart_no_language_pair": {
+        "calibration_path": "/home/swaminathanj/research_artifacts/SART/reports/calibration/0396a76181e127dfc13e5c5ec48a8cee09938b02/sart_no_language_pair-seed42.json",
+        "calibration_seed": 42,
+        "calibration_sha256": "623177d9c58abecd6f6acc35e6762e8014668e90f113a22cb15b2dc61716b922",
+        "hard_threshold": 0.2,
+        "insertion_fraction": 0.5,
+        "max_recurrence": 6,
+        "top_k_fraction": null
+      },
+      "sart_no_message": {
+        "calibration_path": "/home/swaminathanj/research_artifacts/SART/reports/calibration/0396a76181e127dfc13e5c5ec48a8cee09938b02/sart_no_message-seed42.json",
+        "calibration_seed": 42,
+        "calibration_sha256": "6f200860e07ea571d0700f69e40db9b20d3fce6e6c555d361b9eacd1b76da5fa",
+        "hard_threshold": 0.9,
+        "insertion_fraction": 0.5,
+        "max_recurrence": 6,
+        "top_k_fraction": null
+      },
+      "sart_no_scalar": {
+        "calibration_path": "/home/swaminathanj/research_artifacts/SART/reports/calibration/0396a76181e127dfc13e5c5ec48a8cee09938b02/sart_no_scalar-seed42.json",
+        "calibration_seed": 42,
+        "calibration_sha256": "4c26231ccc05539815b670d2a1a8b1d1f72e583949ec00630cb6e69efdfc9907",
+        "hard_threshold": 0.9,
+        "insertion_fraction": 0.5,
+        "max_recurrence": 6,
+        "top_k_fraction": null
+      },
+      "shuffled_structure": {
+        "calibration_path": "/home/swaminathanj/research_artifacts/SART/reports/calibration/0396a76181e127dfc13e5c5ec48a8cee09938b02/shuffled_structure-seed42.json",
+        "calibration_seed": 42,
+        "calibration_sha256": "5bc2f9de85224413891a0f551b27ea0347dc2eebb3f1291676dc4417805108ff",
+        "hard_threshold": 0.2,
+        "insertion_fraction": 0.5,
+        "max_recurrence": 6,
+        "top_k_fraction": null
+      },
+      "structure_only": {
+        "hard_threshold": null,
+        "insertion_fraction": 0.5,
+        "max_recurrence": 6,
+        "top_k_fraction": null
+      },
+      "uniform_region_loop": {
+        "hard_threshold": null,
+        "insertion_fraction": 0.5,
+        "max_recurrence": 6,
+        "top_k_fraction": null
+      },
+      "uniform_token_loop": {
+        "hard_threshold": null,
+        "insertion_fraction": 0.5,
+        "max_recurrence": 6,
+        "top_k_fraction": null
+      }
+    },
+    "bb9afde76d7945da5745592525db122d4d729eb1": {
+      "dense": {
+        "hard_threshold": null,
+        "insertion_fraction": 0.5,
+        "max_recurrence": 6,
+        "top_k_fraction": null
+      },
+      "full_sart": {
+        "calibration_path": "/home/swaminathanj/research_artifacts/SART/reports/calibration/bb9afde76d7945da5745592525db122d4d729eb1/full_sart-seed42.json",
+        "calibration_seed": 42,
+        "calibration_sha256": "b5ff566c98d705a9308868174908d1715cd193d447ff8dfa5b6a2da09e437408",
+        "hard_threshold": 0.8,
+        "insertion_fraction": 0.5,
+        "max_recurrence": 6,
+        "top_k_fraction": null
+      },
+      "mor_style": {
+        "calibration_path": "/home/swaminathanj/research_artifacts/SART/reports/calibration/bb9afde76d7945da5745592525db122d4d729eb1/mor_style-seed42.json",
+        "calibration_seed": 42,
+        "calibration_sha256": "2f1cf1c1c0e5e24cb1b4dcf8089ee39d9ab0ebfdea15d44018fcf61fe5d0924e",
+        "hard_threshold": 0.7,
+        "insertion_fraction": 0.5,
+        "max_recurrence": 6,
+        "top_k_fraction": null
+      }
+    },
+    "df3ce67c0e24480f20468b6ef2894622d69eb73b": {
+      "dense": {
+        "hard_threshold": null,
+        "insertion_fraction": 0.5,
+        "max_recurrence": 6,
+        "top_k_fraction": null
+      },
+      "full_sart": {
+        "calibration_path": "/home/swaminathanj/research_artifacts/SART/reports/calibration/df3ce67c0e24480f20468b6ef2894622d69eb73b/full_sart-seed42.json",
+        "calibration_seed": 42,
+        "calibration_sha256": "dd314b6338ba865c45f48a4d6f805fd43f0a0f818b3b67a15cce408b46a57595",
+        "hard_threshold": 0.3,
+        "insertion_fraction": 0.5,
+        "max_recurrence": 6,
+        "top_k_fraction": null
+      },
+      "mor_style": {
+        "calibration_path": "/home/swaminathanj/research_artifacts/SART/reports/calibration/df3ce67c0e24480f20468b6ef2894622d69eb73b/mor_style-seed42.json",
+        "calibration_seed": 42,
+        "calibration_sha256": "67403f71c2688011f65d0d822a58a5dd227117209476860f9a5e5cba5b981f32",
+        "hard_threshold": 0.8,
+        "insertion_fraction": 0.5,
+        "max_recurrence": 6,
+        "top_k_fraction": null
+      }
+    },
+    "f2ad5164aade432d6d56c24bb71589184d5d613d": {
+      "dense": {
+        "hard_threshold": null,
+        "insertion_fraction": 0.5,
+        "max_recurrence": 6,
+        "top_k_fraction": null
+      },
+      "full_sart": {
+        "calibration_path": "/home/swaminathanj/research_artifacts/SART/reports/calibration/f2ad5164aade432d6d56c24bb71589184d5d613d/full_sart-seed42.json",
+        "calibration_seed": 42,
+        "calibration_sha256": "f88528eb64f4931571eb5c61af9b0dcb183bb9dd5afb29712086280f662c6fc4",
+        "hard_threshold": 0.3,
+        "insertion_fraction": 0.5,
+        "max_recurrence": 6,
+        "top_k_fraction": null
+      },
+      "mor_style": {
+        "calibration_path": "/home/swaminathanj/research_artifacts/SART/reports/calibration/f2ad5164aade432d6d56c24bb71589184d5d613d/mor_style-seed42.json",
+        "calibration_seed": 42,
+        "calibration_sha256": "9736e67e3b42c22d774b88896409885acb927d1e24d690e93b41a1d03c940731",
+        "hard_threshold": 0.7,
+        "insertion_fraction": 0.5,
+        "max_recurrence": 6,
+        "top_k_fraction": null
+      }
+    }
+  },
+  "schema_version": 1,
+  "selection_metric": "validation_target_loss",
+  "status": "FROZEN_PREMODEL",
+  "training_horizon_epochs": {
+    "0396a76181e127dfc13e5c5ec48a8cee09938b02": 2,
+    "bb9afde76d7945da5745592525db122d4d729eb1": 2,
+    "df3ce67c0e24480f20468b6ef2894622d69eb73b": 2,
+    "f2ad5164aade432d6d56c24bb71589184d5d613d": 2
+  },
+  "translation_protocol_sha256": "f41bfa104861313591333bc9ac443343202443ef99e098522f9b0352c97e517d"
+}

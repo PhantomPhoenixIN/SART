@@ -1,0 +1,4 @@
+experiments/registry.csv whitespace=-trailing-space
+reports/results/SART_CT_results_tables.txt whitespace=-trailing-space
+reports/data/xcodeeval_raw_audit.md whitespace=-trailing-space
+reports/data/xlcost_audit.md whitespace=-trailing-space

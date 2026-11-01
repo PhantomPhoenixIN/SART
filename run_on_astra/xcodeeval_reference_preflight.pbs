@@ -1,0 +1,27 @@
+#!/bin/bash
+#PBS -N sart_xcodeeval_refs
+#PBS -q cpuq
+#PBS -l select=1:ncpus=8:mem=64gb
+#PBS -l walltime=96:00:00
+#PBS -j oe
+set -euo pipefail
+cd /home/swaminathanj/research_artifacts/SART
+module load gcc/gcc-12.3.0
+mkdir -p experiments/xcodeeval_reference_preflight_20261002
+{
+  date -Is
+  hostname
+  module list 2>&1
+  /apps/apps/gcc/gcc-12.3.0/gc/bin/g++ --version | head -1
+  content/tools/temurin/21.0.12.1+1/runtime/bin/java -version 2>&1 | head -3
+  env/bin/python --version
+  sha256sum data/manifests/xcodeeval_reference_selection.json
+} > experiments/xcodeeval_reference_preflight_20261002/environment.txt
+export OMP_NUM_THREADS=1
+export OPENBLAS_NUM_THREADS=1
+export MKL_NUM_THREADS=1
+export PYTHONPATH=/home/swaminathanj/research_artifacts/SART
+exec env/bin/python scripts/evaluate/preflight_xcodeeval.py \
+  --manifest data/manifests/xcodeeval_reference_selection.json \
+  --output outputs/xcodeeval_reference_preflight \
+  --workers 6 --repeats 3 --case-timeout 6

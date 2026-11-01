@@ -1,0 +1,196 @@
+{
+  "backbone_revision": "0396a76181e127dfc13e5c5ec48a8cee09938b02",
+  "benchmark": "xcodeeval",
+  "comparisons": {
+    "full_sart_vs_dense": {
+      "baseline": "dense",
+      "exploratory_problem_bootstrap_95_percent_interval_percentage_points": [
+        -2.5602409638554215,
+        1.6064257028112447
+      ],
+      "pass_at_1_difference_percentage_points": -0.4518072289156627,
+      "problem_count": 332,
+      "seed": 42
+    },
+    "full_sart_vs_mor_style": {
+      "baseline": "mor_style",
+      "exploratory_problem_bootstrap_95_percent_interval_percentage_points": [
+        -2.259036144578314,
+        1.8072289156626504
+      ],
+      "pass_at_1_difference_percentage_points": -0.25100401606425715,
+      "problem_count": 332,
+      "seed": 42
+    },
+    "full_sart_vs_uniform_token_loop": {
+      "baseline": "uniform_token_loop",
+      "exploratory_problem_bootstrap_95_percent_interval_percentage_points": [
+        -5.272339357429718,
+        -1.0040160642570284
+      ],
+      "pass_at_1_difference_percentage_points": -3.1626506024096384,
+      "problem_count": 332,
+      "seed": 42
+    }
+  },
+  "interpretation_limit": "Single seed and no matched end-to-end compute profile yet; this preview cannot confirm H1 or H2. Three-seed paired inference, all planned controls, and efficiency profiles remain required.",
+  "models": {
+    "dense": {
+      "directional_metrics": {
+        "C++-to-Java": {
+          "pass_at_1": 0.2560240963855422,
+          "tasks": 332
+        },
+        "C++-to-Python": {
+          "pass_at_1": 0.25,
+          "tasks": 332
+        },
+        "Java-to-C++": {
+          "pass_at_1": 0.3795180722891566,
+          "tasks": 332
+        },
+        "Java-to-Python": {
+          "pass_at_1": 0.22590361445783133,
+          "tasks": 332
+        },
+        "Python-to-C++": {
+          "pass_at_1": 0.32228915662650603,
+          "tasks": 332
+        },
+        "Python-to-Java": {
+          "pass_at_1": 0.15060240963855423,
+          "tasks": 332
+        }
+      },
+      "experiment_id": "dense-seed42-a2b260ba88c6",
+      "pass_at_1_macro": 0.2640562248995984,
+      "score_manifest": "reports/results/protocol_v3/0396a76181e127dfc13e5c5ec48a8cee09938b02/dense-seed42-a2b260ba88c6/xcodeeval/common_core/score_manifest.json",
+      "score_manifest_sha256": "163f41b19a7985cc92c4bc4aba2ef4a4ce58d5a1a5c30e2b4edfb66dd3af3385",
+      "status_counts": {
+        "compile_failure": 518,
+        "context_overflow": 2,
+        "failed": 946,
+        "passed": 526
+      }
+    },
+    "full_sart": {
+      "directional_metrics": {
+        "C++-to-Java": {
+          "pass_at_1": 0.21385542168674698,
+          "tasks": 332
+        },
+        "C++-to-Python": {
+          "pass_at_1": 0.21987951807228914,
+          "tasks": 332
+        },
+        "Java-to-C++": {
+          "pass_at_1": 0.3704819277108434,
+          "tasks": 332
+        },
+        "Java-to-Python": {
+          "pass_at_1": 0.20481927710843373,
+          "tasks": 332
+        },
+        "Python-to-C++": {
+          "pass_at_1": 0.31626506024096385,
+          "tasks": 332
+        },
+        "Python-to-Java": {
+          "pass_at_1": 0.2319277108433735,
+          "tasks": 332
+        }
+      },
+      "experiment_id": "full_sart-seed42-7d9cbd6005d3",
+      "pass_at_1_macro": 0.2595381526104417,
+      "score_manifest": "reports/results/protocol_v3/0396a76181e127dfc13e5c5ec48a8cee09938b02/full_sart-seed42-7d9cbd6005d3/xcodeeval/common_core/score_manifest.json",
+      "score_manifest_sha256": "64975a7af1ed1a62e1d1f7cb37ddac6603d274ebfa3f3a25e2cc32c8b962a078",
+      "status_counts": {
+        "compile_failure": 498,
+        "context_overflow": 2,
+        "failed": 975,
+        "passed": 517
+      }
+    },
+    "mor_style": {
+      "directional_metrics": {
+        "C++-to-Java": {
+          "pass_at_1": 0.24096385542168675,
+          "tasks": 332
+        },
+        "C++-to-Python": {
+          "pass_at_1": 0.22289156626506024,
+          "tasks": 332
+        },
+        "Java-to-C++": {
+          "pass_at_1": 0.39759036144578314,
+          "tasks": 332
+        },
+        "Java-to-Python": {
+          "pass_at_1": 0.18373493975903615,
+          "tasks": 332
+        },
+        "Python-to-C++": {
+          "pass_at_1": 0.3433734939759036,
+          "tasks": 332
+        },
+        "Python-to-Java": {
+          "pass_at_1": 0.18373493975903615,
+          "tasks": 332
+        }
+      },
+      "experiment_id": "mor_style-seed42-4dbef25dab2b",
+      "pass_at_1_macro": 0.2620481927710844,
+      "score_manifest": "reports/results/protocol_v3/0396a76181e127dfc13e5c5ec48a8cee09938b02/mor_style-seed42-4dbef25dab2b/xcodeeval/common_core/score_manifest.json",
+      "score_manifest_sha256": "d0db323ed57d54b5fe1468ab4abe1c53fb042dbb9ef7707ca93070ddec5f53bc",
+      "status_counts": {
+        "compile_failure": 493,
+        "context_overflow": 2,
+        "failed": 974,
+        "passed": 522,
+        "reference_setup_error": 1
+      }
+    },
+    "uniform_token_loop": {
+      "directional_metrics": {
+        "C++-to-Java": {
+          "pass_at_1": 0.3373493975903614,
+          "tasks": 332
+        },
+        "C++-to-Python": {
+          "pass_at_1": 0.21686746987951808,
+          "tasks": 332
+        },
+        "Java-to-C++": {
+          "pass_at_1": 0.37650602409638556,
+          "tasks": 332
+        },
+        "Java-to-Python": {
+          "pass_at_1": 0.23493975903614459,
+          "tasks": 332
+        },
+        "Python-to-C++": {
+          "pass_at_1": 0.3614457831325301,
+          "tasks": 332
+        },
+        "Python-to-Java": {
+          "pass_at_1": 0.21987951807228914,
+          "tasks": 332
+        }
+      },
+      "experiment_id": "uniform_token_loop-seed42-80a4b3c4e0cc",
+      "pass_at_1_macro": 0.29116465863453816,
+      "score_manifest": "reports/results/protocol_v3/0396a76181e127dfc13e5c5ec48a8cee09938b02/uniform_token_loop-seed42-80a4b3c4e0cc/xcodeeval/common_core/score_manifest.json",
+      "score_manifest_sha256": "3f482af89f3911c733a837e5ccab6bc1717da9d8855ccd0acf53c573d2dfb55d",
+      "status_counts": {
+        "compile_failure": 479,
+        "context_overflow": 2,
+        "failed": 930,
+        "passed": 580,
+        "reference_setup_error": 1
+      }
+    }
+  },
+  "protocol_sha256": "de1b028ad6aa5f2776cfee989d1c92e836cb3062f2ca413c9272c9fce87d53a1",
+  "split": "common_core",
+  "status": "preliminary_seed42_only"
+}

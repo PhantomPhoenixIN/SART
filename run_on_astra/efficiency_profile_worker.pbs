@@ -1,0 +1,56 @@
+#!/usr/bin/env bash
+#PBS -q gpuq
+#PBS -l select=1:ncpus=8:ngpus=1:mem=64gb
+#PBS -l walltime=96:00:00
+set -euo pipefail
+
+project_root="/home/swaminathanj/research_artifacts/SART"
+cd "${project_root}"
+: "${SART_CHECKPOINT:?qsub must set SART_CHECKPOINT}"
+: "${SART_VALIDATION_ROOT:?qsub must set SART_VALIDATION_ROOT}"
+: "${SART_SAMPLE_PLAN:?qsub must set SART_SAMPLE_PLAN}"
+: "${SART_PROFILE_OUTPUT:?qsub must set SART_PROFILE_OUTPUT}"
+: "${SART_PROFILE_KEY:?qsub must set SART_PROFILE_KEY}"
+: "${SART_ATTEMPT:?qsub must set SART_ATTEMPT}"
+: "${SART_INITIAL_PROFILE:?qsub must set SART_INITIAL_PROFILE}"
+
+printf 'profiler_source_sha256='
+sha256sum scripts/evaluate/profile_inference_cost.py
+sha256sum scripts/evaluate/run_efficiency_profile_batch.py
+export PATH="${project_root}/env/bin:${PATH}"
+export TOKENIZERS_PARALLELISM=false
+export OMP_NUM_THREADS=4
+export OPENBLAS_NUM_THREADS=1
+
+# Share the same physical-device lock used by training and external inference.
+lock_dir="/tmp/sart_gpu_locks_${USER}"
+mkdir -p "${lock_dir}"
+selected_gpu=""
+for attempt in $(seq 1 180); do
+  while IFS=',' read -r gpu_id free_mib; do
+    gpu_id="${gpu_id//[[:space:]]/}"
+    free_mib="${free_mib//[[:space:]]/}"
+    [[ "${gpu_id}" =~ ^[0-9]+$ && "${free_mib}" =~ ^[0-9]+$ ]] || continue
+    (( free_mib >= 30000 )) || continue
+    eval "exec {gpu_lock_fd}>\"${lock_dir}/gpu_${gpu_id}.lock\""
+    if flock -n "${gpu_lock_fd}"; then
+      selected_gpu="${gpu_id}"
+      break
+    fi
+    eval "exec ${gpu_lock_fd}>&-"
+  done < <(nvidia-smi --query-gpu=index,memory.free --format=csv,noheader,nounits | sort -t, -k2,2nr)
+  [[ -n "${selected_gpu}" ]] && break
+  sleep 10
+done
+if [[ -z "${selected_gpu}" ]]; then
+  echo "No unclaimed GPU with at least30GiB free after30 minutes" >&2
+  exit 75
+fi
+export CUDA_VISIBLE_DEVICES="${selected_gpu}"
+printf '%s,%s,%s,%s\n' "${PBS_JOBID}" "$(hostname)" "${selected_gpu}" "${SART_PROFILE_KEY}" \
+  >>"${lock_dir}/allocation_ledger.csv"
+
+export SART_ENVIRONMENT_DIR="experiments/${SART_PROFILE_KEY}/attempts/${SART_ATTEMPT}/environment"
+bash scripts/reproduce/capture_environment.sh "${SART_PROFILE_KEY}_attempt${SART_ATTEMPT}"
+
+env/bin/python scripts/evaluate/run_efficiency_profile_batch.py

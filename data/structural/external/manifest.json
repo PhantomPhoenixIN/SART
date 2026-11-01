@@ -1,0 +1,14 @@
+{
+  "input_manifests": {
+    "avatar_tc/common_core/manifest.json": "db7235ea827084a59ce0e26001826814f19637bab33a813d248d10755d5fa4a3",
+    "avatar_tc/full_directional/manifest.json": "ae11c4a79e25679c5260da0f8c626ba0006510b17aea3da3d4d856cb8fd69995",
+    "humanevalx/common_core/manifest.json": "bd6b65e772ac5ad13bf85324d7f96c9d213314425abe0ace6b2a98793fd2802e",
+    "humanevalx/full_directional/manifest.json": "a2fd96c8c92b1756a0af9d2623ac4570eac4d613218b5f321bfa884a2e19c8b1",
+    "transcoder_test/common_core/manifest.json": "ba90e764604a5d84cfccb6bb29ef8cb85f2958c226f1ec6a3e8f4c991c76506f",
+    "transcoder_test/full_directional/manifest.json": "86e8db78f25e911cadf9750ddc027000b2939a6c9ec485615f0ccab19f53320a",
+    "xcodeeval/common_core/manifest.json": "3623a49653d03f780fe0252d2fc231648c0fb7d7045a2a5713872c1a598f64cf",
+    "xcodeeval/full_directional/manifest.json": "16917288fbc89cf932e1c7446cd7bc3388b7b177e2edb8735db59d8f59a8ccbb"
+  },
+  "schema_version": 1,
+  "status": "COMPLETE"
+}

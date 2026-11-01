@@ -1,0 +1,112 @@
+{
+  "benchmark": "xcodeeval",
+  "split": "common_core",
+  "scope": "stored external generation, 332 problems x six directions x three seeds",
+  "architectures": {
+    "uniform_region_loop": {
+      "13": {
+        "tasks": 1992,
+        "depth_available_tasks": 1990,
+        "depth_missing_tasks": 2,
+        "median_latency_seconds": 5.575023281387985,
+        "median_generated_tokens": 171.0,
+        "mean_task_depth": 6.0,
+        "median_task_depth": 6.0,
+        "depth_min": 6.0,
+        "depth_max": 6.0
+      },
+      "42": {
+        "tasks": 1992,
+        "depth_available_tasks": 1990,
+        "depth_missing_tasks": 2,
+        "median_latency_seconds": 5.330850025638938,
+        "median_generated_tokens": 172.0,
+        "mean_task_depth": 6.0,
+        "median_task_depth": 6.0,
+        "depth_min": 6.0,
+        "depth_max": 6.0
+      },
+      "87": {
+        "tasks": 1992,
+        "depth_available_tasks": 1990,
+        "depth_missing_tasks": 2,
+        "median_latency_seconds": 5.607256814837456,
+        "median_generated_tokens": 171.5,
+        "mean_task_depth": 6.0,
+        "median_task_depth": 6.0,
+        "depth_min": 6.0,
+        "depth_max": 6.0
+      }
+    },
+    "uniform_token_loop": {
+      "13": {
+        "tasks": 1992,
+        "depth_available_tasks": 1990,
+        "depth_missing_tasks": 2,
+        "median_latency_seconds": 5.900479920208454,
+        "median_generated_tokens": 168.5,
+        "mean_task_depth": 6.0,
+        "median_task_depth": 6.0,
+        "depth_min": 6.0,
+        "depth_max": 6.0
+      },
+      "42": {
+        "tasks": 1992,
+        "depth_available_tasks": 1990,
+        "depth_missing_tasks": 2,
+        "median_latency_seconds": 5.882993593811989,
+        "median_generated_tokens": 172.0,
+        "mean_task_depth": 6.0,
+        "median_task_depth": 6.0,
+        "depth_min": 6.0,
+        "depth_max": 6.0
+      },
+      "87": {
+        "tasks": 1992,
+        "depth_available_tasks": 1990,
+        "depth_missing_tasks": 2,
+        "median_latency_seconds": 5.43948139436543,
+        "median_generated_tokens": 172.0,
+        "mean_task_depth": 6.0,
+        "median_task_depth": 6.0,
+        "depth_min": 6.0,
+        "depth_max": 6.0
+      }
+    },
+    "full_sart": {
+      "13": {
+        "tasks": 1992,
+        "depth_available_tasks": 1990,
+        "depth_missing_tasks": 2,
+        "median_latency_seconds": 5.93748858012259,
+        "median_generated_tokens": 173.0,
+        "mean_task_depth": 3.0,
+        "median_task_depth": 3.0,
+        "depth_min": 3.0,
+        "depth_max": 3.0
+      },
+      "42": {
+        "tasks": 1992,
+        "depth_available_tasks": 1990,
+        "depth_missing_tasks": 2,
+        "median_latency_seconds": 5.983290521427989,
+        "median_generated_tokens": 171.0,
+        "mean_task_depth": 3.0,
+        "median_task_depth": 3.0,
+        "depth_min": 3.0,
+        "depth_max": 3.0
+      },
+      "87": {
+        "tasks": 1992,
+        "depth_available_tasks": 1990,
+        "depth_missing_tasks": 2,
+        "median_latency_seconds": 5.932831251062453,
+        "median_generated_tokens": 172.0,
+        "mean_task_depth": 3.0,
+        "median_task_depth": 3.0,
+        "depth_min": 3.0,
+        "depth_max": 3.0
+      }
+    }
+  }
+}

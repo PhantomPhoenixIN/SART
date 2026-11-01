@@ -1,0 +1,71 @@
+project: SART-CT
+backbones:
+  primary: Qwen/Qwen2.5-Coder-7B
+  scaling: Qwen/Qwen2.5-Coder-14B
+  family_validation: bigcode/starcoder2-7b
+languages: [Python, Java, C++]
+seed_screening: [42]
+confirmatory_seeds: [13, 42, 87]
+insertion_fraction: 0.5
+insertion_layer_ablation:
+  architecture: full_sart
+  insertion_fractions: [0.333333, 0.5, 0.666667]
+  validation_only: true
+recurrent_width: 1024
+rmax: 6
+backbone_trainability_confirmatory:
+  architectures: [dense, mor_style, full_sart]
+  unfreeze_last_decoder_layers: 1
+  same_data_horizon_and_optimizer_budget: true
+  run_after_a100_memory_profile: true
+training:
+  horizon_config: configs/training/horizon.yaml
+  checkpoint_metric: in_domain_validation_loss
+  checkpoint_frequency_steps: null # resolve from pilot/run length before submit
+  selection_external_benchmarks: false
+translation_protocol: docs/TRANSLATION_PROTOCOL.md
+architectures:
+  - dense
+  - dense_param_match
+  - structure_only
+  - uniform_token_loop
+  - uniform_region_loop # Uniform Semantic Regions in the causal ladder
+  - mor_style
+  - region_adaptive_no_graph
+  - random_region
+  - shuffled_structure
+  - ast_sart
+  - cfg_sart
+  - dfg_sart
+  - ast_cfg_sart
+  - ast_dfg_sart
+  - sart_no_scalar
+  - sart_no_message
+  - sart_attention_pool
+  - sart_no_language_pair
+  - sart_coarse_ontology
+  - full_sart
+recurrent_comparison:
+  source_prefix_only: true
+  same_insertion_depth: true
+  same_hidden_width: true
+  shared_initialization_policy: deterministic_same_source_layer
+  target_teacher_forced_recurrence: false
+compute_profile:
+  components: [prefill, recurrent_module, autoregressive_decode, end_to_end]
+  normalized: [per_source_token, per_generated_token]
+  fixed_length_control: true
+router_diagnostics:
+  every_validation_interval: true
+  collapse_fraction: 0.95
+  collapse_consecutive_checks: 2
+  diagnostics:
+    - expected_depth
+    - depth_histogram
+    - stop_at_1_fraction
+    - reach_rmax_fraction
+    - mean_continue_probability
+    - entropy
+    - gradient_norm
+    - depth_by_region_type
+    - depth_by_program

@@ -1,0 +1,1226 @@
+{
+  "backbone_revision": "0396a76181e127dfc13e5c5ec48a8cee09938b02",
+  "benchmark": "xcodeeval",
+  "cluster_unit": "problem_id",
+  "comparisons": {
+    "pass_at_1:full_sart_vs_dense": {
+      "bootstrap": {
+        "baseline_mean_task_score": 0.2635542168674699,
+        "bootstrap_seed": 42,
+        "ci95": [
+          -0.031291834002677384,
+          0.006358768406961177
+        ],
+        "ci95_percentage_points": [
+          -3.1291834002677383,
+          0.6358768406961177
+        ],
+        "difference": -0.012382864792503348,
+        "difference_percentage_points": -1.2382864792503347,
+        "model_a_mean_task_score": 0.25117135207496655,
+        "relative_error_reduction": -0.01681436037264258,
+        "replicates": 10000
+      },
+      "direction_results": {
+        "C++-to-Java": {
+          "difference": -0.034136546184738964,
+          "model_a_score": 0.20783132530120482,
+          "model_b_score": 0.2419678714859438
+        },
+        "C++-to-Python": {
+          "difference": 0.006024096385542188,
+          "model_a_score": 0.23293172690763053,
+          "model_b_score": 0.22690763052208834
+        },
+        "Java-to-C++": {
+          "difference": -0.025100401606425682,
+          "model_a_score": 0.3674698795180723,
+          "model_b_score": 0.392570281124498
+        },
+        "Java-to-Python": {
+          "difference": -0.007028112449799201,
+          "model_a_score": 0.21887550200803213,
+          "model_b_score": 0.22590361445783133
+        },
+        "Python-to-C++": {
+          "difference": -0.007028112449799229,
+          "model_a_score": 0.31626506024096385,
+          "model_b_score": 0.3232931726907631
+        },
+        "Python-to-Java": {
+          "difference": -0.007028112449799201,
+          "model_a_score": 0.1636546184738956,
+          "model_b_score": 0.1706827309236948
+        }
+      },
+      "directions": [
+        "C++-to-Java",
+        "C++-to-Python",
+        "Java-to-C++",
+        "Java-to-Python",
+        "Python-to-C++",
+        "Python-to-Java"
+      ],
+      "effect_size_percentage_points": -1.2382864792503347,
+      "mcnemar_by_direction_seed": [
+        {
+          "a_correct_b_wrong": 44,
+          "a_wrong_b_correct": 51,
+          "both_correct": 12,
+          "both_wrong": 225,
+          "direction": "C++-to-Java",
+          "exact_mcnemar_p": 0.5383940262921677,
+          "seed": 13
+        },
+        {
+          "a_correct_b_wrong": 42,
+          "a_wrong_b_correct": 27,
+          "both_correct": 42,
+          "both_wrong": 221,
+          "direction": "C++-to-Python",
+          "exact_mcnemar_p": 0.09118649056701154,
+          "seed": 13
+        },
+        {
+          "a_correct_b_wrong": 45,
+          "a_wrong_b_correct": 56,
+          "both_correct": 75,
+          "both_wrong": 156,
+          "direction": "Java-to-C++",
+          "exact_mcnemar_p": 0.3197273207002652,
+          "seed": 13
+        },
+        {
+          "a_correct_b_wrong": 25,
+          "a_wrong_b_correct": 24,
+          "both_correct": 46,
+          "both_wrong": 237,
+          "direction": "Java-to-Python",
+          "exact_mcnemar_p": 1.0,
+          "seed": 13
+        },
+        {
+          "a_correct_b_wrong": 28,
+          "a_wrong_b_correct": 31,
+          "both_correct": 76,
+          "both_wrong": 197,
+          "direction": "Python-to-C++",
+          "exact_mcnemar_p": 0.794843653982861,
+          "seed": 13
+        },
+        {
+          "a_correct_b_wrong": 27,
+          "a_wrong_b_correct": 40,
+          "both_correct": 17,
+          "both_wrong": 248,
+          "direction": "Python-to-Java",
+          "exact_mcnemar_p": 0.1420713794263756,
+          "seed": 13
+        },
+        {
+          "a_correct_b_wrong": 39,
+          "a_wrong_b_correct": 53,
+          "both_correct": 32,
+          "both_wrong": 208,
+          "direction": "C++-to-Java",
+          "exact_mcnemar_p": 0.1749838984629618,
+          "seed": 42
+        },
+        {
+          "a_correct_b_wrong": 25,
+          "a_wrong_b_correct": 35,
+          "both_correct": 48,
+          "both_wrong": 224,
+          "direction": "C++-to-Python",
+          "exact_mcnemar_p": 0.2450608330229457,
+          "seed": 42
+        },
+        {
+          "a_correct_b_wrong": 37,
+          "a_wrong_b_correct": 40,
+          "both_correct": 86,
+          "both_wrong": 169,
+          "direction": "Java-to-C++",
+          "exact_mcnemar_p": 0.8198929037490488,
+          "seed": 42
+        },
+        {
+          "a_correct_b_wrong": 21,
+          "a_wrong_b_correct": 28,
+          "both_correct": 47,
+          "both_wrong": 236,
+          "direction": "Java-to-Python",
+          "exact_mcnemar_p": 0.3916029105474905,
+          "seed": 42
+        },
+        {
+          "a_correct_b_wrong": 33,
+          "a_wrong_b_correct": 35,
+          "both_correct": 72,
+          "both_wrong": 192,
+          "direction": "Python-to-C++",
+          "exact_mcnemar_p": 0.9035973456835127,
+          "seed": 42
+        },
+        {
+          "a_correct_b_wrong": 48,
+          "a_wrong_b_correct": 21,
+          "both_correct": 29,
+          "both_wrong": 234,
+          "direction": "Python-to-Java",
+          "exact_mcnemar_p": 0.0015503169494868645,
+          "seed": 42
+        },
+        {
+          "a_correct_b_wrong": 44,
+          "a_wrong_b_correct": 57,
+          "both_correct": 36,
+          "both_wrong": 195,
+          "direction": "C++-to-Java",
+          "exact_mcnemar_p": 0.23230046428473872,
+          "seed": 87
+        },
+        {
+          "a_correct_b_wrong": 34,
+          "a_wrong_b_correct": 33,
+          "both_correct": 41,
+          "both_wrong": 224,
+          "direction": "C++-to-Python",
+          "exact_mcnemar_p": 1.0,
+          "seed": 87
+        },
+        {
+          "a_correct_b_wrong": 48,
+          "a_wrong_b_correct": 59,
+          "both_correct": 75,
+          "both_wrong": 150,
+          "direction": "Java-to-C++",
+          "exact_mcnemar_p": 0.3337051161974391,
+          "seed": 87
+        },
+        {
+          "a_correct_b_wrong": 35,
+          "a_wrong_b_correct": 36,
+          "both_correct": 44,
+          "both_wrong": 217,
+          "direction": "Java-to-Python",
+          "exact_mcnemar_p": 1.0,
+          "seed": 87
+        },
+        {
+          "a_correct_b_wrong": 24,
+          "a_wrong_b_correct": 26,
+          "both_correct": 82,
+          "both_wrong": 200,
+          "direction": "Python-to-C++",
+          "exact_mcnemar_p": 0.887724827340783,
+          "seed": 87
+        },
+        {
+          "a_correct_b_wrong": 22,
+          "a_wrong_b_correct": 43,
+          "both_correct": 20,
+          "both_wrong": 247,
+          "direction": "Python-to-Java",
+          "exact_mcnemar_p": 0.012502546136489844,
+          "seed": 87
+        }
+      ],
+      "metric": "pass_at_1",
+      "model_a": "full_sart",
+      "model_b": "dense",
+      "multiplicity_status": "confirmatory_holm_family",
+      "paired_cluster_randomization": {
+        "cluster_count": 332,
+        "difference": -0.012382864792503346,
+        "p_value_two_sided": 0.05697943020569794,
+        "randomization_seed": 43,
+        "replicates": 100000
+      },
+      "problem_count": 332,
+      "relative_error_reduction": -0.01681436037264258,
+      "seeds": [
+        13,
+        42,
+        87
+      ]
+    },
+    "pass_at_1:full_sart_vs_mor_style": {
+      "bootstrap": {
+        "baseline_mean_task_score": 0.25702811244979923,
+        "bootstrap_seed": 42,
+        "ci95": [
+          -0.025941265060240963,
+          0.013219544846050868
+        ],
+        "ci95_percentage_points": [
+          -2.594126506024096,
+          1.3219544846050868
+        ],
+        "difference": -0.005856760374832664,
+        "difference_percentage_points": -0.5856760374832664,
+        "model_a_mean_task_score": 0.25117135207496655,
+        "relative_error_reduction": -0.007882882882882884,
+        "replicates": 10000
+      },
+      "direction_results": {
+        "C++-to-Java": {
+          "difference": -0.045180722891566244,
+          "model_a_score": 0.20783132530120482,
+          "model_b_score": 0.25301204819277107
+        },
+        "C++-to-Python": {
+          "difference": 0.016064257028112455,
+          "model_a_score": 0.23293172690763053,
+          "model_b_score": 0.21686746987951808
+        },
+        "Java-to-C++": {
+          "difference": 0.002008032128514081,
+          "model_a_score": 0.3674698795180723,
+          "model_b_score": 0.3654618473895582
+        },
+        "Java-to-Python": {
+          "difference": 0.016064257028112455,
+          "model_a_score": 0.21887550200803213,
+          "model_b_score": 0.20281124497991967
+        },
+        "Python-to-C++": {
+          "difference": -0.008032128514056214,
+          "model_a_score": 0.31626506024096385,
+          "model_b_score": 0.32429718875502006
+        },
+        "Python-to-Java": {
+          "difference": -0.016064257028112428,
+          "model_a_score": 0.1636546184738956,
+          "model_b_score": 0.17971887550200802
+        }
+      },
+      "directions": [
+        "C++-to-Java",
+        "C++-to-Python",
+        "Java-to-C++",
+        "Java-to-Python",
+        "Python-to-C++",
+        "Python-to-Java"
+      ],
+      "effect_size_percentage_points": -0.5856760374832664,
+      "mcnemar_by_direction_seed": [
+        {
+          "a_correct_b_wrong": 35,
+          "a_wrong_b_correct": 67,
+          "both_correct": 21,
+          "both_wrong": 209,
+          "direction": "C++-to-Java",
+          "exact_mcnemar_p": 0.0019928055857140587,
+          "seed": 13
+        },
+        {
+          "a_correct_b_wrong": 29,
+          "a_wrong_b_correct": 24,
+          "both_correct": 55,
+          "both_wrong": 224,
+          "direction": "C++-to-Python",
+          "exact_mcnemar_p": 0.5831321542611763,
+          "seed": 13
+        },
+        {
+          "a_correct_b_wrong": 43,
+          "a_wrong_b_correct": 42,
+          "both_correct": 77,
+          "both_wrong": 170,
+          "direction": "Java-to-C++",
+          "exact_mcnemar_p": 1.0,
+          "seed": 13
+        },
+        {
+          "a_correct_b_wrong": 27,
+          "a_wrong_b_correct": 22,
+          "both_correct": 44,
+          "both_wrong": 239,
+          "direction": "Java-to-Python",
+          "exact_mcnemar_p": 0.5681724128491652,
+          "seed": 13
+        },
+        {
+          "a_correct_b_wrong": 36,
+          "a_wrong_b_correct": 30,
+          "both_correct": 68,
+          "both_wrong": 198,
+          "direction": "Python-to-C++",
+          "exact_mcnemar_p": 0.5385827752459466,
+          "seed": 13
+        },
+        {
+          "a_correct_b_wrong": 26,
+          "a_wrong_b_correct": 50,
+          "both_correct": 18,
+          "both_wrong": 238,
+          "direction": "Python-to-Java",
+          "exact_mcnemar_p": 0.007905180027859783,
+          "seed": 13
+        },
+        {
+          "a_correct_b_wrong": 40,
+          "a_wrong_b_correct": 49,
+          "both_correct": 31,
+          "both_wrong": 212,
+          "direction": "C++-to-Java",
+          "exact_mcnemar_p": 0.39657015814551616,
+          "seed": 42
+        },
+        {
+          "a_correct_b_wrong": 25,
+          "a_wrong_b_correct": 26,
+          "both_correct": 48,
+          "both_wrong": 233,
+          "direction": "C++-to-Python",
+          "exact_mcnemar_p": 1.0,
+          "seed": 42
+        },
+        {
+          "a_correct_b_wrong": 35,
+          "a_wrong_b_correct": 44,
+          "both_correct": 88,
+          "both_wrong": 165,
+          "direction": "Java-to-C++",
+          "exact_mcnemar_p": 0.3681876338306311,
+          "seed": 42
+        },
+        {
+          "a_correct_b_wrong": 27,
+          "a_wrong_b_correct": 20,
+          "both_correct": 41,
+          "both_wrong": 244,
+          "direction": "Java-to-Python",
+          "exact_mcnemar_p": 0.38169339766321275,
+          "seed": 42
+        },
+        {
+          "a_correct_b_wrong": 24,
+          "a_wrong_b_correct": 33,
+          "both_correct": 81,
+          "both_wrong": 194,
+          "direction": "Python-to-C++",
+          "exact_mcnemar_p": 0.2892437471090205,
+          "seed": 42
+        },
+        {
+          "a_correct_b_wrong": 39,
+          "a_wrong_b_correct": 23,
+          "both_correct": 38,
+          "both_wrong": 232,
+          "direction": "Python-to-Java",
+          "exact_mcnemar_p": 0.05589722669971112,
+          "seed": 42
+        },
+        {
+          "a_correct_b_wrong": 48,
+          "a_wrong_b_correct": 52,
+          "both_correct": 32,
+          "both_wrong": 200,
+          "direction": "C++-to-Java",
+          "exact_mcnemar_p": 0.7643534344026669,
+          "seed": 87
+        },
+        {
+          "a_correct_b_wrong": 34,
+          "a_wrong_b_correct": 22,
+          "both_correct": 41,
+          "both_wrong": 235,
+          "direction": "C++-to-Python",
+          "exact_mcnemar_p": 0.1408954235984807,
+          "seed": 87
+        },
+        {
+          "a_correct_b_wrong": 52,
+          "a_wrong_b_correct": 42,
+          "both_correct": 71,
+          "both_wrong": 167,
+          "direction": "Java-to-C++",
+          "exact_mcnemar_p": 0.35332803247158273,
+          "seed": 87
+        },
+        {
+          "a_correct_b_wrong": 36,
+          "a_wrong_b_correct": 32,
+          "both_correct": 43,
+          "both_wrong": 221,
+          "direction": "Java-to-Python",
+          "exact_mcnemar_p": 0.716300760154337,
+          "seed": 87
+        },
+        {
+          "a_correct_b_wrong": 27,
+          "a_wrong_b_correct": 32,
+          "both_correct": 79,
+          "both_wrong": 194,
+          "direction": "Python-to-C++",
+          "exact_mcnemar_p": 0.6029232012571504,
+          "seed": 87
+        },
+        {
+          "a_correct_b_wrong": 30,
+          "a_wrong_b_correct": 38,
+          "both_correct": 12,
+          "both_wrong": 252,
+          "direction": "Python-to-Java",
+          "exact_mcnemar_p": 0.39612484029702977,
+          "seed": 87
+        }
+      ],
+      "metric": "pass_at_1",
+      "model_a": "full_sart",
+      "model_b": "mor_style",
+      "multiplicity_status": "confirmatory_holm_family",
+      "paired_cluster_randomization": {
+        "cluster_count": 332,
+        "difference": -0.005856760374832665,
+        "p_value_two_sided": 0.34090659093409065,
+        "randomization_seed": 43,
+        "replicates": 100000
+      },
+      "problem_count": 332,
+      "relative_error_reduction": -0.007882882882882884,
+      "seeds": [
+        13,
+        42,
+        87
+      ]
+    },
+    "pass_at_1:full_sart_vs_random_region": {
+      "bootstrap": {
+        "baseline_mean_task_score": 0.28279785809906294,
+        "bootstrap_seed": 42,
+        "ci95": [
+          -0.04953145917001339,
+          -0.013721552878179383
+        ],
+        "ci95_percentage_points": [
+          -4.953145917001339,
+          -1.3721552878179384
+        ],
+        "difference": -0.03162650602409638,
+        "difference_percentage_points": -3.1626506024096384,
+        "model_a_mean_task_score": 0.25117135207496655,
+        "relative_error_reduction": -0.04409706019598693,
+        "replicates": 10000
+      },
+      "direction_results": {
+        "C++-to-Java": {
+          "difference": -0.10943775100401607,
+          "model_a_score": 0.20783132530120482,
+          "model_b_score": 0.3172690763052209
+        },
+        "C++-to-Python": {
+          "difference": -0.004016064257028107,
+          "model_a_score": 0.23293172690763053,
+          "model_b_score": 0.23694779116465864
+        },
+        "Java-to-C++": {
+          "difference": 0.003012048192771122,
+          "model_a_score": 0.3674698795180723,
+          "model_b_score": 0.3644578313253012
+        },
+        "Java-to-Python": {
+          "difference": 0.010040160642570295,
+          "model_a_score": 0.21887550200803213,
+          "model_b_score": 0.20883534136546184
+        },
+        "Python-to-C++": {
+          "difference": -0.011044176706827336,
+          "model_a_score": 0.31626506024096385,
+          "model_b_score": 0.3273092369477912
+        },
+        "Python-to-Java": {
+          "difference": -0.0783132530120482,
+          "model_a_score": 0.1636546184738956,
+          "model_b_score": 0.2419678714859438
+        }
+      },
+      "directions": [
+        "C++-to-Java",
+        "C++-to-Python",
+        "Java-to-C++",
+        "Java-to-Python",
+        "Python-to-C++",
+        "Python-to-Java"
+      ],
+      "effect_size_percentage_points": -3.1626506024096384,
+      "mcnemar_by_direction_seed": [
+        {
+          "a_correct_b_wrong": 29,
+          "a_wrong_b_correct": 78,
+          "both_correct": 27,
+          "both_wrong": 198,
+          "direction": "C++-to-Java",
+          "exact_mcnemar_p": 2.351892746999197e-06,
+          "seed": 13
+        },
+        {
+          "a_correct_b_wrong": 31,
+          "a_wrong_b_correct": 28,
+          "both_correct": 53,
+          "both_wrong": 220,
+          "direction": "C++-to-Python",
+          "exact_mcnemar_p": 0.794843653982861,
+          "seed": 13
+        },
+        {
+          "a_correct_b_wrong": 48,
+          "a_wrong_b_correct": 43,
+          "both_correct": 72,
+          "both_wrong": 169,
+          "direction": "Java-to-C++",
+          "exact_mcnemar_p": 0.6752224599160574,
+          "seed": 13
+        },
+        {
+          "a_correct_b_wrong": 27,
+          "a_wrong_b_correct": 23,
+          "both_correct": 44,
+          "both_wrong": 238,
+          "direction": "Java-to-Python",
+          "exact_mcnemar_p": 0.6718110337653656,
+          "seed": 13
+        },
+        {
+          "a_correct_b_wrong": 31,
+          "a_wrong_b_correct": 35,
+          "both_correct": 73,
+          "both_wrong": 193,
+          "direction": "Python-to-C++",
+          "exact_mcnemar_p": 0.7122308826373509,
+          "seed": 13
+        },
+        {
+          "a_correct_b_wrong": 19,
+          "a_wrong_b_correct": 57,
+          "both_correct": 25,
+          "both_wrong": 231,
+          "direction": "Python-to-Java",
+          "exact_mcnemar_p": 1.4836899336372366e-05,
+          "seed": 13
+        },
+        {
+          "a_correct_b_wrong": 34,
+          "a_wrong_b_correct": 68,
+          "both_correct": 37,
+          "both_wrong": 193,
+          "direction": "C++-to-Java",
+          "exact_mcnemar_p": 0.000986536808184603,
+          "seed": 42
+        },
+        {
+          "a_correct_b_wrong": 20,
+          "a_wrong_b_correct": 29,
+          "both_correct": 53,
+          "both_wrong": 230,
+          "direction": "C++-to-Python",
+          "exact_mcnemar_p": 0.2528697301676033,
+          "seed": 42
+        },
+        {
+          "a_correct_b_wrong": 43,
+          "a_wrong_b_correct": 50,
+          "both_correct": 80,
+          "both_wrong": 159,
+          "direction": "Java-to-C++",
+          "exact_mcnemar_p": 0.5340598617346062,
+          "seed": 42
+        },
+        {
+          "a_correct_b_wrong": 29,
+          "a_wrong_b_correct": 31,
+          "both_correct": 39,
+          "both_wrong": 233,
+          "direction": "Java-to-Python",
+          "exact_mcnemar_p": 0.8974218269914307,
+          "seed": 42
+        },
+        {
+          "a_correct_b_wrong": 26,
+          "a_wrong_b_correct": 23,
+          "both_correct": 79,
+          "both_wrong": 204,
+          "direction": "Python-to-C++",
+          "exact_mcnemar_p": 0.7754496546815659,
+          "seed": 42
+        },
+        {
+          "a_correct_b_wrong": 34,
+          "a_wrong_b_correct": 29,
+          "both_correct": 43,
+          "both_wrong": 226,
+          "direction": "Python-to-Java",
+          "exact_mcnemar_p": 0.6146550157654618,
+          "seed": 42
+        },
+        {
+          "a_correct_b_wrong": 39,
+          "a_wrong_b_correct": 65,
+          "both_correct": 41,
+          "both_wrong": 187,
+          "direction": "C++-to-Java",
+          "exact_mcnemar_p": 0.013836195066747886,
+          "seed": 87
+        },
+        {
+          "a_correct_b_wrong": 32,
+          "a_wrong_b_correct": 30,
+          "both_correct": 43,
+          "both_wrong": 227,
+          "direction": "C++-to-Python",
+          "exact_mcnemar_p": 0.8990763136528589,
+          "seed": 87
+        },
+        {
+          "a_correct_b_wrong": 48,
+          "a_wrong_b_correct": 43,
+          "both_correct": 75,
+          "both_wrong": 166,
+          "direction": "Java-to-C++",
+          "exact_mcnemar_p": 0.6752224599160574,
+          "seed": 87
+        },
+        {
+          "a_correct_b_wrong": 32,
+          "a_wrong_b_correct": 24,
+          "both_correct": 47,
+          "both_wrong": 229,
+          "direction": "Java-to-Python",
+          "exact_mcnemar_p": 0.34968195298368476,
+          "seed": 87
+        },
+        {
+          "a_correct_b_wrong": 22,
+          "a_wrong_b_correct": 32,
+          "both_correct": 84,
+          "both_wrong": 194,
+          "direction": "Python-to-C++",
+          "exact_mcnemar_p": 0.22032849417661093,
+          "seed": 87
+        },
+        {
+          "a_correct_b_wrong": 15,
+          "a_wrong_b_correct": 60,
+          "both_correct": 27,
+          "both_wrong": 230,
+          "direction": "Python-to-Java",
+          "exact_mcnemar_p": 1.5877990745379462e-07,
+          "seed": 87
+        }
+      ],
+      "metric": "pass_at_1",
+      "model_a": "full_sart",
+      "model_b": "random_region",
+      "multiplicity_status": "confirmatory_holm_family",
+      "paired_cluster_randomization": {
+        "cluster_count": 332,
+        "difference": -0.03162650602409638,
+        "p_value_two_sided": 9.99990000099999e-06,
+        "randomization_seed": 43,
+        "replicates": 100000
+      },
+      "problem_count": 332,
+      "relative_error_reduction": -0.04409706019598693,
+      "seeds": [
+        13,
+        42,
+        87
+      ]
+    },
+    "pass_at_1:full_sart_vs_structure_only": {
+      "bootstrap": {
+        "baseline_mean_task_score": 0.2515060240963855,
+        "bootstrap_seed": 42,
+        "ci95": [
+          -0.016064257028112452,
+          0.015060240963855422
+        ],
+        "ci95_percentage_points": [
+          -1.6064257028112452,
+          1.5060240963855422
+        ],
+        "difference": -0.0003346720214190092,
+        "difference_percentage_points": -0.03346720214190092,
+        "model_a_mean_task_score": 0.25117135207496655,
+        "relative_error_reduction": -0.0004471272076905877,
+        "replicates": 10000
+      },
+      "direction_results": {
+        "C++-to-Java": {
+          "difference": 0.0050200803212851475,
+          "model_a_score": 0.20783132530120482,
+          "model_b_score": 0.20281124497991967
+        },
+        "C++-to-Python": {
+          "difference": 0.006024096385542188,
+          "model_a_score": 0.23293172690763053,
+          "model_b_score": 0.22690763052208834
+        },
+        "Java-to-C++": {
+          "difference": -0.017068273092369468,
+          "model_a_score": 0.3674698795180723,
+          "model_b_score": 0.3845381526104418
+        },
+        "Java-to-Python": {
+          "difference": -0.0020080321285140534,
+          "model_a_score": 0.21887550200803213,
+          "model_b_score": 0.22088353413654618
+        },
+        "Python-to-C++": {
+          "difference": 0.0,
+          "model_a_score": 0.31626506024096385,
+          "model_b_score": 0.31626506024096385
+        },
+        "Python-to-Java": {
+          "difference": 0.006024096385542188,
+          "model_a_score": 0.1636546184738956,
+          "model_b_score": 0.1576305220883534
+        }
+      },
+      "directions": [
+        "C++-to-Java",
+        "C++-to-Python",
+        "Java-to-C++",
+        "Java-to-Python",
+        "Python-to-C++",
+        "Python-to-Java"
+      ],
+      "effect_size_percentage_points": -0.03346720214190092,
+      "mcnemar_by_direction_seed": [
+        {
+          "a_correct_b_wrong": 39,
+          "a_wrong_b_correct": 40,
+          "both_correct": 17,
+          "both_wrong": 236,
+          "direction": "C++-to-Java",
+          "exact_mcnemar_p": 1.0,
+          "seed": 13
+        },
+        {
+          "a_correct_b_wrong": 34,
+          "a_wrong_b_correct": 26,
+          "both_correct": 50,
+          "both_wrong": 222,
+          "direction": "C++-to-Python",
+          "exact_mcnemar_p": 0.36629400670329104,
+          "seed": 13
+        },
+        {
+          "a_correct_b_wrong": 38,
+          "a_wrong_b_correct": 57,
+          "both_correct": 82,
+          "both_wrong": 155,
+          "direction": "Java-to-C++",
+          "exact_mcnemar_p": 0.064212806627131,
+          "seed": 13
+        },
+        {
+          "a_correct_b_wrong": 26,
+          "a_wrong_b_correct": 27,
+          "both_correct": 45,
+          "both_wrong": 234,
+          "direction": "Java-to-Python",
+          "exact_mcnemar_p": 1.0,
+          "seed": 13
+        },
+        {
+          "a_correct_b_wrong": 36,
+          "a_wrong_b_correct": 32,
+          "both_correct": 68,
+          "both_wrong": 196,
+          "direction": "Python-to-C++",
+          "exact_mcnemar_p": 0.716300760154337,
+          "seed": 13
+        },
+        {
+          "a_correct_b_wrong": 38,
+          "a_wrong_b_correct": 31,
+          "both_correct": 6,
+          "both_wrong": 257,
+          "direction": "Python-to-Java",
+          "exact_mcnemar_p": 0.47036853185814453,
+          "seed": 13
+        },
+        {
+          "a_correct_b_wrong": 42,
+          "a_wrong_b_correct": 54,
+          "both_correct": 29,
+          "both_wrong": 207,
+          "direction": "C++-to-Java",
+          "exact_mcnemar_p": 0.2614694362863877,
+          "seed": 42
+        },
+        {
+          "a_correct_b_wrong": 24,
+          "a_wrong_b_correct": 29,
+          "both_correct": 49,
+          "both_wrong": 230,
+          "direction": "C++-to-Python",
+          "exact_mcnemar_p": 0.5831321542611763,
+          "seed": 42
+        },
+        {
+          "a_correct_b_wrong": 51,
+          "a_wrong_b_correct": 48,
+          "both_correct": 72,
+          "both_wrong": 161,
+          "direction": "Java-to-C++",
+          "exact_mcnemar_p": 0.8408215252256428,
+          "seed": 42
+        },
+        {
+          "a_correct_b_wrong": 26,
+          "a_wrong_b_correct": 32,
+          "both_correct": 42,
+          "both_wrong": 232,
+          "direction": "Java-to-Python",
+          "exact_mcnemar_p": 0.5118423084381691,
+          "seed": 42
+        },
+        {
+          "a_correct_b_wrong": 23,
+          "a_wrong_b_correct": 32,
+          "both_correct": 82,
+          "both_wrong": 195,
+          "direction": "Python-to-C++",
+          "exact_mcnemar_p": 0.2806097176983541,
+          "seed": 42
+        },
+        {
+          "a_correct_b_wrong": 46,
+          "a_wrong_b_correct": 20,
+          "both_correct": 31,
+          "both_wrong": 235,
+          "direction": "Python-to-Java",
+          "exact_mcnemar_p": 0.0018582303075658085,
+          "seed": 42
+        },
+        {
+          "a_correct_b_wrong": 58,
+          "a_wrong_b_correct": 40,
+          "both_correct": 22,
+          "both_wrong": 212,
+          "direction": "C++-to-Java",
+          "exact_mcnemar_p": 0.0854105891128046,
+          "seed": 87
+        },
+        {
+          "a_correct_b_wrong": 29,
+          "a_wrong_b_correct": 26,
+          "both_correct": 46,
+          "both_wrong": 231,
+          "direction": "C++-to-Python",
+          "exact_mcnemar_p": 0.7877061896700431,
+          "seed": 87
+        },
+        {
+          "a_correct_b_wrong": 45,
+          "a_wrong_b_correct": 46,
+          "both_correct": 78,
+          "both_wrong": 163,
+          "direction": "Java-to-C++",
+          "exact_mcnemar_p": 1.0,
+          "seed": 87
+        },
+        {
+          "a_correct_b_wrong": 33,
+          "a_wrong_b_correct": 28,
+          "both_correct": 46,
+          "both_wrong": 225,
+          "direction": "Java-to-Python",
+          "exact_mcnemar_p": 0.6089207154048286,
+          "seed": 87
+        },
+        {
+          "a_correct_b_wrong": 32,
+          "a_wrong_b_correct": 27,
+          "both_correct": 74,
+          "both_wrong": 199,
+          "direction": "Python-to-C++",
+          "exact_mcnemar_p": 0.6029232012571504,
+          "seed": 87
+        },
+        {
+          "a_correct_b_wrong": 17,
+          "a_wrong_b_correct": 44,
+          "both_correct": 25,
+          "both_wrong": 246,
+          "direction": "Python-to-Java",
+          "exact_mcnemar_p": 0.0007299045109347685,
+          "seed": 87
+        }
+      ],
+      "metric": "pass_at_1",
+      "model_a": "full_sart",
+      "model_b": "structure_only",
+      "multiplicity_status": "confirmatory_holm_family",
+      "paired_cluster_randomization": {
+        "cluster_count": 332,
+        "difference": -0.00033467202141901017,
+        "p_value_two_sided": 0.9472405275947241,
+        "randomization_seed": 43,
+        "replicates": 100000
+      },
+      "problem_count": 332,
+      "relative_error_reduction": -0.0004471272076905877,
+      "seeds": [
+        13,
+        42,
+        87
+      ]
+    },
+    "pass_at_1:full_sart_vs_uniform_token_loop": {
+      "bootstrap": {
+        "baseline_mean_task_score": 0.266231593038822,
+        "bootstrap_seed": 42,
+        "ci95": [
+          -0.03748326639892905,
+          0.005856760374832661
+        ],
+        "ci95_percentage_points": [
+          -3.748326639892905,
+          0.5856760374832661
+        ],
+        "difference": -0.015060240963855422,
+        "difference_percentage_points": -1.5060240963855422,
+        "model_a_mean_task_score": 0.25117135207496655,
+        "relative_error_reduction": -0.020524515393386546,
+        "replicates": 10000
+      },
+      "direction_results": {
+        "C++-to-Java": {
+          "difference": -0.07429718875502009,
+          "model_a_score": 0.20783132530120482,
+          "model_b_score": 0.2821285140562249
+        },
+        "C++-to-Python": {
+          "difference": 0.023092369477911656,
+          "model_a_score": 0.23293172690763053,
+          "model_b_score": 0.20983935742971888
+        },
+        "Java-to-C++": {
+          "difference": 0.002008032128514081,
+          "model_a_score": 0.3674698795180723,
+          "model_b_score": 0.3654618473895582
+        },
+        "Java-to-Python": {
+          "difference": -0.008032128514056214,
+          "model_a_score": 0.21887550200803213,
+          "model_b_score": 0.22690763052208834
+        },
+        "Python-to-C++": {
+          "difference": -0.011044176706827336,
+          "model_a_score": 0.31626506024096385,
+          "model_b_score": 0.3273092369477912
+        },
+        "Python-to-Java": {
+          "difference": -0.022088353413654616,
+          "model_a_score": 0.1636546184738956,
+          "model_b_score": 0.1857429718875502
+        }
+      },
+      "directions": [
+        "C++-to-Java",
+        "C++-to-Python",
+        "Java-to-C++",
+        "Java-to-Python",
+        "Python-to-C++",
+        "Python-to-Java"
+      ],
+      "effect_size_percentage_points": -1.5060240963855422,
+      "mcnemar_by_direction_seed": [
+        {
+          "a_correct_b_wrong": 41,
+          "a_wrong_b_correct": 45,
+          "both_correct": 15,
+          "both_wrong": 231,
+          "direction": "C++-to-Java",
+          "exact_mcnemar_p": 0.7465343822890574,
+          "seed": 13
+        },
+        {
+          "a_correct_b_wrong": 40,
+          "a_wrong_b_correct": 18,
+          "both_correct": 44,
+          "both_wrong": 230,
+          "direction": "C++-to-Python",
+          "exact_mcnemar_p": 0.005354859650800294,
+          "seed": 13
+        },
+        {
+          "a_correct_b_wrong": 47,
+          "a_wrong_b_correct": 49,
+          "both_correct": 73,
+          "both_wrong": 163,
+          "direction": "Java-to-C++",
+          "exact_mcnemar_p": 0.9187780353645374,
+          "seed": 13
+        },
+        {
+          "a_correct_b_wrong": 25,
+          "a_wrong_b_correct": 33,
+          "both_correct": 46,
+          "both_wrong": 228,
+          "direction": "Java-to-Python",
+          "exact_mcnemar_p": 0.358143301806138,
+          "seed": 13
+        },
+        {
+          "a_correct_b_wrong": 23,
+          "a_wrong_b_correct": 27,
+          "both_correct": 81,
+          "both_wrong": 201,
+          "direction": "Python-to-C++",
+          "exact_mcnemar_p": 0.6718110337653656,
+          "seed": 13
+        },
+        {
+          "a_correct_b_wrong": 30,
+          "a_wrong_b_correct": 33,
+          "both_correct": 14,
+          "both_wrong": 255,
+          "direction": "Python-to-Java",
+          "exact_mcnemar_p": 0.8013064925040663,
+          "seed": 13
+        },
+        {
+          "a_correct_b_wrong": 30,
+          "a_wrong_b_correct": 71,
+          "both_correct": 41,
+          "both_wrong": 190,
+          "direction": "C++-to-Java",
+          "exact_mcnemar_p": 5.5330705875801516e-05,
+          "seed": 42
+        },
+        {
+          "a_correct_b_wrong": 33,
+          "a_wrong_b_correct": 32,
+          "both_correct": 40,
+          "both_wrong": 227,
+          "direction": "C++-to-Python",
+          "exact_mcnemar_p": 1.0,
+          "seed": 42
+        },
+        {
+          "a_correct_b_wrong": 45,
+          "a_wrong_b_correct": 47,
+          "both_correct": 78,
+          "both_wrong": 162,
+          "direction": "Java-to-C++",
+          "exact_mcnemar_p": 0.9170405196524722,
+          "seed": 42
+        },
+        {
+          "a_correct_b_wrong": 23,
+          "a_wrong_b_correct": 33,
+          "both_correct": 45,
+          "both_wrong": 231,
+          "direction": "Java-to-Python",
+          "exact_mcnemar_p": 0.2288055412343561,
+          "seed": 42
+        },
+        {
+          "a_correct_b_wrong": 22,
+          "a_wrong_b_correct": 37,
+          "both_correct": 83,
+          "both_wrong": 190,
+          "direction": "Python-to-C++",
+          "exact_mcnemar_p": 0.06744461190078899,
+          "seed": 42
+        },
+        {
+          "a_correct_b_wrong": 33,
+          "a_wrong_b_correct": 29,
+          "both_correct": 44,
+          "both_wrong": 226,
+          "direction": "Python-to-Java",
+          "exact_mcnemar_p": 0.7035366713552733,
+          "seed": 42
+        },
+        {
+          "a_correct_b_wrong": 42,
+          "a_wrong_b_correct": 71,
+          "both_correct": 38,
+          "both_wrong": 181,
+          "direction": "C++-to-Java",
+          "exact_mcnemar_p": 0.008149691373771188,
+          "seed": 87
+        },
+        {
+          "a_correct_b_wrong": 26,
+          "a_wrong_b_correct": 26,
+          "both_correct": 49,
+          "both_wrong": 231,
+          "direction": "C++-to-Python",
+          "exact_mcnemar_p": 1.0,
+          "seed": 87
+        },
+        {
+          "a_correct_b_wrong": 48,
+          "a_wrong_b_correct": 42,
+          "both_correct": 75,
+          "both_wrong": 167,
+          "direction": "Java-to-C++",
+          "exact_mcnemar_p": 0.5984117182335192,
+          "seed": 87
+        },
+        {
+          "a_correct_b_wrong": 36,
+          "a_wrong_b_correct": 26,
+          "both_correct": 43,
+          "both_wrong": 227,
+          "direction": "Java-to-Python",
+          "exact_mcnemar_p": 0.25285439418811073,
+          "seed": 87
+        },
+        {
+          "a_correct_b_wrong": 30,
+          "a_wrong_b_correct": 22,
+          "both_correct": 76,
+          "both_wrong": 204,
+          "direction": "Python-to-C++",
+          "exact_mcnemar_p": 0.3317497633694906,
+          "seed": 87
+        },
+        {
+          "a_correct_b_wrong": 17,
+          "a_wrong_b_correct": 40,
+          "both_correct": 25,
+          "both_wrong": 250,
+          "direction": "Python-to-Java",
+          "exact_mcnemar_p": 0.0032015437674503813,
+          "seed": 87
+        }
+      ],
+      "metric": "pass_at_1",
+      "model_a": "full_sart",
+      "model_b": "uniform_token_loop",
+      "multiplicity_status": "confirmatory_holm_family",
+      "paired_cluster_randomization": {
+        "cluster_count": 332,
+        "difference": -0.015060240963855422,
+        "p_value_two_sided": 0.020819791802081978,
+        "randomization_seed": 43,
+        "replicates": 100000
+      },
+      "problem_count": 332,
+      "relative_error_reduction": -0.020524515393386546,
+      "seeds": [
+        13,
+        42,
+        87
+      ]
+    }
+  },
+  "holm_adjusted_p_values": {
+    "pass_at_1:full_sart_vs_dense": 0.1709382906170938,
+    "pass_at_1:full_sart_vs_mor_style": 0.6818131818681813,
+    "pass_at_1:full_sart_vs_random_region": 4.9999500004999955e-05,
+    "pass_at_1:full_sart_vs_structure_only": 0.9472405275947241,
+    "pass_at_1:full_sart_vs_uniform_token_loop": 0.08327916720832791
+  },
+  "primary_aggregate": "equal_weight_macro_over_six_directions",
+  "split": "common_core"
+}

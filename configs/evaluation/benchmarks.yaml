@@ -1,0 +1,48 @@
+external_benchmarks:
+  xcodeeval:
+    repository: NTU-NLP-sg/xCodeEval
+    task: code_translation
+    split: test
+    dataset_license: CC-BY-NC-4.0
+    role: primary_large_scale_external
+    hidden_tests: true
+    runner: pinned_rootless_execeval_compatible_fallback
+    runner_is_official_execeval_service: false
+    training_overlap_allowed: false
+    sets:
+      - common_core
+      - full_directional
+    source_selection:
+      accepted: true
+      parse_valid: true
+      length: closest_to_median
+      tie_break: stable_code_uid
+    canonical_preflight_repeats: 3
+    java_release: 8
+    python3_runtime_for_python_candidates: private_cpython_3_11
+    freeze_manifest_before_model_inference: true
+  transcoder_test:
+    repository: facebookresearch/TransCoder
+    role: established_external
+    canonical_preflight_repeats: 3
+    harness: official_geeks_for_geeks_successful_test_scripts
+    output_contract: f_filled_at_tofill_marker
+    target_interface: official_f_gold_signature_with_filled_symbol
+    source_selection: corresponding_official_f_gold_function
+    java_pair_compatibility_shim: project_private_source_shim_only_when_required
+    freeze_manifest_before_model_inference: true
+  humaneval_x:
+    repository: zai-org/CodeGeeX
+    role: independent_human_written_external
+    canonical_preflight_repeats: 3
+    java_release: 17
+    freeze_manifest_before_model_inference: true
+  avatar_tc:
+    repository: prithwishjana/cotran
+    role: auxiliary_python_java
+    required_when_reproducible: true
+    canonical_preflight_repeats: 3
+    freeze_manifest_before_model_inference: true
+report_test_count_statistics: true
+precision_analysis_before_prediction_inspection: true
+report_common_task_and_full_directional_separately: true

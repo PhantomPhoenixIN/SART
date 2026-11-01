@@ -1,0 +1,76 @@
+{
+  "avatar_tc": {
+    "case_outcomes": {
+      "passed": 3
+    },
+    "compile_status": "passed",
+    "diagnostic": "",
+    "execution_status": "passed",
+    "flaky": false,
+    "pass_at_1": true,
+    "pass_ratio_available": true,
+    "repeats": 3,
+    "runtime_status": "passed",
+    "status": "passed",
+    "tests_passed": 1,
+    "tests_total": 1
+  },
+  "humanevalx": {
+    "compile_status": "passed",
+    "diagnostic": "",
+    "execution_status": "passed",
+    "flaky": false,
+    "pass_at_1": true,
+    "pass_ratio_available": false,
+    "pass_ratio_unavailable_reason": "humanevalx_harness_reports_task_level_outcome_only",
+    "repeats": 3,
+    "runtime_status": "passed",
+    "status": "passed",
+    "tests_passed": 7,
+    "tests_total": 7
+  },
+  "transcoder_test": {
+    "compile_status": "passed",
+    "diagnostic": "",
+    "execution_status": "passed",
+    "flaky": false,
+    "pass_at_1": true,
+    "pass_ratio_available": true,
+    "repeats": 3,
+    "reported_results": [
+      {
+        "passed": 10,
+        "total": 10
+      },
+      {
+        "passed": 10,
+        "total": 10
+      },
+      {
+        "passed": 10,
+        "total": 10
+      }
+    ],
+    "runtime_status": "passed",
+    "status": "passed",
+    "tests_passed": 10,
+    "tests_total": 10
+  },
+  "xcodeeval": {
+    "case_outcomes": {
+      "passed": 147
+    },
+    "compile_status": "passed",
+    "diagnostic": "",
+    "execution_status": "passed",
+    "flaky": false,
+    "pass_at_1": true,
+    "pass_ratio_available": true,
+    "repeats": 3,
+    "runtime_status": "passed",
+    "status": "passed",
+    "tests_checked_until_failure": 49,
+    "tests_passed": 49,
+    "tests_total": 49
+  }
+}

@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+#PBS -N sart_resume_pilot
+#PBS -q gpuq
+#PBS -l select=1:ncpus=8:ngpus=1:mem=64gb
+#PBS -l walltime=96:00:00
+set -euo pipefail
+
+project_root="/home/swaminathanj/research_artifacts/SART"
+cd "${project_root}"
+mkdir -p logs/convergence_pilot_external_clean
+export PATH="${project_root}/env/bin:${PATH}"
+export TOKENIZERS_PARALLELISM=false
+export OMP_NUM_THREADS=4
+export OPENBLAS_NUM_THREADS=1
+
+bash scripts/reproduce/capture_environment.sh convergence_pilot_external_clean_sart_resume_20261003
+env/bin/python src/training/run_translation.py --config configs/training/pilot_sart_external_clean.yaml

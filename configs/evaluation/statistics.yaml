@@ -1,0 +1,70 @@
+status: frozen_before_external_model_evaluation
+primary_benchmark: xcodeeval_common_core
+primary_endpoints:
+  - sampled_execution_pass_at_1_sample_0
+primary_aggregate: equal_weight_macro_over_six_directions
+report_each_direction: true
+keep_common_core_and_full_directional_separate: true
+cluster_unit: src_uid_problem_id
+confirmatory_seeds: [13, 42, 87]
+hierarchical_bootstrap:
+  replicates: 10000
+  resample_seeds: true
+  resample_problem_ids: true
+  retain_all_directions_within_problem: true
+  confidence_level: 0.95
+paired_cluster_randomization:
+  replicates: 100000
+  cluster_unit: problem_id
+  swap_model_labels_within_cluster: true
+per_direction_mcnemar:
+  status: secondary
+  exact_when_discordant_counts_are_small: true
+multiple_comparison_control:
+  method: holm_bonferroni
+  family:
+    endpoints: [pass_at_1]
+    comparisons:
+      - full_sart_vs_dense
+      - full_sart_vs_uniform_token_loop
+      - full_sart_vs_mor_style
+      - full_sart_vs_random_region
+      - full_sart_vs_structure_only
+effect_sizes:
+  - absolute_pass_at_1_percentage_point_difference
+  - relative_error_reduction
+  - confidence_interval_95_percent
+structural_difficulty:
+  normalize_metrics_within_direction: percentile_rank
+  composite: equal_weight_mean_percentile
+  bins: [Q1_easiest, Q2, Q3, Q4_hardest]
+  freeze_quartile_edges_before_model_scores: true
+  h3_contrast: macro_directional_full_sart_minus_mor_q4_minus_q1_pass_at_1
+  h3_bootstrap:
+    resample_seed_ids: true
+    resample_problem_clusters: true
+    retain_all_directions_within_problem: true
+    replicates: 10000
+  h4_association: spearman_expected_region_depth_vs_frozen_source_reference_region_difficulty
+  h4_bootstrap:
+    resample_seed_ids: true
+    resample_problem_clusters: true
+    retain_all_directions_and_regions_within_problem: true
+    replicates: 1000
+  h4_region_alignment_limitation: one_to_one_ast_semantic_region_structural_proxy_not_semantic_translation_alignment
+compute_matching:
+  primary_cost: total_end_to_end_inference_flops
+  target_relative_tolerance: 0.05
+  report_components: [prefill, recurrent_module, autoregressive_decode]
+  report_normalized: [flops_per_source_token, decode_flops_per_generated_token]
+  validation_profile_sample: configs/evaluation/efficiency_profile_sample.json
+  sample_size: 4_per_direction
+  sample_aggregation: median_across_24_frozen_validation_examples
+  cached_decode_token_cap: 128
+  cached_decode_reference: validation_target_prefix_or_full_target_if_shorter
+  report: [total_parameters, trainable_parameters, adapter_parameters, router_parameters, prefill_throughput, decode_throughput, end_to_end_latency, peak_vram]
+precision_estimation:
+  before_predictions: true
+  method: conservative_bounded_paired_cluster_difference
+  confidence_level: 0.95
+  target_power: 0.80

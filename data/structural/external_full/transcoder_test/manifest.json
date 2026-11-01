@@ -1,0 +1,247 @@
+{
+  "splits": {
+    "common_core": {
+      "ast_manifest_sha256": "ba90e764604a5d84cfccb6bb29ef8cb85f2958c226f1ec6a3e8f4c991c76506f",
+      "files": {
+        "C++-to-Java/shard_00000.jsonl": {
+          "input_sha256": "f17b5a2bf787570632ffe6efe145a4c6238ab36622e56838db84fe62d73d6b44",
+          "path": "data/structural/external_full/transcoder_test/common_core/C++-to-Java/shard_00000.jsonl",
+          "records": 128,
+          "sha256": "3fbe40da1fa2cbaa107d596a8d24558c7ade178bebad5d2da9c149e377fb8c8a"
+        },
+        "C++-to-Java/shard_00001.jsonl": {
+          "input_sha256": "638ac4ec95afa5c9d2ebb26e67464b07bc451cb7d17c6e797edd4e88fb819bb9",
+          "path": "data/structural/external_full/transcoder_test/common_core/C++-to-Java/shard_00001.jsonl",
+          "records": 128,
+          "sha256": "cf2ad1658f7785f4d9c13cc44520b49f9468bd212c5edcb62491cbb6f56810e7"
+        },
+        "C++-to-Java/shard_00002.jsonl": {
+          "input_sha256": "5284f03a683b7d5d07b9cd554427931198447129f9c422a3b5fb8098649006f1",
+          "path": "data/structural/external_full/transcoder_test/common_core/C++-to-Java/shard_00002.jsonl",
+          "records": 65,
+          "sha256": "488dd00a5bbfd4e12dc215a4b44628a9386a1b8ba8a49c23486e4fb891fe8cfc"
+        },
+        "C++-to-Python/shard_00000.jsonl": {
+          "input_sha256": "c813ae0b87caefaf2e55f85e8b8a69b8f5af7a51dd9226c3e8858b0d21a49ed1",
+          "path": "data/structural/external_full/transcoder_test/common_core/C++-to-Python/shard_00000.jsonl",
+          "records": 128,
+          "sha256": "9d2f120417d6129457ef06bb5f253356cd1ca3b56d71d3e438537edb2dc7fdef"
+        },
+        "C++-to-Python/shard_00001.jsonl": {
+          "input_sha256": "9cc89c5189b509759ecc53061391f2b699eaa3da22c5c0f859ab2d78580ab3a1",
+          "path": "data/structural/external_full/transcoder_test/common_core/C++-to-Python/shard_00001.jsonl",
+          "records": 128,
+          "sha256": "08080271d3d39931f8ca3cced8f93531345ab7391ef00c7fcfde0860f4383988"
+        },
+        "C++-to-Python/shard_00002.jsonl": {
+          "input_sha256": "526090b1ad41777838811f8342fb7a29fb7d21901e786e7730d618003385417d",
+          "path": "data/structural/external_full/transcoder_test/common_core/C++-to-Python/shard_00002.jsonl",
+          "records": 65,
+          "sha256": "8c4e6baf41a6037c160d1c489819ae0a71a6a87b2802e16533db67f1d5c9a7ec"
+        },
+        "Java-to-C++/shard_00000.jsonl": {
+          "input_sha256": "0b35071ee64d381214f6c2a2d4ce0b37d25a017260c426c159b1ce241ff18d2c",
+          "path": "data/structural/external_full/transcoder_test/common_core/Java-to-C++/shard_00000.jsonl",
+          "records": 128,
+          "sha256": "e8a9cc95c30c6c2160106567159bfabc5d47766076dcdfde29a5c0bfaf0aa4fb"
+        },
+        "Java-to-C++/shard_00001.jsonl": {
+          "input_sha256": "99842590ee4567dc8378d2070c293653b3ee0cb76e9eede18a7dc7d405466738",
+          "path": "data/structural/external_full/transcoder_test/common_core/Java-to-C++/shard_00001.jsonl",
+          "records": 128,
+          "sha256": "e26704a51f808f56b0d03466760b4c8c3a665f5619415c5bc691f087145f8d44"
+        },
+        "Java-to-C++/shard_00002.jsonl": {
+          "input_sha256": "0b41a412ce9d96fbcd8d2ab6b50789d50efc9f2201bc4a53da8455a992a0baec",
+          "path": "data/structural/external_full/transcoder_test/common_core/Java-to-C++/shard_00002.jsonl",
+          "records": 65,
+          "sha256": "2e0e4b4f55e623ce3707ad212764d3ce16c5eb868d76b6aa8bc957dc230dac3c"
+        },
+        "Java-to-Python/shard_00000.jsonl": {
+          "input_sha256": "6f9480716e76821f12baff310df55d4e5a80c661a5f6103e0e19d40420145f4b",
+          "path": "data/structural/external_full/transcoder_test/common_core/Java-to-Python/shard_00000.jsonl",
+          "records": 128,
+          "sha256": "98441f4b618c0675d50a44fdaf9738eb92f452fd7535c42e56ec7768faa9de09"
+        },
+        "Java-to-Python/shard_00001.jsonl": {
+          "input_sha256": "37a547e618c307b555f31749c4ad709308805dfa2da7c6e1cc1c65c177ea9e45",
+          "path": "data/structural/external_full/transcoder_test/common_core/Java-to-Python/shard_00001.jsonl",
+          "records": 128,
+          "sha256": "da319de636923f6571e2f3aedb1f91d5244ba5ea93cb705d3949eee39d3a2cd2"
+        },
+        "Java-to-Python/shard_00002.jsonl": {
+          "input_sha256": "f0c7fd504fbe2880ff2e81131e253002c240ec39c499da96f38de1b97e408508",
+          "path": "data/structural/external_full/transcoder_test/common_core/Java-to-Python/shard_00002.jsonl",
+          "records": 65,
+          "sha256": "6d2c497a84e3868ad61b19c2532c86cb1ce4296f1cc484ed77b2c702ea0434b3"
+        },
+        "Python-to-C++/shard_00000.jsonl": {
+          "input_sha256": "0ce07195985d455a89fc716554387a4c151497b8b4e3cea98753b136f51e343a",
+          "path": "data/structural/external_full/transcoder_test/common_core/Python-to-C++/shard_00000.jsonl",
+          "records": 128,
+          "sha256": "722876a4ed89bcfecdb2d1fe60b3a89d1d6294db807b0e6f00da80d08b548e00"
+        },
+        "Python-to-C++/shard_00001.jsonl": {
+          "input_sha256": "cb9c7412d4b66dba989b1c1a63c98a2f896e9e5365c05c73b15e8c1e3bf2da2d",
+          "path": "data/structural/external_full/transcoder_test/common_core/Python-to-C++/shard_00001.jsonl",
+          "records": 128,
+          "sha256": "75351857e363d370fbb80f186ea882c75b1293616356e921cec153858c30a68e"
+        },
+        "Python-to-C++/shard_00002.jsonl": {
+          "input_sha256": "baf9e5c5031b7c39ff8eca4600546381568c3efbd0628277d14f1dd064644709",
+          "path": "data/structural/external_full/transcoder_test/common_core/Python-to-C++/shard_00002.jsonl",
+          "records": 65,
+          "sha256": "c9520c5217a2690793dd5d2a32002d97e8b1ca14a98245d736b7f4697b7e1825"
+        },
+        "Python-to-Java/shard_00000.jsonl": {
+          "input_sha256": "8e5e9d0c477262f96ba61e86ee0bfaa312816c3519e07bd0a772e082dc2b9a83",
+          "path": "data/structural/external_full/transcoder_test/common_core/Python-to-Java/shard_00000.jsonl",
+          "records": 128,
+          "sha256": "fefc7218076f1464655db74538a6c06075abacab9dcd2a30049ded141d0141e2"
+        },
+        "Python-to-Java/shard_00001.jsonl": {
+          "input_sha256": "7a122f6bb04a8810cb768fb1218e7ef33790bbe9a0f7f117d7a18f269643935f",
+          "path": "data/structural/external_full/transcoder_test/common_core/Python-to-Java/shard_00001.jsonl",
+          "records": 128,
+          "sha256": "436469384f2c882092e2c182ee5c3ca3ca8beb9229d167f14518726c788c2050"
+        },
+        "Python-to-Java/shard_00002.jsonl": {
+          "input_sha256": "f75746cb5c4adc8c02e88f0fae4c4b96fd2ed961d0fc4613cb98c5265dc6beb9",
+          "path": "data/structural/external_full/transcoder_test/common_core/Python-to-Java/shard_00002.jsonl",
+          "records": 65,
+          "sha256": "5ab996217fd863cce5973910dca412ebd5811d45d0e7b3fc3ae89beda8691114"
+        }
+      },
+      "joern_manifest_sha256": "8b62803cf64c904eccff7faa580efd97f046ddc716504507e603f3af0490694c",
+      "status": "COMPLETE",
+      "totals": {
+        "cfg_edges": 50198,
+        "dfg_edges": 100534,
+        "joern_available": 1926,
+        "tasks": 1926
+      }
+    },
+    "full_directional": {
+      "ast_manifest_sha256": "86e8db78f25e911cadf9750ddc027000b2939a6c9ec485615f0ccab19f53320a",
+      "files": {
+        "C++-to-Java/shard_00000.jsonl": {
+          "input_sha256": "65bec96146d9a0c3f2cf287765f3e59d43370ac114d7c80f09a40dd9adc4a4e6",
+          "path": "data/structural/external_full/transcoder_test/full_directional/C++-to-Java/shard_00000.jsonl",
+          "records": 128,
+          "sha256": "ebdb9116b149f92177fe57d3d7b77057ab278cad1dc2416f2a9cf752da911f8a"
+        },
+        "C++-to-Java/shard_00001.jsonl": {
+          "input_sha256": "e94afac418837bfb0830b7582afe4f030dda44199ea0c962a48fdaea52a32251",
+          "path": "data/structural/external_full/transcoder_test/full_directional/C++-to-Java/shard_00001.jsonl",
+          "records": 128,
+          "sha256": "5911736470c5b462590887d094e64fd95cb1d403df0ff578100e4716d28d4962"
+        },
+        "C++-to-Java/shard_00002.jsonl": {
+          "input_sha256": "d0632ecbfaf0c354ff9d03db1adc9de0a51604f566d7179c4740ff6366f5d413",
+          "path": "data/structural/external_full/transcoder_test/full_directional/C++-to-Java/shard_00002.jsonl",
+          "records": 67,
+          "sha256": "abd60672192e0ab713109dcd90447eec8f6059a1a4b9291fbc3235cacb390dd0"
+        },
+        "C++-to-Python/shard_00000.jsonl": {
+          "input_sha256": "e754e8ed7e80b554ac7df8e740336715d695533335547a2ff6373df1ff160e82",
+          "path": "data/structural/external_full/transcoder_test/full_directional/C++-to-Python/shard_00000.jsonl",
+          "records": 128,
+          "sha256": "c6c67ace42aa8a0d677fb69d01e080fc4765ce2b2c1c18ecbad967643dff6c19"
+        },
+        "C++-to-Python/shard_00001.jsonl": {
+          "input_sha256": "7e92b9a15f53c4a98b896ae9214a5266203882799570712fb04f735e453c5113",
+          "path": "data/structural/external_full/transcoder_test/full_directional/C++-to-Python/shard_00001.jsonl",
+          "records": 128,
+          "sha256": "a853c38b2b25a59d357f0f26e99a011dbe88cc9084533bc1a3ffae0b3028955a"
+        },
+        "C++-to-Python/shard_00002.jsonl": {
+          "input_sha256": "50bf1653b5bbc2f6b70af9732e6279bc5353b293517ef91dd027e0fb2b6ca18f",
+          "path": "data/structural/external_full/transcoder_test/full_directional/C++-to-Python/shard_00002.jsonl",
+          "records": 67,
+          "sha256": "81944b139c0b6b069cf92216f9f972a91607814882d1f765bc4b09e7511a4b61"
+        },
+        "Java-to-C++/shard_00000.jsonl": {
+          "input_sha256": "74b44f523e2cab9656ca2000bd75cc27d741eae90375c5befdbd27c58a028aae",
+          "path": "data/structural/external_full/transcoder_test/full_directional/Java-to-C++/shard_00000.jsonl",
+          "records": 128,
+          "sha256": "56fb4e4c986fe1369c0afbea1d6f1de0f977f052d8e244815fb262c70617e4df"
+        },
+        "Java-to-C++/shard_00001.jsonl": {
+          "input_sha256": "f82fa1882958119e9c0d0989d5fc3e0e3e3a1904a1736d3a90e8b6e9c64d6e9d",
+          "path": "data/structural/external_full/transcoder_test/full_directional/Java-to-C++/shard_00001.jsonl",
+          "records": 128,
+          "sha256": "e078a5a1d4cd840fdbe5221f84eb60a4d30cf5c69f41f9db914796b2ad6ab90b"
+        },
+        "Java-to-C++/shard_00002.jsonl": {
+          "input_sha256": "146bb4708443f963dfd9a253dc74085982185453334e9cd0093b7ca85d321c03",
+          "path": "data/structural/external_full/transcoder_test/full_directional/Java-to-C++/shard_00002.jsonl",
+          "records": 67,
+          "sha256": "1fffa1b169f9ed8df6f072240201ab6191467e5f2487881d3d353e2e6e716918"
+        },
+        "Java-to-Python/shard_00000.jsonl": {
+          "input_sha256": "3ea1295233e6ba3fc1b1e707f0547f9e9eb7050296d0e19fa9b783c9d3160f03",
+          "path": "data/structural/external_full/transcoder_test/full_directional/Java-to-Python/shard_00000.jsonl",
+          "records": 128,
+          "sha256": "d4c387eeb5ac8b51905f2efafc96900dbf4e269481cb2dd870be205c7d4341f6"
+        },
+        "Java-to-Python/shard_00001.jsonl": {
+          "input_sha256": "95727e67fec95b4c56a62260c0f0f5417160397d353a111d6df4433fce707034",
+          "path": "data/structural/external_full/transcoder_test/full_directional/Java-to-Python/shard_00001.jsonl",
+          "records": 128,
+          "sha256": "8e622be5ea966b7e4a223730d7095c02dfb965bd09a8ea284d2bbc1ea257981b"
+        },
+        "Java-to-Python/shard_00002.jsonl": {
+          "input_sha256": "2d2ca65c116a80a6c5fcf5bfd559b4b44039e21b3dea2cf76667bf3d74ad0889",
+          "path": "data/structural/external_full/transcoder_test/full_directional/Java-to-Python/shard_00002.jsonl",
+          "records": 66,
+          "sha256": "0c293ca692902586d9aebb3f5ef07d0a5808ce86fe09ba1a58e57ca26befca3b"
+        },
+        "Python-to-C++/shard_00000.jsonl": {
+          "input_sha256": "4f372addf05ae9ab783e8938482b513c1616acb58a8da6a9ed4d4cf45c0eb525",
+          "path": "data/structural/external_full/transcoder_test/full_directional/Python-to-C++/shard_00000.jsonl",
+          "records": 128,
+          "sha256": "bed246b7518a92e9be98a12fbb58f90d95e0497211d60721c351855664a8edb2"
+        },
+        "Python-to-C++/shard_00001.jsonl": {
+          "input_sha256": "18b90c1226085df298fc843290d6eab19e39e72389531844b59c581c16768b93",
+          "path": "data/structural/external_full/transcoder_test/full_directional/Python-to-C++/shard_00001.jsonl",
+          "records": 128,
+          "sha256": "468c06890611cd4c040eddc576c94af9b6e5e7e3bef4daaffe799225e593b5ea"
+        },
+        "Python-to-C++/shard_00002.jsonl": {
+          "input_sha256": "a04492e667a9b2281330d46568bae196b0bfac3c9aed1a9a4b7ce110afbe9384",
+          "path": "data/structural/external_full/transcoder_test/full_directional/Python-to-C++/shard_00002.jsonl",
+          "records": 67,
+          "sha256": "35fff1ce9cde10753f2a6bf8a061b652f38a39698fb243b5f21153710f7b266e"
+        },
+        "Python-to-Java/shard_00000.jsonl": {
+          "input_sha256": "e2f4d8dcaf32d6e214e08ad5c53df55de793a429766a7ee7b5f0ae547bc8ec7a",
+          "path": "data/structural/external_full/transcoder_test/full_directional/Python-to-Java/shard_00000.jsonl",
+          "records": 128,
+          "sha256": "2f5e1cec44d9b4dd3ecdebd81700208e6b3b820c92ccd42835d6b6ff21933ff4"
+        },
+        "Python-to-Java/shard_00001.jsonl": {
+          "input_sha256": "d7cf0b3f6d34bdfa860ec0645cb3d3eab228970a7d2450a63117e0523cc66053",
+          "path": "data/structural/external_full/transcoder_test/full_directional/Python-to-Java/shard_00001.jsonl",
+          "records": 128,
+          "sha256": "232978351189a902eab74f455887ab3bea210b3af848121a916351830c34e074"
+        },
+        "Python-to-Java/shard_00002.jsonl": {
+          "input_sha256": "54e90b4d229e9a8bb6d96c86241e764f11364e484b04dfd19338e16e6bc917dd",
+          "path": "data/structural/external_full/transcoder_test/full_directional/Python-to-Java/shard_00002.jsonl",
+          "records": 66,
+          "sha256": "52a1d13a2bdd4ba4f98cfac2947a096fdd6f1a406d7961857c381ae273ae7098"
+        }
+      },
+      "joern_manifest_sha256": "8b62803cf64c904eccff7faa580efd97f046ddc716504507e603f3af0490694c",
+      "status": "COMPLETE",
+      "totals": {
+        "cfg_edges": 50589,
+        "dfg_edges": 101455,
+        "joern_available": 1936,
+        "tasks": 1936
+      }
+    }
+  },
+  "status": "COMPLETE"
+}

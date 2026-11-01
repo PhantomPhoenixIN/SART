@@ -1,0 +1,72 @@
+{
+  "expected_file_count": 16,
+  "files": {
+    ".gitattributes": {
+      "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+      "size_bytes": 1519
+    },
+    "LICENSE": {
+      "sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+      "size_bytes": 11343
+    },
+    "README.md": {
+      "sha256": "0880554226072cd8b0b5510a134c9473ed8c7c900fc867eab988e8441b666bfa",
+      "size_bytes": 5193
+    },
+    "config.json": {
+      "sha256": "5d13166e27c8968f6dd7180059681ff25706271336983409dd6faabcfe804734",
+      "size_bytes": 663
+    },
+    "generation_config.json": {
+      "sha256": "215d4506cf90f3590fe821bee47dc92e99caa06f2c1b36076693b5209980009c",
+      "size_bytes": 139
+    },
+    "merges.txt": {
+      "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+      "size_bytes": 1671839
+    },
+    "model-00001-of-00006.safetensors": {
+      "sha256": "ba62fcb34d2c9bcb21171cdb39c134bf0673c6c18d52fb0ca2ea20a150cb41f8",
+      "size_bytes": 4986211280
+    },
+    "model-00002-of-00006.safetensors": {
+      "sha256": "316f429cf97cb98eba720f417623a0de060822ab2b77de6e345cdfeeef4a55b9",
+      "size_bytes": 4954847344
+    },
+    "model-00003-of-00006.safetensors": {
+      "sha256": "adcc7dd5c4fc98e80aaf28dc3e429218b15682829f3d040767e6715c10f16c9a",
+      "size_bytes": 4954847392
+    },
+    "model-00004-of-00006.safetensors": {
+      "sha256": "77dfd772103ec48921ffe727451fcbecbe7d0945ffc897db70651c2aa5e8cdfc",
+      "size_bytes": 4954847392
+    },
+    "model-00005-of-00006.safetensors": {
+      "sha256": "54fcee630189a97d339a1ec35715fc14c6e22e6f611a0a6ffef6d45d63fc0e20",
+      "size_bytes": 4954847392
+    },
+    "model-00006-of-00006.safetensors": {
+      "sha256": "09671dedf12d0cc96551fbaa81ff54b87d25a4a0b0523a3146d2d7169e33ed67",
+      "size_bytes": 4734533160
+    },
+    "model.safetensors.index.json": {
+      "sha256": "425811015c8708208c9efc04c4cfae250c7927a1b04c99dda5a9121caf4bf77a",
+      "size_bytes": 47472
+    },
+    "tokenizer.json": {
+      "sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+      "size_bytes": 7031645
+    },
+    "tokenizer_config.json": {
+      "sha256": "283ec39d07ebfd1904aa2dee3c7d73524ed96c489fdb3915629900d3ab3ac319",
+      "size_bytes": 7228
+    },
+    "vocab.json": {
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+      "size_bytes": 2776833
+    }
+  },
+  "repo_id": "Qwen/Qwen2.5-Coder-14B",
+  "revision": "f2ad5164aade432d6d56c24bb71589184d5d613d",
+  "status": "COMPLETE"
+}

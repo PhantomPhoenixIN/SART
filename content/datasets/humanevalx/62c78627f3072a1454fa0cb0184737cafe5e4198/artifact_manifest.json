@@ -1,0 +1,20 @@
+{
+  "files": {
+    "data/cpp/data/humaneval.jsonl": {
+      "sha256": "af420b4b58c1b5e7f4cac9c1257daad7b20b5c77e88d59ccc120e63825f03325",
+      "size_bytes": 303498
+    },
+    "data/java/data/humaneval.jsonl": {
+      "sha256": "2157a77a6ff808020adc20142228b4ff698048c0696b33110786400c47c5d79c",
+      "size_bytes": 474987
+    },
+    "data/python/data/humaneval.jsonl": {
+      "sha256": "f0e21637407b08a725dbc5bfcc20f909049f73564dd0d55dcc11619fa0838849",
+      "size_bytes": 342956
+    }
+  },
+  "repo_id": "zai-org/humaneval-x",
+  "repo_type": "dataset",
+  "revision": "62c78627f3072a1454fa0cb0184737cafe5e4198",
+  "status": "COMPLETE"
+}

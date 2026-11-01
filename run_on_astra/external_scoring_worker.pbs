@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+#PBS -q cpuq
+#PBS -l select=1:ncpus=4:mem=16gb
+#PBS -l walltime=96:00:00
+set -euo pipefail
+
+project_root="/home/swaminathanj/research_artifacts/SART"
+cd "${project_root}"
+: "${SART_BENCHMARK:?qsub must set SART_BENCHMARK}"
+: "${SART_SPLIT:?qsub must set SART_SPLIT}"
+: "${SART_MANIFEST:?qsub must set SART_MANIFEST}"
+: "${SART_PREDICTIONS:?qsub must set SART_PREDICTIONS}"
+: "${SART_OUTPUT_ROOT:?qsub must set SART_OUTPUT_ROOT}"
+: "${SART_SCORING_KEY:?qsub must set SART_SCORING_KEY}"
+: "${SART_ATTEMPT:?qsub must set SART_ATTEMPT}"
+printf 'scorer_source_sha256='
+sha256sum scripts/evaluate/score_external_predictions.py
+export PATH="${project_root}/env/bin:${PATH}"
+export TOKENIZERS_PARALLELISM=false
+export OMP_NUM_THREADS=1
+export OPENBLAS_NUM_THREADS=1
+export SART_ENVIRONMENT_DIR="experiments/${SART_SCORING_KEY}/attempts/${SART_ATTEMPT}/environment"
+bash scripts/reproduce/capture_environment.sh "${SART_SCORING_KEY}_attempt${SART_ATTEMPT}"
+
+args=(
+  --benchmark "${SART_BENCHMARK}"
+  --split "${SART_SPLIT}"
+  --manifest "${SART_MANIFEST}"
+  --predictions "${SART_PREDICTIONS}"
+  --output-root "${SART_OUTPUT_ROOT}"
+  --repeats 3
+  --workers 2
+)
+if [[ "${SART_BENCHMARK}" == "xcodeeval" ]]; then
+  : "${SART_XCODE_SELECTION:?xCodeEval scoring requires its frozen selection manifest}"
+  args+=(--xcode-selection "${SART_XCODE_SELECTION}")
+fi
+env/bin/python scripts/evaluate/score_external_predictions.py "${args[@]}"

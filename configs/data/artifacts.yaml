@@ -1,0 +1,69 @@
+# Upstream revisions audited on 2026-10-02. These refs are immutable commit IDs.
+# Dataset/model payload checksums are intentionally pending cache/download audit.
+models:
+  qwen2_5_coder_7b_base:
+    repo: Qwen/Qwen2.5-Coder-7B
+    revision: 0396a76181e127dfc13e5c5ec48a8cee09938b02
+    variant: base
+    license: Apache-2.0
+  qwen2_5_coder_14b_base:
+    repo: Qwen/Qwen2.5-Coder-14B
+    revision: f2ad5164aade432d6d56c24bb71589184d5d613d
+    variant: base
+    license: Apache-2.0
+  starcoder2_7b:
+    repo: bigcode/starcoder2-7b
+    revision: bb9afde76d7945da5745592525db122d4d729eb1
+    license: BigCode-OpenRAIL-M-v1
+datasets_and_tools:
+  joern_cli:
+    repo: joernio/joern
+    release: v4.0.644
+    asset: joern-cli-linux-x86_64.zip
+    official_sha256: 407358d2ccb506e4b3d8e674456fbc08a734e94add9f8d6a06136de2afae7110
+    status: downloaded_checksum_verified_extracted
+    archive: content/tools/joern/v4.0.644/joern-cli-linux-x86_64.zip
+    cli: content/tools/joern/v4.0.644/joern-cli
+  temurin_jdk:
+    distribution: Eclipse Temurin
+    version: 21.0.12.1+1
+    archive: OpenJDK21U-jdk_x64_linux_hotspot_21.0.12.1_1.tar.gz
+    official_sha256: ce79869e1307ed8ee1e2baa86a412b1eb5b75d10a01006d788a6f968bcfaee94
+    extracted_runtime: content/tools/temurin/21.0.12.1+1/runtime
+  xlcost_code:
+    repo: reddy-lab-code-research/XLCoST
+    revision: 3a7b3d242cea9afb8d621cdb835df3a23f988056
+    dataset_archive: https://drive.google.com/file/d/1Cp3vFITRaUEJwPoeI_uv0cC6KVyvDc4F/view
+    dataset_archive_filename: XLCoST_data.zip
+    dataset_license: UNKNOWN pending inspection of archive terms
+    repository_code_license: Apache-2.0
+  xcodeeval:
+    repo: NTU-NLP-sg/xCodeEval
+    revision: aa09386604075a3e80bcdb315dd68bcc117dedc0
+    license: CC-BY-NC-4.0
+  execeval:
+    repo: ntunlp/ExecEval
+    revision: dd693865a99bd32448c1ff0c40922951d940a0cd
+    license: MIT
+  transcoder:
+    repo: facebookresearch/TransCoder
+    revision: 1c21887dc55a88ea6535e669952d419256fbc24a
+    license: CC-BY-NC-4.0
+    official_test_archive: https://dl.fbaipublicfiles.com/transcoder/TransCoder_tokenized_test_set_functions.zip
+    auxiliary_test_harnesses: data/evaluation/geeks_for_geeks_successful_test_scripts
+  humaneval_x_data:
+    repo: zai-org/humaneval-x
+    revision: 62c78627f3072a1454fa0cb0184737cafe5e4198
+    license: Apache-2.0 (verified on pinned Hugging Face dataset page)
+  codegeex_evaluator:
+    repo: zai-org/CodeGeeX
+    revision: 2838420b7b4492cf3d16bce5320e26e65960c9e2
+    license: MIT (repository code; verify bundled benchmark data terms)
+  cotran:
+    repo: prithwishjana/cotran
+    revision: c02d3b4ef856c676c3924dd720824e581a30f1a5
+    license: UNKNOWN (verify)
+  avatar:
+    repo: wasiahmad/AVATAR
+    revision: 6ae262ec44178087974e8d57cb7c034a164547d6
+    license: CC-BY-SA-4.0 (official AVATAR repository; verify AVATAR-TC artifacts separately)

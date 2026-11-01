@@ -1,0 +1,85 @@
+{
+  "ast_manifest_sha256": "a2fd96c8c92b1756a0af9d2623ac4570eac4d613218b5f321bfa884a2e19c8b1",
+  "files": {
+    "C++-to-Java/shard_00000.jsonl": {
+      "input_sha256": "45ad35a5001c1a48f2294e90b825b5750abab54f2700f69df0c82099b79629fe",
+      "path": "data/structural/external_full/humanevalx/full_directional/C++-to-Java/shard_00000.jsonl",
+      "records": 128,
+      "sha256": "57a1e092fb0a765865bddbcd4fa5d3c98962f2c089f040859694d65c13f93709"
+    },
+    "C++-to-Java/shard_00001.jsonl": {
+      "input_sha256": "8b69c8c7ff5439b599022af1bc062c0ea1c4b05dba741a1bfa00db69550a59b8",
+      "path": "data/structural/external_full/humanevalx/full_directional/C++-to-Java/shard_00001.jsonl",
+      "records": 33,
+      "sha256": "df9f6d4f6be2f28e485684cd3cf7bee8f34f86a19d791b52e3f9cafcd2807281"
+    },
+    "C++-to-Python/shard_00000.jsonl": {
+      "input_sha256": "7ab5e1ffa2c06d9871235053bc29944ea29205104a830dd48f7c6c3b80060664",
+      "path": "data/structural/external_full/humanevalx/full_directional/C++-to-Python/shard_00000.jsonl",
+      "records": 128,
+      "sha256": "7cbd098b4b679292a57805e731842e0963602512a66c48a75a352c0fb638ddf4"
+    },
+    "C++-to-Python/shard_00001.jsonl": {
+      "input_sha256": "f554e2979e57243babc4f24487d93b0485c462eda76658f07990c1f829b59cc1",
+      "path": "data/structural/external_full/humanevalx/full_directional/C++-to-Python/shard_00001.jsonl",
+      "records": 29,
+      "sha256": "7c027a1f26b698baba262579ec2da224b38c4a751e3cc37387f80ebec2878772"
+    },
+    "Java-to-C++/shard_00000.jsonl": {
+      "input_sha256": "19612150030faecf888e30fd4a724192a82bc284f66c9b30de0f850c06d51274",
+      "path": "data/structural/external_full/humanevalx/full_directional/Java-to-C++/shard_00000.jsonl",
+      "records": 128,
+      "sha256": "edcdfcb7fa7eade97abff1552afb4e4eb17974d96083370e1928828386eb922d"
+    },
+    "Java-to-C++/shard_00001.jsonl": {
+      "input_sha256": "a3c792d6ed4228a87414fec6f8dad6d4709c266e084457c3751e6517028bd3ed",
+      "path": "data/structural/external_full/humanevalx/full_directional/Java-to-C++/shard_00001.jsonl",
+      "records": 33,
+      "sha256": "1d2f7a867c3f104f85fdff31c3a8d501d007d269d46950b3ca793b903f5085c8"
+    },
+    "Java-to-Python/shard_00000.jsonl": {
+      "input_sha256": "0273a62bfcfff348483667ac4d42f629c724df80a82b857849741fbdbe43e998",
+      "path": "data/structural/external_full/humanevalx/full_directional/Java-to-Python/shard_00000.jsonl",
+      "records": 128,
+      "sha256": "3ba44eb02852d358c32584c32c4bdea5ddce0c65021efecb2a0f910b1fdbdb47"
+    },
+    "Java-to-Python/shard_00001.jsonl": {
+      "input_sha256": "30610a01f494900017331078bc59d016bf0495e3c82c60faf5bed98221b77fe9",
+      "path": "data/structural/external_full/humanevalx/full_directional/Java-to-Python/shard_00001.jsonl",
+      "records": 32,
+      "sha256": "bd432a61d45c060d154d7f2d42cdbcec8370630d59f08f6b30d3223343c82af9"
+    },
+    "Python-to-C++/shard_00000.jsonl": {
+      "input_sha256": "b841fe04d1af59bc77b5bef7f4370d4d7c6759aa09da0745441f659ade2ccbe8",
+      "path": "data/structural/external_full/humanevalx/full_directional/Python-to-C++/shard_00000.jsonl",
+      "records": 128,
+      "sha256": "a029fc6d37899477e63d8bacd8b99ec6a9c87614aba2173ffdc83e5ff34a65b3"
+    },
+    "Python-to-C++/shard_00001.jsonl": {
+      "input_sha256": "f1692ddd2b5c57b530c7f2f9c6a5b434e6dc4105bea186656720aae035ddaf7e",
+      "path": "data/structural/external_full/humanevalx/full_directional/Python-to-C++/shard_00001.jsonl",
+      "records": 29,
+      "sha256": "aa6162d0e97af95152392d5455891606da8b0d09fd6b987d2bcaf1d5ba1b2b53"
+    },
+    "Python-to-Java/shard_00000.jsonl": {
+      "input_sha256": "c567e858348e09febdc1e3b649c1adc8f5559d3079ea251d78320cd6773bfd5c",
+      "path": "data/structural/external_full/humanevalx/full_directional/Python-to-Java/shard_00000.jsonl",
+      "records": 128,
+      "sha256": "01ecc1064fb8cdfe778fb686f579c30f27fb42f9406d6f4e1af1851bf0c16206"
+    },
+    "Python-to-Java/shard_00001.jsonl": {
+      "input_sha256": "22cd344e96c638d9d90ea004485fddeb38bae804a192bb36a6ea662a66ff9fc5",
+      "path": "data/structural/external_full/humanevalx/full_directional/Python-to-Java/shard_00001.jsonl",
+      "records": 32,
+      "sha256": "840175fbfceb1f06fd0a694168b5a053a14d8f2fb5bbe651853370d7b6d21a5f"
+    }
+  },
+  "joern_manifest_sha256": "8b62803cf64c904eccff7faa580efd97f046ddc716504507e603f3af0490694c",
+  "status": "COMPLETE",
+  "totals": {
+    "cfg_edges": 20298,
+    "dfg_edges": 38498,
+    "joern_available": 956,
+    "tasks": 956
+  }
+}

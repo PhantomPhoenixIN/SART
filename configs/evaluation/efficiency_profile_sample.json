@@ -1,0 +1,196 @@
+{
+  "direction_count": 6,
+  "per_direction": 4,
+  "purpose": "in-domain efficiency profiling only; no external outcomes or model predictions read",
+  "sample_count": 24,
+  "samples": [
+    {
+      "dataset_index": 402,
+      "direction": "C++-to-Java",
+      "problem_id": "4467",
+      "selection_sha256": "003ac87e658b2ec0bf0f9bf0dd6b912a67d13f24ddcada2ee90dac8430e6238d",
+      "source_sha256": "afdf82c8e590cf183b36ba495907acd995ea5686802c41ab924be49b9f766d06"
+    },
+    {
+      "dataset_index": 385,
+      "direction": "C++-to-Java",
+      "problem_id": "14024",
+      "selection_sha256": "008f9617bca213adb51a9c86a62b9e927459e90ab9b7d1502d5771c908456dd0",
+      "source_sha256": "71e9ae7fe342f366e0a1383f0e856259898648937209318c9d09b7d488f0f5ac"
+    },
+    {
+      "dataset_index": 286,
+      "direction": "C++-to-Java",
+      "problem_id": "8151",
+      "selection_sha256": "0209f533de524c308b9993886b93c658ccd6844f987c22972125a71d12467645",
+      "source_sha256": "dfaff49b40bad5dc9c1b91f99ccacad15233ae7f89c43259f4354e4e9efbb5a2"
+    },
+    {
+      "dataset_index": 40,
+      "direction": "C++-to-Java",
+      "problem_id": "13339",
+      "selection_sha256": "02308569f6032c0dd0b49f05b92b365b1547903c1d0b69875e0fe0bd025b37c8",
+      "source_sha256": "9081a5ced0e1fffb0ef3b80883fb366e7ee940d4bed12be57a6a6b7e58def942"
+    },
+    {
+      "dataset_index": 519,
+      "direction": "C++-to-Python",
+      "problem_id": "9419",
+      "selection_sha256": "003ce7a07b6d60c58f1d1a27e6f139024569f30501c0ddb5a087d775cc9f6a3b",
+      "source_sha256": "601c658a13833a8e745298d9362f8a040c056fa0521c8bee22ffc8f44aa1aa9b"
+    },
+    {
+      "dataset_index": 737,
+      "direction": "C++-to-Python",
+      "problem_id": "11817",
+      "selection_sha256": "006e16be0130a96e50dd7e73076d836eb18f433bfd325e39f1d2187a019977ad",
+      "source_sha256": "c62a961b5e108e0040eda89372acdac8a9adeb173c2b52f898d5979d9078806f"
+    },
+    {
+      "dataset_index": 738,
+      "direction": "C++-to-Python",
+      "problem_id": "11835",
+      "selection_sha256": "025de6d747187fda7e562b186f0fc2266fb84866f3f93a9419786a9395494125",
+      "source_sha256": "e623fbbc2c1edaf0b09993f15aa119f9bf96ab514c765c4f4af59e63ed3a4a4a"
+    },
+    {
+      "dataset_index": 802,
+      "direction": "C++-to-Python",
+      "problem_id": "5457",
+      "selection_sha256": "0463974219a3046e5608e3c30940f58f10cc4af2030e7e9528dd4d1a3cfa4bfd",
+      "source_sha256": "3e3eb9f598a8168846bfdfe51723a0a7f0e47fca562099e416f81f6cc4ad42ed"
+    },
+    {
+      "dataset_index": 1107,
+      "direction": "Java-to-C++",
+      "problem_id": "10239",
+      "selection_sha256": "002d61da0bfb230e181c3d995f4eb0ffba9bebc2482b5a0097b5791dd73d5b76",
+      "source_sha256": "19239d5cefbc2b839bb52e8f46099d96d92daab1917cab736ab333c9ed2527c8"
+    },
+    {
+      "dataset_index": 840,
+      "direction": "Java-to-C++",
+      "problem_id": "9108",
+      "selection_sha256": "00b857f33f008a5b0e42bd7e5d4d15a47afa72d66dec637396da2aa607b901e4",
+      "source_sha256": "cab4c2d2d13cf4842442ddd3d0b48e680f4a27deb2806963d5f0ed1895c2f438"
+    },
+    {
+      "dataset_index": 890,
+      "direction": "Java-to-C++",
+      "problem_id": "12043",
+      "selection_sha256": "012f35a1861cc4f502d3c83b887c8750e54bd47d8112e917fdbb620ca0f3dd6a",
+      "source_sha256": "a738de47febfa66fa750ecf0c72f0d37fc8e0447d1e696db990914bff21fee39"
+    },
+    {
+      "dataset_index": 870,
+      "direction": "Java-to-C++",
+      "problem_id": "1528",
+      "selection_sha256": "0135417a17f23a2083aafe73fed0c5876334155ce99098cec72d1c27a3ee3518",
+      "source_sha256": "5607bc55c15e8b520f2cbcdc50c39111048a5deb17f0a38bd6ccb6eb93cfc368"
+    },
+    {
+      "dataset_index": 1544,
+      "direction": "Java-to-Python",
+      "problem_id": "11537",
+      "selection_sha256": "00245a726d3466e6e61d876ac5664145ffbcdf05ac18c2456af8d22e71e90e5a",
+      "source_sha256": "adaa8566a804518ec0ef5c508ba5361937a9123fdfd91c7bde7fd8f95ee0859c"
+    },
+    {
+      "dataset_index": 1576,
+      "direction": "Java-to-Python",
+      "problem_id": "13588",
+      "selection_sha256": "005a05935eaca7d3d82d33cda4eaed21e9747ed442739ed08a1c51a32c17f7d3",
+      "source_sha256": "0e9e5a27ccc8f190c7ff13e363971e3bea60ff13c5a1b4b856c5373c166f34cc"
+    },
+    {
+      "dataset_index": 1494,
+      "direction": "Java-to-Python",
+      "problem_id": "8445",
+      "selection_sha256": "0098a9e54859ab864c1e7c7b13734ff72188c650bf1cbef1b680a4ffacd9b563",
+      "source_sha256": "5b2620eec844e7cef36761df09ffe3148fbebeef87dac60b75c9eeb0eba38f20"
+    },
+    {
+      "dataset_index": 1547,
+      "direction": "Java-to-Python",
+      "problem_id": "11817",
+      "selection_sha256": "009e53e641e7f9b59bf6a5f314f467c42e82066aea6e8673601bb8c7de6b81c2",
+      "source_sha256": "ec8216bcdb788d27dde3daa6e3f054a418617c0452416d0116debd24e1cabbc6"
+    },
+    {
+      "dataset_index": 1671,
+      "direction": "Python-to-C++",
+      "problem_id": "3894",
+      "selection_sha256": "0030e52ccbe880cd4fd329d136449e9b2d6b807b7798985b68022582d8e4cdf4",
+      "source_sha256": "f60826cbef0c749c687c78a49a31f1c3e922f187c9d8cd6e872fd3d7d8613bbe"
+    },
+    {
+      "dataset_index": 1901,
+      "direction": "Python-to-C++",
+      "problem_id": "10608",
+      "selection_sha256": "008fa3404be852a8a6e704382a906e3b95264062a86a64f0264d0f9bfcc4adae",
+      "source_sha256": "41cf32902a28d14f6adcb0df3167247dc96b40d8faaf1538bb1e572298725b68"
+    },
+    {
+      "dataset_index": 1955,
+      "direction": "Python-to-C++",
+      "problem_id": "12375",
+      "selection_sha256": "00ba084c9bf5fdd7e43c5d3b970bf51516c7cf6fd55f63cee736934f8c4bc4ac",
+      "source_sha256": "f8053eea2b3fd37613bf1168ca288284317a8ce7cd2f9c9642b70095a5962479"
+    },
+    {
+      "dataset_index": 1646,
+      "direction": "Python-to-C++",
+      "problem_id": "8150",
+      "selection_sha256": "00c550caca9c41619fc993a3d1133e9c03e27f362ba322e807afda1d11eb49c6",
+      "source_sha256": "7ee79462d82a49efc2b0d9d27e0e4b7a0f4a507c560fea861f9d08333361119f"
+    },
+    {
+      "dataset_index": 2151,
+      "direction": "Python-to-Java",
+      "problem_id": "1711",
+      "selection_sha256": "01591f5e85e34d54779d88200158d09a4814c30a02410e30ebd657615fde5118",
+      "source_sha256": "bb3a6605c4d6dc3933261ad87a616501d8141f778358039bea8d38cd582b800b"
+    },
+    {
+      "dataset_index": 2397,
+      "direction": "Python-to-Java",
+      "problem_id": "6090",
+      "selection_sha256": "02cbebd4659122aadb22a60ed46dba459490e9618e5cd27cf2fdb58b612faea3",
+      "source_sha256": "c104151582782dd6c7ba309b9c9b24381132bc46bdbc523e831f17c7ad5eaacc"
+    },
+    {
+      "dataset_index": 2195,
+      "direction": "Python-to-Java",
+      "problem_id": "2781",
+      "selection_sha256": "0422f45b40347d5ea85069dea423aebe74023bd60c7b6427ace84624a958d15a",
+      "source_sha256": "898b2bca701ba336b9ff7c1df95830f890e8bfae673e01636ec91f401f83dc1c"
+    },
+    {
+      "dataset_index": 2049,
+      "direction": "Python-to-Java",
+      "problem_id": "13741",
+      "selection_sha256": "0461be3037553f43f6d38a03ac5b1c098d7d24db73b8d58a4d412307ce1bd419",
+      "source_sha256": "216b5067fee3baf049dff0335353dd459871888faba1a627e3f470c535765c47"
+    }
+  ],
+  "schema_version": 1,
+  "selection": "lowest SHA256(SART-efficiency-profile-v1|direction|problem_id) within direction",
+  "status": "FROZEN_PREMODEL",
+  "validation_example_count": 2398,
+  "validation_manifest_sha256": "df52230ef4569b05718abfcbc069ff30d9ed823f2ad8c22866888b8cef25e9c6",
+  "validation_shard_sha256": {
+    "validation/validation/C++-to-Java/shard_00000.jsonl": "a9db856b056f066208ff8a1036f7011aba0cc19a279e291397479bbd76d73592",
+    "validation/validation/C++-to-Java/shard_00001.jsonl": "68b09f6f9fa2fc80161424eabdd16ea48ca146f81766d9270f746effce1a3225",
+    "validation/validation/C++-to-Python/shard_00000.jsonl": "90335bb08ba00e89d21216b8494e07e8cc8aafd4a5888a545507407e1b36c27d",
+    "validation/validation/C++-to-Python/shard_00001.jsonl": "0cd23c33e5b5c67e5bc3b6da1f4d5987b84d7b8b990cfc537266d0de693778a5",
+    "validation/validation/Java-to-C++/shard_00000.jsonl": "84a2939858880429d6297b24c52e430a4e7b31a832548e8ca14e2e118cd5bc36",
+    "validation/validation/Java-to-C++/shard_00001.jsonl": "fdca56191578f36bc2b13cff1ce267903492d51fb3dfc4df0417e13f1b7f316d",
+    "validation/validation/Java-to-Python/shard_00000.jsonl": "8efc3c9d38715a7c8c3c4b5f7049c42ca5f6225f4fd857afcaca416b47248c51",
+    "validation/validation/Java-to-Python/shard_00001.jsonl": "dfcf78b977ea004e2571c2fac68bcdd2f07a567c2f96d1956170a26d3ce79962",
+    "validation/validation/Python-to-C++/shard_00000.jsonl": "ff9798fdcbdb606badb0e370099ce0359a9b27af1f2c4c76e9d16dca09be8877",
+    "validation/validation/Python-to-C++/shard_00001.jsonl": "e4de08b54d03c1d08caa057f979a7e780d7352fdbdc1ca1484f5c10f9f604f4b",
+    "validation/validation/Python-to-Java/shard_00000.jsonl": "d1f456a8d94d29975149c41789fafa58383b2e9f1aaa12cdfc3ec6c76363f8cb",
+    "validation/validation/Python-to-Java/shard_00001.jsonl": "f4cbc698de4b37a2d1ba5f3b5970516bb56836eeb183e9389d1d54a13caca99b"
+  },
+  "validation_source_manifest_sha256": "0d05aefb122106bc288d89e0396de12e62b79f12c7990d8de6efd591b78a65be"
+}

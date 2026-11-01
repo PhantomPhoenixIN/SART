@@ -1,0 +1,28 @@
+{
+  "files": {
+    "code_translation/test/C++.jsonl": {
+      "sha256": "8020d465891e7673c69de7de32b1032daefedebeac7597054a4107efab69c5ce",
+      "size_bytes": 4501723
+    },
+    "code_translation/test/Java.jsonl": {
+      "sha256": "fc89d71af872ef8e8e3aab6a4a0a6cc27fda2f894748046524f9388846e98222",
+      "size_bytes": 7597577
+    },
+    "code_translation/test/Python.jsonl": {
+      "sha256": "f20c4c9bb89e9c10d5ff2961e3afb01c19fb31b35f9af0d1b3f1a0373202f638",
+      "size_bytes": 1895701
+    },
+    "problem_descriptions.jsonl": {
+      "sha256": "bda417d0e06ded34ee62255b84ac386e8535137b82f8c4f905adda0b93d9f78b",
+      "size_bytes": 18159029
+    },
+    "unittest_db.json": {
+      "sha256": "26b0b526ad96f7abbf11057b9547febf8237ce0bff00cad96fefc650e34374d5",
+      "size_bytes": 11346609
+    }
+  },
+  "repo_id": "NTU-NLP-sg/xCodeEval",
+  "repo_type": "dataset",
+  "revision": "aa09386604075a3e80bcdb315dd68bcc117dedc0",
+  "status": "COMPLETE"
+}

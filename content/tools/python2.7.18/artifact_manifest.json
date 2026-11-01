@@ -1,0 +1,8 @@
+{
+  "runtime": "CPython 2.7.18",
+  "upstream": "https://www.python.org/ftp/python/2.7.18/Python-2.7.18.tar.xz",
+  "upstream_sha256": "b62c0e7937551d0cc02b8fd5cb0f544f9405bafc9a54d3808ed4594812edef43",
+  "prefix_in_sandbox": "/opt/python2",
+  "build_job": "25578.hn01",
+  "build_flags": "--enable-unicode=ucs4 --disable-shared; make -j4"
+}

@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+#PBS -N sart_humanevalx_refs
+#PBS -q cpuq
+#PBS -l select=1:ncpus=8:mem=64gb
+#PBS -l walltime=96:00:00
+#PBS -j oe
+set -euo pipefail
+
+project_root="/home/swaminathanj/research_artifacts/SART"
+cd "${project_root}"
+export PATH="/apps/apps/gcc/gcc-12.3.0/gc/bin:${PATH}"
+export LD_LIBRARY_PATH="/apps/apps/gcc/gcc-12.3.0/gc/lib64:/apps/apps/gcc/gcc-12.3.0/gc/lib:${LD_LIBRARY_PATH:-}"
+export PYTHONPATH="${project_root}"
+export OMP_NUM_THREADS=1
+export OPENBLAS_NUM_THREADS=1
+export MKL_NUM_THREADS=1
+
+mkdir -p experiments/humanevalx_reference_preflight_20261002
+{
+  date -Is
+  hostname
+  module list 2>&1
+  content/tools/python3.11/stage/opt/python3/bin/python3.11 --version
+  content/tools/temurin/21.0.12.1+1/runtime/bin/java -version 2>&1 | head -3
+  /apps/apps/gcc/gcc-12.3.0/gc/bin/g++ --version | head -1
+} > experiments/humanevalx_reference_preflight_20261002/environment.txt
+
+exec env/bin/python scripts/evaluate/preflight_humanevalx_references.py \
+  --output-root outputs/humanevalx_reference_preflight \
+  --workers 3 --repeats 3 --timeout-seconds 30

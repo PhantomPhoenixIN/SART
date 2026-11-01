@@ -1,0 +1,200 @@
+QUALITATIVE ANALYSIS OF TRANSLATION OUTCOMES
+A Systematic Study of Recurrent Computation Allocation in Code Translation
+
+Scope and method
+----------------
+This analysis uses the original Protocol v3, sample-0 predictions and execution
+results for Qwen2.5-Coder-7B, seed 42, on the frozen xCodeEval Common-Core set.
+The same 1,992 problem-direction tasks (332 problems x six directions) are
+present for all seven architectures: Dense (standard Transformer), Uniform
+Token Loop, Uniform Region Loop, MoR-style, Random Region, Region Adaptive No
+Graph, and Full-SART. All comparisons below are paired on task ID and seed.
+The scores are from the project's pinned local execution harness, not the
+official ExecEval service. A pass means the generated program passed every
+available hidden input in that harness. This is an exploratory single-seed
+qualitative analysis, not a preregistered estimate of an architecture effect.
+
+Examples were chosen after observing outcomes. Selection favored short source
+programs that expose distinct failure mechanisms and included a counterexample
+to any simple claim that region recurrence always helps. They are explanatory
+cases, not a representative sample. Code snippets below are verbatim excerpts
+of stored predictions; omitted imports or surrounding statements are never
+used to infer a score. Test counts and diagnostics are from the corresponding
+stored execution records. The reproducibility paths and task IDs appear below.
+
+Observed outcome and failure-status landscape
+---------------------------------------------
+These are exhaustive counts of primary *harness statuses* for this seed. They
+are not a manual semantic-error taxonomy. In particular, "runtime passed,
+tests failed" cannot by itself distinguish a wrong condition, incorrect I/O,
+overflow, or an edge-case error. The two context overflows per architecture and
+the occasional reference/setup errors are kept separate from model-code errors.
+
+Architecture                Pass   Compile failure   Runtime error   Runtime passed,
+                                                                       tests failed   Other
+Dense                        526       518                494              452           2
+Uniform Token Loop           580       479                446              484           3
+Uniform Region Loop          583       489                475              442           3
+MoR-style                    522       493                519              455           3
+Random Region                561       476                514              438           3
+Region Adaptive No Graph     509       520                503              458           2
+Full-SART                    517       498                512              463           2
+
+Every row totals 1,992. "Other" is context_overflow (two in each row) plus
+reference_setup_error (one each for Token Loop, Region Loop, MoR-style, and
+Random Region). These categories reflect the runner's recorded status; some
+nominal compile failures can arise from the execution environment rather than
+invalid generated syntax. For example, the Full-SART program in task
+C++-to-Java/dcaff75492eafaf61d598779d6202c9d prints "25" in valid Java,
+but its record says compile_failure with an empty diagnostic. That record is
+not evidence of a model syntax error and is excluded from the cases below.
+
+The descriptive pass counts correspond to 26.41% (Dense), 29.12% (Token
+Loop), 29.27% (Region Loop), 26.20% (MoR-style), 28.16% (Random Region),
+25.55% (Graph-Free Adaptive), and 25.95% (Full-SART). These are task-level
+fractions for one seed; they do not replace the paper's direction-macro,
+three-seed, problem-clustered statistical results. Region Loop passes 261
+tasks that Dense fails; Dense passes 204 that Region Loop fails. Random Region
+passes 230 tasks that Full-SART fails. These discordances make paired case
+analysis more informative than a ranking of aggregate percentages alone.
+
+Comparative case studies
+------------------------
+1. Input contract lost while arithmetic is largely retained.
+   Task: Python-to-Java/031e53952e76cff8fdc0988bb0d3239c.
+   Source: n=input();print int(1.5*n)
+   Dense generates "int n = 4" and Full-SART generates "n = 10" rather
+   than reading standard input; both compile and fail 23/23 hidden inputs.
+   Token Loop similarly fixes n=15 and fails 23/23. Region Loop reads n with
+   Scanner and prints Math.round(1.5*n), passing 23/23. MoR-style computes
+   from a hard-coded n=4 and fails 23/23. Graph-Free Adaptive hard-codes
+   n=14 and fails 23/23. This is an I/O contract failure visible directly
+   in the generated programs. The Region Loop output is correct on the
+   available tests; Math.round and Python's int conversion are not generally
+   equivalent for all real values, so the example does not establish
+   unrestricted semantic equivalence.
+
+2. Language-specific expression and input translation.
+   Task: Python-to-C++/d87ce09acb8401e910ca6ef3529566f4.
+   Source: print(max(1, 4 * int(int(input()) * 2 ** 0.5)))
+   Region Loop emits "int i; cin >> i; cout << max(1, 4 * int(i * sqrt(2)))"
+   and passes 56/56 tests. MoR-style and Graph-Free Adaptive produce the
+   corresponding correct C++ input-and-sqrt pattern and also pass 56/56.
+   Dense and Token Loop call getline/stoi with an undeclared str and fail
+   compilation. Random Region uses an undeclared s. Full-SART emits
+   "pow(stoi(input()), 0.5)" inside C++; its compiler diagnostic identifies
+   undeclared input, and it passes 0/56. The visible error is a failure to
+   replace a Python input idiom with valid C++ I/O. It does not establish
+   which internal representation caused that failure.
+
+3. Explicit structure does not prevent a Java checked-exception error.
+   Task: Python-to-Java/c8378e6fcaab30d15469a55419f38b39.
+   Source: n,m=map(int,input().split())
+           print(n+m-1-min(n,m),min(n,m))
+   Dense, Token Loop, Region Loop, MoR-style, and Random Region all read two
+   inputs and pass 40/40 tests. Full-SART uses BufferedReader.readLine()
+   inside main without catching or declaring IOException. The stored javac
+   diagnostic says "unreported exception IOException; must be caught or
+   declared to be thrown"; it passes 0/40. Graph-Free Adaptive also fails
+   40/40, but for a different, directly visible reason: it fixes n=3,m=4
+   and prints the two quantities in reverse order. This case isolates an
+   observable compilation problem in Full-SART; source-region labels alone
+   cannot establish why its decoder chose that API pattern.
+
+4. Numeric representation and boundary behavior.
+   Task: Python-to-C++/f1b43baa14d4c262ba616d892525dfde.
+   Source: a = int(input()); print(2**(a+1)-2)
+   Dense and Graph-Free Adaptive use "(1LL << (a + 1)) - 2" and pass 10/10.
+   Region Loop and Full-SART use "(1 << (a + 1)) - 2" and pass only 5/10.
+   Token Loop, MoR-style, and Random Region use pow(2, a + 1) - 2 and also
+   pass 5/10. The source and predictions suggest integer-width or floating
+   representation as candidate explanations. The score files do not expose
+   the specific failing inputs for this task, so neither overflow nor
+   floating-point rounding is confirmed as the actual trigger. The case
+   supports the narrower observation that seemingly equivalent numeric
+   translations diverge on half of the hidden tests.
+
+5. Counterexample: fixed region recurrence can still discard the input.
+   Task: Python-to-Java/758d342c1badde6d0b4db81285be780c.
+   The source reads n, starts sum at 1, adds 4*i for i in range(1,n), and
+   prints sum. Dense, MoR-style, Random Region, and Graph-Free Adaptive read
+   n and pass 60/60. Token Loop, Region Loop, and Full-SART reproduce the
+   loop but assign constant n=5, n=10, and n=7 respectively; all fail
+   60/60. Thus additional or region-level recurrent computation does not
+   guarantee retention of the input contract. This directly balances case 1.
+
+6. A formula is changed despite a usable source structure.
+   Task: Python-to-C++/e87d9798107734a885fd8263e1431347.
+   The source reads k,n,w, computes ((2*k+k*(w-1))*w)//2, and prints the
+   excess over n, floored at zero. Dense, Token Loop, Region Loop, MoR-style,
+   and Random Region retain the division by two and pass 15/15 tests.
+   Graph-Free Adaptive omits that division and fails 15/15. Full-SART emits
+   "s = (2 * k * w * w) + (k * w * w) / 2", also failing 15/15. All seven
+   outputs compile, so the paired difference here is a visible arithmetic
+   error rather than a syntax or target-API error. Full-SART's prediction
+   record lists 17 source regions, including ARITHMETIC, COMPARISON, and
+   CONDITIONAL regions, each at expected depth 3.0. Explicit structure did
+   not ensure preservation of the arithmetic expression in this instance;
+   the records do not show why.
+
+Structural guidance and routing observations
+--------------------------------------------
+Cases 2, 3, and 6 meet the outcome contrast needed for studying structural
+guidance: Full-SART fails while a graph-free or randomly grouped comparator
+passes. In case 2 the stored source-region diagnostics list nine regions
+(PROGRAM, CALL, ARITHMETIC); in case 3 they list twelve (PROGRAM, ASSIGNMENT,
+CALL, MEMBER_ACCESS, ARITHMETIC); case 6 lists seventeen. This shows that
+semantic regions were produced for these sources. It does not validate graph edges, feature values,
+message delivery, or the causal effect of those features on decoded tokens.
+The serialized per-region source_features in these inspected predictions have
+null CFG and DFG degree fields. That field alone is insufficient to conclude
+that the complete structural cache had no graph, or that graph processing
+failed; a separate cache and model-trace audit would be needed.
+
+The inference-time region diagnostics provide one more useful constraint on
+mechanistic speculation. In each of cases 2, 3, 4, 5, and 6, every reported
+Full-SART source region has expected depth 3.0, and each prediction's mean
+recurrence depth is 3.0. The failure of those examples therefore cannot be
+explained by a claim that a visible source region halted at depth 1 in the
+stored trace. Graph-Free Adaptive shows mostly depth 2 with one or two regions
+at depth 1 in the same examples, yet passes cases 2 and 4. This is an
+association in five selected cases, not proof that shallower recurrence helps.
+The stored traces are prefill region-depth summaries, not token-level causal
+attribution maps or counterfactual graph interventions. A token/region heatmap
+would be descriptive, but the present records cannot identify which depth
+choice caused a given output error.
+
+Interpretation and reporting limits
+-----------------------------------
+Across these six cases, the directly observed failure modes are ignored input,
+invalid target-language API use, an unhandled checked exception, a changed
+arithmetic formula, and numeric translations with partial test failures. They span both recurrent and
+standard models. The Full-SART versus Random Region difference cannot be
+assigned to graph quality or routing from prediction text alone. The uniform
+Region Loop advantages in cases 1 and 2 likewise do not establish that
+region boundaries caused the successful outputs. The supported paper claim is
+that architectures yield different, paired executable failure patterns; the
+internal causes remain hypotheses.
+
+This analysis deliberately uses one seed for close reading. A publication
+version should either apply an explicit manual coding protocol to a
+stratified, seed-inclusive sample or state clearly that these examples are
+illustrative. A semantic failure-category frequency chart should not be
+constructed from the broad harness statuses above without inspecting the
+actual predictions and, for boundary failures, the failing test inputs. No
+new model training is required for that extension.
+
+Artifact provenance
+-------------------
+Frozen task selection: data/manifests/xcodeeval_common_core_manifest.json
+Original source code: content/datasets/xcodeeval/
+  aa09386604075a3e80bcdb315dd68bcc117dedc0/code_translation/test/*.jsonl
+Prediction records: reports/predictions/protocol_v3/
+  0396a76181e127dfc13e5c5ec48a8cee09938b02/<experiment_id>/
+  xcodeeval/common_core/<direction>/<task_hash>.json
+Execution records: reports/results/protocol_v3/ (same suffix as predictions)
+The task_hash filename is the first 20 hexadecimal characters of
+SHA256("<direction>/<problem_id>"). Select experiment_id by architecture and
+seed 42. The generated_code field is sample 0, matching pass_at_1 in the
+execution record. The task's problem_id, source_sha256, and
+prediction_record_sha256 provide additional join checks.

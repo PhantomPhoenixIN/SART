@@ -1,0 +1,34 @@
+# Freeze normalization rules before any external-model output is inspected.
+exact_raw:
+  normalization: CRLF/CR-to-LF only
+  remove_comments: false
+  include_in_string_literals: true
+lexical:
+  tokenizer: tree_sitter_leaf_tokens
+  remove_comments: true
+  preserve_string_and_numeric_literals: true
+identifier_normalized:
+  rename_local_identifiers_by_first_occurrence: true
+  preserve_keywords_builtins_api_and_type_names: true
+structural:
+  fingerprint: normalized_tree_sitter_ast
+near_duplicate:
+  method: token_5gram_minhash
+  permutations: 256
+  candidate_jaccard_threshold: 0.80
+  final_exact_jaccard_threshold: 0.85
+  min_tokens: 40
+training_exclusion_policy:
+  group_by_problem_id_before_pairing: true
+  if_training_code_matches_validation_or_test_under_any_frozen_normalization: drop_entire_training_problem
+  cross_benchmark_match: drop_entire_training_problem
+  retain_external_examples: true
+  record_removed_problem_ids_and_rules: true
+xlcost_pairing:
+  max_pairs_per_problem_per_direction: 1
+  preserve_official_aligned_program_pair: true
+  if_any_side_fails_parse_after_frozen_detokenization: exclude_pair_and_record_reason
+  apply_same_filtered_training_pair_manifest_to_all_architectures: true
+external_benchmarks:
+  xcodeeval_train_data_used: false
+  canonical_task_exclusions_only_before_prediction_inference: true

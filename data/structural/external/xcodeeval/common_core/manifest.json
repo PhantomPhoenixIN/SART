@@ -1,0 +1,188 @@
+{
+  "ast_coverage": 0.964859437751004,
+  "benchmark": "xcodeeval",
+  "completed_shards": {
+    "C++-to-Java:00000": {
+      "ast_available": 114,
+      "bytes": 2917605,
+      "mapped_source_tokens": 46220,
+      "path": "data/structural/external/xcodeeval/common_core/C++-to-Java/shard_00000.jsonl",
+      "sha256": "87660d1b2e4a7630a2186aaae2990f5f7dc07553ce880cab6fefdeca8dcfe590",
+      "source_tokens": 46223,
+      "tasks": 128
+    },
+    "C++-to-Java:00001": {
+      "ast_available": 118,
+      "bytes": 3639659,
+      "mapped_source_tokens": 43741,
+      "path": "data/structural/external/xcodeeval/common_core/C++-to-Java/shard_00001.jsonl",
+      "sha256": "1425930dfd43e30514b82790a5e48f6a079efb1ae0dabe0fe77a123b7c18cc12",
+      "source_tokens": 43744,
+      "tasks": 128
+    },
+    "C++-to-Java:00002": {
+      "ast_available": 65,
+      "bytes": 2234974,
+      "mapped_source_tokens": 28312,
+      "path": "data/structural/external/xcodeeval/common_core/C++-to-Java/shard_00002.jsonl",
+      "sha256": "34f651f3432052926f6c69f28b5fcbc4fd76046aaa9eae162d38d7ae22747182",
+      "source_tokens": 28313,
+      "tasks": 76
+    },
+    "C++-to-Python:00000": {
+      "ast_available": 114,
+      "bytes": 2918373,
+      "mapped_source_tokens": 46220,
+      "path": "data/structural/external/xcodeeval/common_core/C++-to-Python/shard_00000.jsonl",
+      "sha256": "e12a6323c286ab7d42b9b4b181303acd8a0250b472ff58afba11074d16a70a6a",
+      "source_tokens": 46223,
+      "tasks": 128
+    },
+    "C++-to-Python:00001": {
+      "ast_available": 118,
+      "bytes": 3640427,
+      "mapped_source_tokens": 43741,
+      "path": "data/structural/external/xcodeeval/common_core/C++-to-Python/shard_00001.jsonl",
+      "sha256": "5648e214a00a19bae0cd10afeff748a0047e9789e33d603f993c14034a88a003",
+      "source_tokens": 43744,
+      "tasks": 128
+    },
+    "C++-to-Python:00002": {
+      "ast_available": 65,
+      "bytes": 2235430,
+      "mapped_source_tokens": 28312,
+      "path": "data/structural/external/xcodeeval/common_core/C++-to-Python/shard_00002.jsonl",
+      "sha256": "173a951d23bed4753014ec0be75c68313168bdc536d9a7b0dd8b103a198af0f5",
+      "source_tokens": 28313,
+      "tasks": 76
+    },
+    "Java-to-C++:00000": {
+      "ast_available": 128,
+      "bytes": 6614975,
+      "mapped_source_tokens": 73267,
+      "path": "data/structural/external/xcodeeval/common_core/Java-to-C++/shard_00000.jsonl",
+      "sha256": "99e97e3df4ad2b9edc564820069c3781e3d9efc2ec2d88906c65aeb595b0b6cc",
+      "source_tokens": 73269,
+      "tasks": 128
+    },
+    "Java-to-C++:00001": {
+      "ast_available": 128,
+      "bytes": 7013800,
+      "mapped_source_tokens": 77403,
+      "path": "data/structural/external/xcodeeval/common_core/Java-to-C++/shard_00001.jsonl",
+      "sha256": "cdec59a6cf5a599909f7a27bb10b14c592e954e9674b1743dcad5929d832b331",
+      "source_tokens": 77406,
+      "tasks": 128
+    },
+    "Java-to-C++:00002": {
+      "ast_available": 76,
+      "bytes": 4002631,
+      "mapped_source_tokens": 45292,
+      "path": "data/structural/external/xcodeeval/common_core/Java-to-C++/shard_00002.jsonl",
+      "sha256": "e6b74f736a30d5ff621ce989a355e7c65e3e5d475e7056c7959ea1f3c92fe121",
+      "source_tokens": 45293,
+      "tasks": 76
+    },
+    "Java-to-Python:00000": {
+      "ast_available": 128,
+      "bytes": 6615836,
+      "mapped_source_tokens": 73267,
+      "path": "data/structural/external/xcodeeval/common_core/Java-to-Python/shard_00000.jsonl",
+      "sha256": "bea04a43b84084c01a4942467d916d8f48b833959b4760ea5ce172f93aa17a45",
+      "source_tokens": 73269,
+      "tasks": 128
+    },
+    "Java-to-Python:00001": {
+      "ast_available": 128,
+      "bytes": 7014654,
+      "mapped_source_tokens": 77403,
+      "path": "data/structural/external/xcodeeval/common_core/Java-to-Python/shard_00001.jsonl",
+      "sha256": "43839786e254dece275d28de66ca8af9d46ad3ce623c63809ca84a5ba30bfbe4",
+      "source_tokens": 77406,
+      "tasks": 128
+    },
+    "Java-to-Python:00002": {
+      "ast_available": 76,
+      "bytes": 4003131,
+      "mapped_source_tokens": 45292,
+      "path": "data/structural/external/xcodeeval/common_core/Java-to-Python/shard_00002.jsonl",
+      "sha256": "cb10be236ac796bd260c9759ec53ff74e0cd8f40c5860f93608d696194e0509a",
+      "source_tokens": 45293,
+      "tasks": 76
+    },
+    "Python-to-C++:00000": {
+      "ast_available": 128,
+      "bytes": 2796516,
+      "mapped_source_tokens": 69658,
+      "path": "data/structural/external/xcodeeval/common_core/Python-to-C++/shard_00000.jsonl",
+      "sha256": "9ff919515fbd5d7944f058335a94969ade3180ac0256ca87170df8ea4dddf3ef",
+      "source_tokens": 69658,
+      "tasks": 128
+    },
+    "Python-to-C++:00001": {
+      "ast_available": 128,
+      "bytes": 1932704,
+      "mapped_source_tokens": 16392,
+      "path": "data/structural/external/xcodeeval/common_core/Python-to-C++/shard_00001.jsonl",
+      "sha256": "eaa28edf635b72ab3059a699099fda06e07bc66aaf52d8b0c2737dbf323bab62",
+      "source_tokens": 16392,
+      "tasks": 128
+    },
+    "Python-to-C++:00002": {
+      "ast_available": 76,
+      "bytes": 1429297,
+      "mapped_source_tokens": 12604,
+      "path": "data/structural/external/xcodeeval/common_core/Python-to-C++/shard_00002.jsonl",
+      "sha256": "3e8b982892ed605c670adbc98e35466d19bfe7ac8ab720d16b27bbae081e0363",
+      "source_tokens": 12604,
+      "tasks": 76
+    },
+    "Python-to-Java:00000": {
+      "ast_available": 128,
+      "bytes": 2796699,
+      "mapped_source_tokens": 69658,
+      "path": "data/structural/external/xcodeeval/common_core/Python-to-Java/shard_00000.jsonl",
+      "sha256": "bc64f00c54133b4de5903949037c00d5bdf08a39623a80641d37f164c2629344",
+      "source_tokens": 69658,
+      "tasks": 128
+    },
+    "Python-to-Java:00001": {
+      "ast_available": 128,
+      "bytes": 1932921,
+      "mapped_source_tokens": 16392,
+      "path": "data/structural/external/xcodeeval/common_core/Python-to-Java/shard_00001.jsonl",
+      "sha256": "9794327d0f46946e65204032a2f4fc2607689515957e872a16289b75a95c7808",
+      "source_tokens": 16392,
+      "tasks": 128
+    },
+    "Python-to-Java:00002": {
+      "ast_available": 76,
+      "bytes": 1429426,
+      "mapped_source_tokens": 12604,
+      "path": "data/structural/external/xcodeeval/common_core/Python-to-Java/shard_00002.jsonl",
+      "sha256": "36d47879dcde7a2aeb0f10e3a18487297e142b53433e1de75d57a1aae1a9d680",
+      "source_tokens": 12604,
+      "tasks": 76
+    }
+  },
+  "configuration_hash": "2940adbbfee154c659f33266703e7e032399c27ef540d09e8e7d6cff650d55a5",
+  "failures": [],
+  "input_manifest": "data/manifests/xcodeeval_common_core_manifest.json",
+  "input_manifest_sha256": "7b58147227e21e26575b7c94635f9a174148ef7ee3c956dd963947ed8d8c912b",
+  "labels_or_tests_in_model_input": false,
+  "parser": "Tree-sitter semantic AST regions; parser failure uses PROGRAM fallback",
+  "prompt_protocol": "translation_protocol v1",
+  "schema_version": 1,
+  "shard_size": 128,
+  "split": "common_core",
+  "status": "COMPLETE",
+  "token_mapping_coverage": 0.9999685155315304,
+  "tokenizer_path": "/home/swaminathanj/research_artifacts/SART/content/models/qwen2.5-coder-7b/0396a76181e127dfc13e5c5ec48a8cee09938b02",
+  "tokenizer_sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+  "totals": {
+    "ast_available": 1922,
+    "mapped_source_tokens": 825778,
+    "source_tokens": 825804,
+    "tasks": 1992
+  }
+}

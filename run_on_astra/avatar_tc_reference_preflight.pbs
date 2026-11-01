@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+#PBS -N sart_avatar_refs
+#PBS -q cpuq
+#PBS -l select=1:ncpus=8:mem=64gb
+#PBS -l walltime=96:00:00
+#PBS -j oe
+set -euo pipefail
+
+project_root="/home/swaminathanj/research_artifacts/SART"
+cd "${project_root}"
+export PYTHONPATH="${project_root}"
+export OMP_NUM_THREADS=1
+export OPENBLAS_NUM_THREADS=1
+export MKL_NUM_THREADS=1
+export PATH="${project_root}/content/tools/temurin/21.0.12.1+1/runtime/bin:${PATH}"
+export JAVA_TOOL_OPTIONS="-XX:ActiveProcessorCount=1"
+
+mkdir -p experiments/avatar_tc_reference_preflight_20261002
+{
+  date -Is
+  hostname
+  "${project_root}/content/tools/python3.11/stage/opt/python3/bin/python3.11" --version
+  java -version 2>&1 | head -3
+} > experiments/avatar_tc_reference_preflight_20261002/environment.txt
+
+exec env/bin/python scripts/evaluate/preflight_avatar_tc_references.py \
+  --output outputs/avatar_tc_reference_preflight \
+  --workers 3 --repeats 3

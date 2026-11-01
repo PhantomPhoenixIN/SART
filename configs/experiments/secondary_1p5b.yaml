@@ -1,0 +1,19 @@
+study: secondary_same_family_scale
+backbone: Qwen/Qwen2.5-Coder-1.5B
+revision: df3ce67c0e24480f20468b6ef2894622d69eb73b
+architectures: [dense, mor_style, full_sart]
+seeds: [13, 42, 87]
+epochs: 2
+train_manifest: content/datasets/xlcost/structural_external_clean/train_sample/manifest.json
+validation_manifest: content/datasets/xlcost/structural_external_clean
+checkpoint_selection: best_in_domain_validation_within_horizon
+external_metrics_for_selection: false
+defer_submission_until: core_7b_and_14b_studies_complete
+external_evaluation:
+  manifests:
+    - data/manifests/xcodeeval_common_core_manifest.json
+    - data/manifests/xcodeeval_full_direction_manifest.json
+    - data/manifests/transcoder_test_manifest.json
+    - data/manifests/humanevalx_manifest.json
+    - data/manifests/avatar_tc_manifest.json
+  metrics: [pass_at_1, pass_at_5, pass_ratio_at_5]

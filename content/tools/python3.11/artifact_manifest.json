@@ -1,0 +1,12 @@
+{
+  "source_url": "https://www.python.org/ftp/python/3.11.9/Python-3.11.9.tar.xz",
+  "source_sha256": "9b1e896523fc510691126c864406d9360a3d1e986acbda59cda57b5abda45b87",
+  "private_build_job": "25580.hn01",
+  "build_command": "./configure --prefix=<SART>/content/tools/python3.11/stage/opt/python3 --with-ensurepip=no && make -j4 && make altinstall",
+  "compiler": "GCC 12.3.0 cluster module",
+  "runtime_version": "Python 3.11.9",
+  "runtime_binary_sha256": "ef24f02044c3ebd958a13a40d52e8a7735d92fae58ad723c93c3fcf23c66621d",
+  "build_status": "PBS exit status 0; Python 3.11.9 launches in the rootless sandbox and imports bz2, lzma, sqlite3, and zlib",
+  "optional_modules_unavailable": ["_curses", "_curses_panel", "_dbm", "_gdbm", "_hashlib", "_ssl", "nis", "readline", "_ctypes"],
+  "scope": "Project-private runtime; no system Python, CUDA toolkit, or driver was changed."
+}

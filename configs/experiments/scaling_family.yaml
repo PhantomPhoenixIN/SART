@@ -1,0 +1,24 @@
+study: backbone_scaling_and_family_check
+architectures: [dense, mor_style, full_sart]
+seed: 42
+epochs: 2
+train_manifest: content/datasets/xlcost/structural_external_clean/train_sample/manifest.json
+validation_manifest: content/datasets/xlcost/structural_external_clean
+checkpoint_selection: best_in_domain_validation_within_horizon
+external_metrics_for_selection: false
+backbones:
+  qwen14b:
+    repo_id: Qwen/Qwen2.5-Coder-14B
+    revision: f2ad5164aade432d6d56c24bb71589184d5d613d
+    path: content/models/qwen2.5-coder-14b/f2ad5164aade432d6d56c24bb71589184d5d613d
+    registry_name: Qwen/Qwen2.5-Coder-14B
+    output_dir: checkpoints/confirmatory_14b
+    horizon_policy: shared-2-epoch-qwen14b-horizon
+  starcoder2:
+    repo_id: bigcode/starcoder2-7b
+    revision: bb9afde76d7945da5745592525db122d4d729eb1
+    path: content/models/starcoder2-7b/bb9afde76d7945da5745592525db122d4d729eb1
+    registry_name: bigcode/starcoder2-7b
+    output_dir: checkpoints/confirmatory_starcoder2
+    horizon_policy: shared-2-epoch-starcoder2-7b-horizon
+    max_sequence_length: 2112

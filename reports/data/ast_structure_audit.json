@@ -1,0 +1,111 @@
+{
+  "availability_by_language": {
+    "C++": {
+      "ast_available": 18277,
+      "cfg_missing": 18277,
+      "dfg_missing": 18277
+    },
+    "Java": {
+      "ast_available": 18225,
+      "cfg_missing": 18225,
+      "dfg_missing": 18225
+    },
+    "Python": {
+      "ast_available": 17630,
+      "cfg_missing": 17630,
+      "dfg_missing": 17630
+    }
+  },
+  "records_by_split": {
+    "test": 4618,
+    "train": 47116,
+    "validation": 2398
+  },
+  "region_counts_by_language": {
+    "C++": {
+      "ARITHMETIC": 139901,
+      "ASSIGNMENT": 56284,
+      "BOOLEAN_EXPRESSION": 8823,
+      "BRANCH": 290,
+      "BREAK": 2060,
+      "CALL": 76703,
+      "COMPARISON": 68900,
+      "CONDITIONAL": 36462,
+      "CONSTRUCTOR": 1241,
+      "CONTINUE": 718,
+      "DECLARATION": 206683,
+      "EXCEPTION": 6,
+      "FUNCTION": 44416,
+      "INDEX_ACCESS": 89222,
+      "LOOP": 33250,
+      "MEMBER_ACCESS": 40062,
+      "MUTATION": 37120,
+      "OTHER_STRUCTURAL": 2874,
+      "PARAMETER": 53545,
+      "PROGRAM": 18277,
+      "RETURN": 44274,
+      "SWITCH": 48
+    },
+    "Java": {
+      "ARITHMETIC": 104965,
+      "ASSIGNMENT": 59609,
+      "BOOLEAN_EXPRESSION": 8308,
+      "BRANCH": 281,
+      "BREAK": 2051,
+      "CALL": 114727,
+      "COMPARISON": 73594,
+      "CONDITIONAL": 36423,
+      "CONSTRUCTOR": 8830,
+      "CONTINUE": 704,
+      "DECLARATION": 110408,
+      "EXCEPTION": 22,
+      "FUNCTION": 45180,
+      "INDEX_ACCESS": 73878,
+      "LOOP": 35813,
+      "MEMBER_ACCESS": 55016,
+      "MUTATION": 37549,
+      "OTHER_STRUCTURAL": 19307,
+      "PARAMETER": 71261,
+      "PROGRAM": 18225,
+      "RETURN": 29029,
+      "SWITCH": 47
+    },
+    "Python": {
+      "ARITHMETIC": 93041,
+      "ASSIGNMENT": 127907,
+      "BOOLEAN_EXPRESSION": 7612,
+      "BREAK": 1996,
+      "CALL": 132690,
+      "COMPARISON": 51047,
+      "CONDITIONAL": 42326,
+      "CONTINUE": 685,
+      "EXCEPTION": 8,
+      "FUNCTION": 25557,
+      "INDEX_ACCESS": 86251,
+      "LOOP": 36298,
+      "MEMBER_ACCESS": 28003,
+      "MUTATION": 21359,
+      "OTHER_STRUCTURAL": 808,
+      "PARAMETER": 25999,
+      "PROGRAM": 17630,
+      "RETURN": 27282
+    }
+  },
+  "token_mapping_by_language": {
+    "C++": {
+      "mapped_to_non_program_semantic_region": 3457119,
+      "source_tokens": 3721744,
+      "useful_mapping_coverage": 0.928897581348959
+    },
+    "Java": {
+      "mapped_to_non_program_semantic_region": 3781792,
+      "source_tokens": 3887177,
+      "useful_mapping_coverage": 0.9728890657667505
+    },
+    "Python": {
+      "mapped_to_non_program_semantic_region": 3224219,
+      "source_tokens": 3309534,
+      "useful_mapping_coverage": 0.9742214462821654
+    }
+  }
+}

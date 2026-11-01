@@ -1,0 +1,74 @@
+{
+  "directions": {
+    "Java-to-Python": {
+      "problems": 1746,
+      "tasks": 1746,
+      "test_inputs": 1746
+    },
+    "Python-to-Java": {
+      "problems": 1746,
+      "tasks": 1746,
+      "test_inputs": 1746
+    }
+  },
+  "license": "AVATAR-TC artifact license not independently stated in pinned CoTran repository",
+  "source_revision": "c02d3b4ef856c676c3924dd720824e581a30f1a5",
+  "splits": {
+    "test": {
+      "java_programs": 1746,
+      "problems": 1746,
+      "python_programs": 1746
+    },
+    "train": {
+      "java_programs": 55179,
+      "problems": 55179,
+      "python_programs": 55179
+    },
+    "valid": {
+      "java_programs": 443,
+      "problems": 443,
+      "python_programs": 443
+    }
+  },
+  "status": "RAW_AUDIT_ONLY; canonical tests and repeated reference preflight pending",
+  "test_cases_per_problem": {
+    "max": 1,
+    "mean": 1,
+    "median": 1.0,
+    "min": 1,
+    "total": 1746
+  },
+  "test_ids_with_documented_harness_data": 1746,
+  "test_problems": 1746,
+  "test_table_counts": {
+    "aizu": {
+      "problems": 1008,
+      "test_inputs": 1008
+    },
+    "atcoder": {
+      "problems": 771,
+      "test_inputs": 771
+    },
+    "codeforces": {
+      "problems": 2193,
+      "test_inputs": 2193
+    },
+    "codejam": {
+      "problems": 119,
+      "test_inputs": 119
+    },
+    "geeksforgeeks": {
+      "problems": 5019,
+      "test_inputs": 5019
+    },
+    "leetcode": {
+      "problems": 107,
+      "test_inputs": 109
+    },
+    "projecteuler": {
+      "problems": 205,
+      "test_inputs": 205
+    }
+  },
+  "unmatched_test_ids": []
+}

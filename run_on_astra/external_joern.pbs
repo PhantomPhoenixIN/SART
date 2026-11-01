@@ -1,0 +1,19 @@
+#!/bin/bash
+#PBS -N sart_ext_joern
+#PBS -q cpuq
+#PBS -l select=1:ncpus=16:mem=96gb
+#PBS -l walltime=96:00:00
+#PBS -j oe
+#PBS -o logs/jobs/sart_external_joern.log
+set -euo pipefail
+cd /home/swaminathanj/research_artifacts/SART
+export PYTHONPATH=/home/swaminathanj/research_artifacts/SART
+export JAVA_HOME="$PWD/content/tools/temurin/21.0.12.1+1/runtime"
+export PATH="$PWD/env/bin:$JAVA_HOME/bin:$PATH"
+export JAVA_OPTS="-Xmx6g -XX:ActiveProcessorCount=2"
+export OMP_NUM_THREADS=1
+export OPENBLAS_NUM_THREADS=1
+mkdir -p logs/jobs logs/joern_external
+env/bin/python scripts/preprocess/run_external_joern.py \
+  --workers 8 \
+  --shard-size 64

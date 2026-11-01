@@ -1,0 +1,169 @@
+{
+  "ast_manifest_sha256": "db7235ea827084a59ce0e26001826814f19637bab33a813d248d10755d5fa4a3",
+  "files": {
+    "Java-to-Python/shard_00000.jsonl": {
+      "input_sha256": "96da559a8c4f075b8e0e6487d3a70bfdf983ede6da83808d4013ea711c92262b",
+      "path": "data/structural/external_full/avatar_tc/common_core/Java-to-Python/shard_00000.jsonl",
+      "records": 128,
+      "sha256": "934cb497cecb17836ff50ed5e873cfae0aa53e5a2f837959dcfbea3caa6a0139"
+    },
+    "Java-to-Python/shard_00001.jsonl": {
+      "input_sha256": "f370d118b725d33319e20893a9a344944de254dfd9fa57b99529e67dbb7e09ec",
+      "path": "data/structural/external_full/avatar_tc/common_core/Java-to-Python/shard_00001.jsonl",
+      "records": 128,
+      "sha256": "058bc75c6b8def67887498090113203e8a9197ee82e3264148b4b991a921267f"
+    },
+    "Java-to-Python/shard_00002.jsonl": {
+      "input_sha256": "c9664add9bbd0a35af77ab4724834fb6684abae49dc78b356c6d87e0843cc26f",
+      "path": "data/structural/external_full/avatar_tc/common_core/Java-to-Python/shard_00002.jsonl",
+      "records": 128,
+      "sha256": "b7e03d6acc0ff9190e12f489d31d92729d535672f1383b8f3d560d53da4ca206"
+    },
+    "Java-to-Python/shard_00003.jsonl": {
+      "input_sha256": "34c0df7dd8a16afdf268f9cc63f12cb274c915d4a8cbbe21708d8927340ff614",
+      "path": "data/structural/external_full/avatar_tc/common_core/Java-to-Python/shard_00003.jsonl",
+      "records": 128,
+      "sha256": "b81a9854770a293e8422cf2e974e2820a68d7caa6bed4968cbacfd54649a3f8e"
+    },
+    "Java-to-Python/shard_00004.jsonl": {
+      "input_sha256": "2d7774db521347a78b58023ea4461ade5ab66058a97a65f1797b9b255bde048c",
+      "path": "data/structural/external_full/avatar_tc/common_core/Java-to-Python/shard_00004.jsonl",
+      "records": 128,
+      "sha256": "6b518903f2399be90c84d510506d1d6a87e3938e889b0db8b3e8994e7e351562"
+    },
+    "Java-to-Python/shard_00005.jsonl": {
+      "input_sha256": "23a99612c2dab9bd7ff21575e9127ce0d9dab37516bfcc1650dbac7b2aa01057",
+      "path": "data/structural/external_full/avatar_tc/common_core/Java-to-Python/shard_00005.jsonl",
+      "records": 128,
+      "sha256": "fe56ce3bc982d1adc11a33e6759c3ba22347ac25583e9d1fe1e63e80c6287d12"
+    },
+    "Java-to-Python/shard_00006.jsonl": {
+      "input_sha256": "7923c1ebadbd9de10860069da3eefd13a4f28647e59e9f6195ca3014039fdd69",
+      "path": "data/structural/external_full/avatar_tc/common_core/Java-to-Python/shard_00006.jsonl",
+      "records": 128,
+      "sha256": "bcbeb936e3549aad261ff2aaf434f3f17e19c74cae56cb8bed71f8d5e0c9cd76"
+    },
+    "Java-to-Python/shard_00007.jsonl": {
+      "input_sha256": "95a867d2c663f712022cb018487667dcce50c95da5221bee7944e12c4cfbbfd4",
+      "path": "data/structural/external_full/avatar_tc/common_core/Java-to-Python/shard_00007.jsonl",
+      "records": 128,
+      "sha256": "8fd1da9ddf7723ebf5a8a80fa36470015f8c23f86e5bb274e51d489e2d00c3f7"
+    },
+    "Java-to-Python/shard_00008.jsonl": {
+      "input_sha256": "41d6dfd50f53ec71c6c14e2b2ab7f7e360bccdbbff0ce22b53ad8a5256b43f0b",
+      "path": "data/structural/external_full/avatar_tc/common_core/Java-to-Python/shard_00008.jsonl",
+      "records": 128,
+      "sha256": "af2f36bf9d2706b093241e6b1b9a3d4434d2dcd5703a360b2da7f231a22f1c37"
+    },
+    "Java-to-Python/shard_00009.jsonl": {
+      "input_sha256": "0076ff6b4f85bce5582e299206cfba9299ff4831152a2a8c91a2c4c0a1cba9dd",
+      "path": "data/structural/external_full/avatar_tc/common_core/Java-to-Python/shard_00009.jsonl",
+      "records": 128,
+      "sha256": "29452c9e00a4de8fafbfc68eaa80e6629ddf54af8a67b0f75424902b9f11c976"
+    },
+    "Java-to-Python/shard_00010.jsonl": {
+      "input_sha256": "40de69ad96f43efed2583871ae95c268db401b09563e669d05860ebb4e12a380",
+      "path": "data/structural/external_full/avatar_tc/common_core/Java-to-Python/shard_00010.jsonl",
+      "records": 128,
+      "sha256": "1ed14b6de4404775fd377e8f617e250a16d93ed85e24357657bdae5ff1ba25a1"
+    },
+    "Java-to-Python/shard_00011.jsonl": {
+      "input_sha256": "685ada61fdc3a0ced0f3a09a6531a562062219d59896a3c2cdf505150ce5502b",
+      "path": "data/structural/external_full/avatar_tc/common_core/Java-to-Python/shard_00011.jsonl",
+      "records": 128,
+      "sha256": "748b7759259c3cee867a3788a3560c0222c346bb41a2e581ef8ecd3a0cf7caa6"
+    },
+    "Java-to-Python/shard_00012.jsonl": {
+      "input_sha256": "e4ef363bdc54782e081971cd5c83bcc3f6612dbfc1bf074c6073f197c22140d4",
+      "path": "data/structural/external_full/avatar_tc/common_core/Java-to-Python/shard_00012.jsonl",
+      "records": 113,
+      "sha256": "822a10142a6ef5ca016fbb9bb4c388c5e0e7a5015d1becaea12e45cf8e6a6f89"
+    },
+    "Python-to-Java/shard_00000.jsonl": {
+      "input_sha256": "580f774cc51ba9b6352f42bf468a6282472a31e5f6a9d9de77ff4e6758053ae0",
+      "path": "data/structural/external_full/avatar_tc/common_core/Python-to-Java/shard_00000.jsonl",
+      "records": 128,
+      "sha256": "2849295da1b03ce5b9ad38f5cdaed29e59b003e462bab4fd59bd119a3d4f0758"
+    },
+    "Python-to-Java/shard_00001.jsonl": {
+      "input_sha256": "1e56e9216794c57b0627eb593e4aaf2fc51248fdf3fccfb8756d3319fc9bb4b1",
+      "path": "data/structural/external_full/avatar_tc/common_core/Python-to-Java/shard_00001.jsonl",
+      "records": 128,
+      "sha256": "7a053881eb4322aadef6ef75c392e6365f8b118fd8eac173378dabb4e7da704d"
+    },
+    "Python-to-Java/shard_00002.jsonl": {
+      "input_sha256": "9b2a8a1278907934010da91a590c64c47c2eb103abf869fe6e05ccb5a2ed8a00",
+      "path": "data/structural/external_full/avatar_tc/common_core/Python-to-Java/shard_00002.jsonl",
+      "records": 128,
+      "sha256": "9ea39f7bd30e0a16fcbb54cadbf98c233842e277c77d2fb1fe4b6888ec628571"
+    },
+    "Python-to-Java/shard_00003.jsonl": {
+      "input_sha256": "4e0f9ee293957d46de51d3e96b668bae02542afe3f7138c2d9bd1f855fabf233",
+      "path": "data/structural/external_full/avatar_tc/common_core/Python-to-Java/shard_00003.jsonl",
+      "records": 128,
+      "sha256": "42c3740bd410922a2efe9b18933d430ac3564cf00d41306ccb6fb4ed26f91edc"
+    },
+    "Python-to-Java/shard_00004.jsonl": {
+      "input_sha256": "8357de8b860bf562b32795503174514f7fa15a742a8f66fc0dcc551ca5115fc4",
+      "path": "data/structural/external_full/avatar_tc/common_core/Python-to-Java/shard_00004.jsonl",
+      "records": 128,
+      "sha256": "20d1ed1e4621602075b2d1a478b07c36ba97d07d244a9d748e4691fd8eb91511"
+    },
+    "Python-to-Java/shard_00005.jsonl": {
+      "input_sha256": "e00efce18d7baad398e80c390b065c70f2b1ef909b1b5b919ac9b87375f83dc3",
+      "path": "data/structural/external_full/avatar_tc/common_core/Python-to-Java/shard_00005.jsonl",
+      "records": 128,
+      "sha256": "7cbcdc8f4a9fb78ddd7d1fd39a913c563e3c88d86817fcc4f859c10c84153152"
+    },
+    "Python-to-Java/shard_00006.jsonl": {
+      "input_sha256": "759136b9a5e199989862d2200221d02e7cd6be3c63e2804083122a2b37fab1e1",
+      "path": "data/structural/external_full/avatar_tc/common_core/Python-to-Java/shard_00006.jsonl",
+      "records": 128,
+      "sha256": "544dfd2084fdfb1c3e2381a32b5c5d484807cb249d6d9bed885fd56d5345ca4b"
+    },
+    "Python-to-Java/shard_00007.jsonl": {
+      "input_sha256": "69ff4bb710d47a1befcc519b04d101fa57a7bf93a35ee2a98e933a6bca543a5f",
+      "path": "data/structural/external_full/avatar_tc/common_core/Python-to-Java/shard_00007.jsonl",
+      "records": 128,
+      "sha256": "113a30b09371470fc27862722227514f14e839ccf9bed69cf478f6c8d77ad63f"
+    },
+    "Python-to-Java/shard_00008.jsonl": {
+      "input_sha256": "a1a3e18dc6e72b03dcede5d7a6eec43f74f7ea24b591f68b4c8c147290e2007a",
+      "path": "data/structural/external_full/avatar_tc/common_core/Python-to-Java/shard_00008.jsonl",
+      "records": 128,
+      "sha256": "67e564e7c940649286b39a46ee94305a57ffe394d9db8432b9a991a5014f5797"
+    },
+    "Python-to-Java/shard_00009.jsonl": {
+      "input_sha256": "f183f83fc47df0c8d55a144f2d710025cdba10536ec8b16048147aecf49cb6fa",
+      "path": "data/structural/external_full/avatar_tc/common_core/Python-to-Java/shard_00009.jsonl",
+      "records": 128,
+      "sha256": "219fab2580667528c1b0653fa2af59982e460f5971288e5b54c3bfca9af2694c"
+    },
+    "Python-to-Java/shard_00010.jsonl": {
+      "input_sha256": "b4738349da07eb9e00724385a6c932ee6df84d8b28c9b53183800cfbd3081f73",
+      "path": "data/structural/external_full/avatar_tc/common_core/Python-to-Java/shard_00010.jsonl",
+      "records": 128,
+      "sha256": "d2409e90831390da58d11f1dea54ad52dbbdd15861d76289faa035015e1509a2"
+    },
+    "Python-to-Java/shard_00011.jsonl": {
+      "input_sha256": "0f00c4ce9e1b59ad270f4bbe66d0497d10795eab0fe9fc1cc1f787cfcaf0bff2",
+      "path": "data/structural/external_full/avatar_tc/common_core/Python-to-Java/shard_00011.jsonl",
+      "records": 128,
+      "sha256": "0c4c274fd6f536fd3f5dffcfcae28f67a790636c286e72ad291003d8b22244b1"
+    },
+    "Python-to-Java/shard_00012.jsonl": {
+      "input_sha256": "2d56f0f74020d12040caae64bcd358aeb0cee51ba1a5aaaede2213066faa274b",
+      "path": "data/structural/external_full/avatar_tc/common_core/Python-to-Java/shard_00012.jsonl",
+      "records": 113,
+      "sha256": "b506015d3df26cca7caee922f26982cae2949b1174e307db7d0c737aa815e33a"
+    }
+  },
+  "joern_manifest_sha256": "8b62803cf64c904eccff7faa580efd97f046ddc716504507e603f3af0490694c",
+  "status": "COMPLETE",
+  "totals": {
+    "cfg_edges": 131922,
+    "dfg_edges": 206463,
+    "joern_available": 3298,
+    "tasks": 3298
+  }
+}

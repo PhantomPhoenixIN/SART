@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+#PBS -N sart_unfreeze_mem
+#PBS -q gpuq
+#PBS -l select=1:ncpus=8:ngpus=1:mem=64gb
+#PBS -l walltime=02:00:00
+#PBS -o /home/swaminathanj/research_artifacts/SART/logs/profile_unfreeze_memory_attempt3.stdout
+#PBS -e /home/swaminathanj/research_artifacts/SART/logs/profile_unfreeze_memory_attempt3.stderr
+set -euo pipefail
+
+project_root="/home/swaminathanj/research_artifacts/SART"
+cd "${project_root}"
+mkdir -p logs experiments/profile_unfreeze_memory_20261003/environment reports/profiling
+export PATH="${project_root}/env/bin:${PATH}"
+export TOKENIZERS_PARALLELISM=false
+export OMP_NUM_THREADS=4
+export OPENBLAS_NUM_THREADS=1
+
+bash scripts/reproduce/capture_environment.sh profile_unfreeze_memory_20261003
+env/bin/python scripts/train/profile_unfreeze_memory.py \
+  --config configs/training/pilot_sart_external_clean.yaml \
+  --unfreeze-layers 1 \
+  --output reports/profiling/unfreeze_last_layer_a100.json

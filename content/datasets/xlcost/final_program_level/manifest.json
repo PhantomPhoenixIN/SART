@@ -1,0 +1,310 @@
+{
+  "files": {
+    "test": {
+      "C++-to-Java.jsonl": {
+        "excluded": 0,
+        "exclusions": [],
+        "input": 794,
+        "kept": 794,
+        "sha256": "96c069c05ed875a56b8a2eaf170748dd32924047872e2b3ec3b738513e7f2a99"
+      },
+      "C++-to-Python.jsonl": {
+        "excluded": 0,
+        "exclusions": [],
+        "input": 756,
+        "kept": 756,
+        "sha256": "a2d719397127ef59fdccbb342c612ed8fb99e0ac73397135c478804de81f0e08"
+      },
+      "Java-to-C++.jsonl": {
+        "excluded": 0,
+        "exclusions": [],
+        "input": 794,
+        "kept": 794,
+        "sha256": "67f5f267cea31d1c7c0b8aaf2810a1c2e16a9d119c0625a22f1b19fa10be3a19"
+      },
+      "Java-to-Python.jsonl": {
+        "excluded": 0,
+        "exclusions": [],
+        "input": 759,
+        "kept": 759,
+        "sha256": "bcf62e86e60a214222e2bdda4ed557aa521370becd7c2142235eee36f2917898"
+      },
+      "Python-to-C++.jsonl": {
+        "excluded": 0,
+        "exclusions": [],
+        "input": 756,
+        "kept": 756,
+        "sha256": "0f3e537bceb8054c37c227bde65743e814fe21103cebf18d015cb8ad40bb4943"
+      },
+      "Python-to-Java.jsonl": {
+        "excluded": 0,
+        "exclusions": [],
+        "input": 759,
+        "kept": 759,
+        "sha256": "7adce70669fe3064737da1a77544dd758dc01710180d4560bc2e5a1f433288f9"
+      }
+    },
+    "train": {
+      "C++-to-Java.jsonl": {
+        "excluded": 3,
+        "exclusions": [
+          {
+            "combined_tokens": 2295,
+            "problem_id": "6192",
+            "prompt_tokens": 1115,
+            "target_tokens_including_eos": 1180
+          },
+          {
+            "combined_tokens": 3752,
+            "problem_id": "3013",
+            "prompt_tokens": 1886,
+            "target_tokens_including_eos": 1866
+          },
+          {
+            "combined_tokens": 2323,
+            "problem_id": "4049",
+            "prompt_tokens": 1152,
+            "target_tokens_including_eos": 1171
+          }
+        ],
+        "input": 8227,
+        "kept": 8224,
+        "sha256": "b8082275f961c6340bbe1ffbde2396f5b839c3ffe0353f61a9019af4cd43cfcc"
+      },
+      "C++-to-Python.jsonl": {
+        "excluded": 3,
+        "exclusions": [
+          {
+            "combined_tokens": 2242,
+            "problem_id": "6192",
+            "prompt_tokens": 1115,
+            "target_tokens_including_eos": 1127
+          },
+          {
+            "combined_tokens": 2085,
+            "problem_id": "330",
+            "prompt_tokens": 1092,
+            "target_tokens_including_eos": 993
+          },
+          {
+            "combined_tokens": 2211,
+            "problem_id": "4049",
+            "prompt_tokens": 1152,
+            "target_tokens_including_eos": 1059
+          }
+        ],
+        "input": 7699,
+        "kept": 7696,
+        "sha256": "5e4e69066a2a7300c097bd89efbad8cf61d5422b3b1439358ec4310564f54fae"
+      },
+      "Java-to-C++.jsonl": {
+        "excluded": 3,
+        "exclusions": [
+          {
+            "combined_tokens": 2296,
+            "problem_id": "6192",
+            "prompt_tokens": 1225,
+            "target_tokens_including_eos": 1071
+          },
+          {
+            "combined_tokens": 3753,
+            "problem_id": "3013",
+            "prompt_tokens": 1911,
+            "target_tokens_including_eos": 1842
+          },
+          {
+            "combined_tokens": 2324,
+            "problem_id": "4049",
+            "prompt_tokens": 1216,
+            "target_tokens_including_eos": 1108
+          }
+        ],
+        "input": 8227,
+        "kept": 8224,
+        "sha256": "fb92ab2ab2df999d1e664738176ac49b53ea4a98f86708d1827621884d4df15f"
+      },
+      "Java-to-Python.jsonl": {
+        "excluded": 3,
+        "exclusions": [
+          {
+            "combined_tokens": 2350,
+            "problem_id": "6192",
+            "prompt_tokens": 1223,
+            "target_tokens_including_eos": 1127
+          },
+          {
+            "combined_tokens": 3087,
+            "problem_id": "8833",
+            "prompt_tokens": 1581,
+            "target_tokens_including_eos": 1506
+          },
+          {
+            "combined_tokens": 2273,
+            "problem_id": "4049",
+            "prompt_tokens": 1214,
+            "target_tokens_including_eos": 1059
+          }
+        ],
+        "input": 7641,
+        "kept": 7638,
+        "sha256": "b74dfd4c21e87c71d019ede7796f1bf1a103d85d1a57330da774542b91fdccbf"
+      },
+      "Python-to-C++.jsonl": {
+        "excluded": 3,
+        "exclusions": [
+          {
+            "combined_tokens": 2243,
+            "problem_id": "6192",
+            "prompt_tokens": 1172,
+            "target_tokens_including_eos": 1071
+          },
+          {
+            "combined_tokens": 2086,
+            "problem_id": "330",
+            "prompt_tokens": 1038,
+            "target_tokens_including_eos": 1048
+          },
+          {
+            "combined_tokens": 2212,
+            "problem_id": "4049",
+            "prompt_tokens": 1104,
+            "target_tokens_including_eos": 1108
+          }
+        ],
+        "input": 7699,
+        "kept": 7696,
+        "sha256": "c9aa8ab0a0cb2378d8ee440ccb82c6a5073c7a547a8ef1ced21b50686d44bc5d"
+      },
+      "Python-to-Java.jsonl": {
+        "excluded": 3,
+        "exclusions": [
+          {
+            "combined_tokens": 2350,
+            "problem_id": "6192",
+            "prompt_tokens": 1170,
+            "target_tokens_including_eos": 1180
+          },
+          {
+            "combined_tokens": 3087,
+            "problem_id": "8833",
+            "prompt_tokens": 1549,
+            "target_tokens_including_eos": 1538
+          },
+          {
+            "combined_tokens": 2273,
+            "problem_id": "4049",
+            "prompt_tokens": 1102,
+            "target_tokens_including_eos": 1171
+          }
+        ],
+        "input": 7641,
+        "kept": 7638,
+        "sha256": "33eec6364a957364b29397f9fce55f4ba8e2d3432e9f284222fff0aed3ada842"
+      }
+    },
+    "validation": {
+      "C++-to-Java.jsonl": {
+        "excluded": 2,
+        "exclusions": [
+          {
+            "combined_tokens": 2549,
+            "problem_id": "3826",
+            "prompt_tokens": 1295,
+            "target_tokens_including_eos": 1254
+          },
+          {
+            "combined_tokens": 2198,
+            "problem_id": "742",
+            "prompt_tokens": 1186,
+            "target_tokens_including_eos": 1012
+          }
+        ],
+        "input": 420,
+        "kept": 418,
+        "sha256": "567c113e9244ec11500bc7816071d19e4ae3cdfab7ddb03e877c8437e764b7dc"
+      },
+      "C++-to-Python.jsonl": {
+        "excluded": 1,
+        "exclusions": [
+          {
+            "combined_tokens": 2599,
+            "problem_id": "3826",
+            "prompt_tokens": 1295,
+            "target_tokens_including_eos": 1304
+          }
+        ],
+        "input": 390,
+        "kept": 389,
+        "sha256": "3963c8308c05c24395115ece41dd08620630f342a25c4e64b2003ee027023e9e"
+      },
+      "Java-to-C++.jsonl": {
+        "excluded": 2,
+        "exclusions": [
+          {
+            "combined_tokens": 2550,
+            "problem_id": "3826",
+            "prompt_tokens": 1299,
+            "target_tokens_including_eos": 1251
+          },
+          {
+            "combined_tokens": 2199,
+            "problem_id": "742",
+            "prompt_tokens": 1057,
+            "target_tokens_including_eos": 1142
+          }
+        ],
+        "input": 420,
+        "kept": 418,
+        "sha256": "4e2f14cde0e796c55018fcbf60b4a28d0f3b11855fa62371418a9b222e10507b"
+      },
+      "Java-to-Python.jsonl": {
+        "excluded": 1,
+        "exclusions": [
+          {
+            "combined_tokens": 2601,
+            "problem_id": "3826",
+            "prompt_tokens": 1297,
+            "target_tokens_including_eos": 1304
+          }
+        ],
+        "input": 393,
+        "kept": 392,
+        "sha256": "c4b4ccb96d2b41478096fd764f99d7e7dfbb80e2168b05b839fa573bb9391a24"
+      },
+      "Python-to-C++.jsonl": {
+        "excluded": 1,
+        "exclusions": [
+          {
+            "combined_tokens": 2600,
+            "problem_id": "3826",
+            "prompt_tokens": 1349,
+            "target_tokens_including_eos": 1251
+          }
+        ],
+        "input": 390,
+        "kept": 389,
+        "sha256": "d86202c40a4c032bf46135f7008423d9e6bf169da2d6bd4c8fe8d114147704d9"
+      },
+      "Python-to-Java.jsonl": {
+        "excluded": 1,
+        "exclusions": [
+          {
+            "combined_tokens": 2601,
+            "problem_id": "3826",
+            "prompt_tokens": 1347,
+            "target_tokens_including_eos": 1254
+          }
+        ],
+        "input": 393,
+        "kept": 392,
+        "sha256": "690a07806be743c7dd01bae7e41e541bc19f81cb57b9e8f558f8df18ac0013af"
+      }
+    }
+  },
+  "length_audit_sha256": "0ce3d4efe67b457a8b081fbd6449c62d0c5cb28127b17e6102c3179236601a96",
+  "max_new_tokens": 768,
+  "max_sequence_length": 2048,
+  "schema_version": 1,
+  "source_manifest_sha256": "033c3f2d4201183b172aa716c677a489d9ab4e24b7b233dcd8d71fa20a322d0e",
+  "status": "COMPLETE"
+}

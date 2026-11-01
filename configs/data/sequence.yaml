@@ -1,0 +1,12 @@
+backbone: Qwen/Qwen2.5-Coder-7B
+revision: 0396a76181e127dfc13e5c5ec48a8cee09938b02
+protocol: docs/TRANSLATION_PROTOCOL.md
+selection_splits: [train, validation]
+target_percentile: 99.5
+target_rounding_multiple: 256
+target_length_includes_eos: true
+max_new_tokens: 768
+max_sequence_length: 2048
+over_context_policy: exclude_and_record
+audit: reports/data/qwen_token_length_audit.json
+frozen_before_external_inference: true

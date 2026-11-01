@@ -1,0 +1,55 @@
+#!/usr/bin/env bash
+#PBS -q gpuq
+#PBS -l select=1:ncpus=8:ngpus=1:mem=64gb
+#PBS -l walltime=96:00:00
+set -euo pipefail
+
+project_root="/home/swaminathanj/research_artifacts/SART"
+cd "${project_root}"
+: "${SART_CHECKPOINT:?qsub must set SART_CHECKPOINT}"
+: "${SART_CALIBRATION_OUTPUT:?qsub must set SART_CALIBRATION_OUTPUT}"
+: "${SART_CALIBRATION_KEY:?qsub must set SART_CALIBRATION_KEY}"
+: "${SART_ATTEMPT:?qsub must set SART_ATTEMPT}"
+printf 'calibration_script_sha256='
+sha256sum scripts/evaluate/calibrate_routing.py
+printf 'routing_module_sha256='
+sha256sum src/models/recurrent/region_module.py
+export PATH="${project_root}/env/bin:${PATH}"
+export TOKENIZERS_PARALLELISM=false
+export OMP_NUM_THREADS=4
+export OPENBLAS_NUM_THREADS=1
+
+# Coordinate physical A100 selection with the training worker on shared nodes.
+lock_dir="/tmp/sart_gpu_locks_${USER}"
+mkdir -p "${lock_dir}"
+selected_gpu=""
+for attempt in $(seq 1 180); do
+  while IFS=',' read -r gpu_id free_mib; do
+    gpu_id="${gpu_id//[[:space:]]/}"
+    free_mib="${free_mib//[[:space:]]/}"
+    [[ "${gpu_id}" =~ ^[0-9]+$ && "${free_mib}" =~ ^[0-9]+$ ]] || continue
+    (( free_mib >= 30000 )) || continue
+    eval "exec {gpu_lock_fd}>\"${lock_dir}/gpu_${gpu_id}.lock\""
+    if flock -n "${gpu_lock_fd}"; then
+      selected_gpu="${gpu_id}"
+      break
+    fi
+    eval "exec ${gpu_lock_fd}>&-"
+  done < <(nvidia-smi --query-gpu=index,memory.free --format=csv,noheader,nounits | sort -t, -k2,2nr)
+  [[ -n "${selected_gpu}" ]] && break
+  sleep 10
+done
+if [[ -z "${selected_gpu}" ]]; then
+  echo "No unclaimed A100 with at least 30 GiB free after 30 minutes" >&2
+  exit 75
+fi
+export CUDA_VISIBLE_DEVICES="${selected_gpu}"
+printf '%s,%s,%s,%s\n' "${PBS_JOBID}" "$(hostname)" "${selected_gpu}" "${SART_CALIBRATION_KEY}" \
+  >>"${lock_dir}/allocation_ledger.csv"
+
+export SART_ENVIRONMENT_DIR="experiments/calibration_runs/${SART_CALIBRATION_KEY}/attempts/${SART_ATTEMPT}/environment"
+bash scripts/reproduce/capture_environment.sh "${SART_CALIBRATION_KEY}_attempt${SART_ATTEMPT}"
+env/bin/python scripts/evaluate/calibrate_routing.py \
+  --checkpoint "${SART_CHECKPOINT}" \
+  --output "${SART_CALIBRATION_OUTPUT}" \
+  --device cuda

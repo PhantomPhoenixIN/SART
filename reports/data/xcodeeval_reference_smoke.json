@@ -1,0 +1,47 @@
+{
+  "src_uid": "0034806908c9794086736a2d07fc654c",
+  "results": {
+    "Python": {
+      "status": "failed",
+      "compile_status": "passed",
+      "all_passed": false,
+      "flaky": false,
+      "outcomes": {
+        "wrong_answer": 3
+      },
+      "tests_per_repeat": 131,
+      "tests_checked": 1,
+      "code_uid": "dfad7b1658bba03d8098ccc6cb302d6f",
+      "runtime_label": "PyPy 3",
+      "outer_returncode": 0
+    },
+    "Java": {
+      "status": "passed",
+      "compile_status": "passed",
+      "all_passed": true,
+      "flaky": false,
+      "outcomes": {
+        "passed": 393
+      },
+      "tests_per_repeat": 131,
+      "tests_checked": 131,
+      "code_uid": "017d00147843ed63015205e3bb34a321",
+      "runtime_label": "Java 8",
+      "outer_returncode": 0
+    },
+    "C++": {
+      "status": "passed",
+      "compile_status": "passed",
+      "all_passed": true,
+      "flaky": false,
+      "outcomes": {
+        "passed": 393
+      },
+      "tests_per_repeat": 131,
+      "tests_checked": 131,
+      "code_uid": "4d5bf7cf7c7fbaab6bc821abdd74bbe6",
+      "runtime_label": "GNU C++17",
+      "outer_returncode": 0
+    }
+  }
+}

@@ -1,0 +1,48 @@
+#!/bin/bash
+#PBS -N sart_ext_struct
+#PBS -q cpuq
+#PBS -l select=1:ncpus=8:mem=64gb
+#PBS -l walltime=96:00:00
+#PBS -j oe
+#PBS -o logs/jobs/sart_external_structures_common.log
+set -euo pipefail
+cd /home/swaminathanj/research_artifacts/SART
+export PYTHONPATH=/home/swaminathanj/research_artifacts/SART
+export OMP_NUM_THREADS=1
+export OPENBLAS_NUM_THREADS=1
+export MKL_NUM_THREADS=1
+export TOKENIZERS_PARALLELISM=false
+
+TOKENIZER=content/models/qwen2.5-coder-7b/0396a76181e127dfc13e5c5ec48a8cee09938b02
+XCODE_ROOT=content/datasets/xcodeeval/aa09386604075a3e80bcdb315dd68bcc117dedc0
+HUMANEVAL_ROOT=content/datasets/humanevalx/62c78627f3072a1454fa0cb0184737cafe5e4198
+mkdir -p logs/jobs logs/structures
+
+run_cache() {
+  local benchmark="$1" manifest="$2"
+  shift 2
+  env/bin/python scripts/preprocess/prepare_external_structures.py \
+    --benchmark "$benchmark" \
+    --manifest "$manifest" \
+    --output-root "data/structural/external/$benchmark/common_core" \
+    --tokenizer "$TOKENIZER" "$@"
+}
+
+run_cache xcodeeval data/manifests/xcodeeval_common_core_manifest.json \
+  --xcode-root "$XCODE_ROOT" > logs/structures/xcodeeval_common_core.log 2>&1 &
+p1=$!
+run_cache humanevalx data/manifests/humanevalx_manifest.json \
+  --humanevalx-root "$HUMANEVAL_ROOT" > logs/structures/humanevalx_common_core.log 2>&1 &
+p2=$!
+run_cache transcoder_test data/manifests/transcoder_test_manifest.json \
+  > logs/structures/transcoder_common_core.log 2>&1 &
+p3=$!
+run_cache avatar_tc data/manifests/avatar_tc_manifest.json \
+  > logs/structures/avatar_common_core.log 2>&1 &
+p4=$!
+
+status=0
+for pid in "$p1" "$p2" "$p3" "$p4"; do
+  wait "$pid" || status=1
+done
+exit "$status"

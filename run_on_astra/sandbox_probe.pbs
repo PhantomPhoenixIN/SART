@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+#PBS -N sart_sandbox_probe
+#PBS -q cpuq
+#PBS -l select=1:ncpus=1:mem=2gb
+#PBS -l walltime=00:05:00
+#PBS -o /home/swaminathanj/research_artifacts/SART/logs/sandbox_probe.pbs.stdout
+#PBS -e /home/swaminathanj/research_artifacts/SART/logs/sandbox_probe.pbs.stderr
+set -u
+project_root="/home/swaminathanj/research_artifacts/SART"
+cd "$project_root"
+mkdir -p logs/sandbox
+output="logs/sandbox/${PBS_JOBID}.txt"
+{
+  echo "job=${PBS_JOBID} host=$(hostname)"
+  echo "uid=$(id)"
+  echo "cgroup=$(cat /proc/self/cgroup)"
+  while IFS=: read -r hierarchy controllers group; do
+    for controller in ${controllers//,/ }; do
+      case "$controller" in
+        memory) names="memory.limit_in_bytes memory.memsw.limit_in_bytes" ;;
+        pids) names="pids.max" ;;
+        cpu|cpuacct) controller="cpu,cpuacct"; names="cpu.cfs_quota_us cpu.cfs_period_us" ;;
+        *) continue ;;
+      esac
+      for name in $names; do
+        file="/sys/fs/cgroup/${controller}${group}/${name}"
+        [[ -r "$file" ]] && printf '%s=' "$file" && cat "$file"
+      done
+    done
+  done < /proc/self/cgroup
+  for tool in unshare setpriv prlimit timeout bwrap nsjail docker podman apptainer; do
+    printf '%s=' "$tool"
+    command -v "$tool" || true
+  done
+  echo "userns_probe_begin"
+  timeout 10s unshare --user --map-root-user --mount --pid --fork --net \
+    sh -c 'id; grep ^Cap /proc/self/status; setpriv --bounding-set=-all true; echo inner_setpriv_status=$?'
+  echo "userns_probe_status=$?"
+  echo "capability_drop_probe_begin"
+  timeout 10s setpriv --bounding-set=-all true
+  echo "capability_drop_probe_status=$?"
+} >"${output}.tmp" 2>&1
+mv "${output}.tmp" "$output"

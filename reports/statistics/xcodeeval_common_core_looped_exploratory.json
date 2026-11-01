@@ -1,0 +1,184 @@
+{
+  "analysis": "exploratory_direct_looped_comparisons",
+  "backbone": "Qwen2.5-Coder-7B",
+  "benchmark": "xcodeeval",
+  "cluster_unit": "problem_id",
+  "comparisons": {
+    "dense": {
+      "bootstrap": {
+        "baseline_mean_task_score": 0.2635542168674699,
+        "bootstrap_seed": 42,
+        "ci95": [
+          -0.020749665327978582,
+          0.029116465863453816
+        ],
+        "ci95_percentage_points": [
+          -2.074966532797858,
+          2.9116465863453818
+        ],
+        "difference": 0.002677376171352075,
+        "difference_percentage_points": 0.2677376171352075,
+        "model_a_mean_task_score": 0.266231593038822,
+        "relative_error_reduction": 0.003635537377868666,
+        "replicates": 10000
+      },
+      "directions": [
+        "C++-to-Java",
+        "C++-to-Python",
+        "Java-to-C++",
+        "Java-to-Python",
+        "Python-to-C++",
+        "Python-to-Java"
+      ],
+      "model_a": "uniform_token_loop",
+      "model_b": "dense",
+      "paired_cluster_randomization": {
+        "cluster_count": 332,
+        "difference": 0.0026773761713520753,
+        "p_value_two_sided": 0.6721032789672103,
+        "randomization_seed": 43,
+        "replicates": 100000
+      },
+      "problem_count": 332,
+      "seeds": [
+        13,
+        42,
+        87
+      ]
+    },
+    "mor_style": {
+      "bootstrap": {
+        "baseline_mean_task_score": 0.25702811244979923,
+        "bootstrap_seed": 42,
+        "ci95": [
+          -0.020582329317269075,
+          0.035809906291834
+        ],
+        "ci95_percentage_points": [
+          -2.0582329317269075,
+          3.5809906291833995
+        ],
+        "difference": 0.00920348058902276,
+        "difference_percentage_points": 0.9203480589022759,
+        "model_a_mean_task_score": 0.266231593038822,
+        "relative_error_reduction": 0.012387387387387391,
+        "replicates": 10000
+      },
+      "directions": [
+        "C++-to-Java",
+        "C++-to-Python",
+        "Java-to-C++",
+        "Java-to-Python",
+        "Python-to-C++",
+        "Python-to-Java"
+      ],
+      "model_a": "uniform_token_loop",
+      "model_b": "mor_style",
+      "paired_cluster_randomization": {
+        "cluster_count": 332,
+        "difference": 0.009203480589022756,
+        "p_value_two_sided": 0.14966850331496684,
+        "randomization_seed": 43,
+        "replicates": 100000
+      },
+      "problem_count": 332,
+      "seeds": [
+        13,
+        42,
+        87
+      ]
+    },
+    "random_region": {
+      "bootstrap": {
+        "baseline_mean_task_score": 0.28279785809906294,
+        "bootstrap_seed": 42,
+        "ci95": [
+          -0.04317269076305221,
+          0.012382864792503346
+        ],
+        "ci95_percentage_points": [
+          -4.317269076305221,
+          1.2382864792503345
+        ],
+        "difference": -0.01656626506024096,
+        "difference_percentage_points": -1.6566265060240961,
+        "model_a_mean_task_score": 0.266231593038822,
+        "relative_error_reduction": -0.02309846010265982,
+        "replicates": 10000
+      },
+      "directions": [
+        "C++-to-Java",
+        "C++-to-Python",
+        "Java-to-C++",
+        "Java-to-Python",
+        "Python-to-C++",
+        "Python-to-Java"
+      ],
+      "model_a": "uniform_token_loop",
+      "model_b": "random_region",
+      "paired_cluster_randomization": {
+        "cluster_count": 332,
+        "difference": -0.016566265060240965,
+        "p_value_two_sided": 0.008209917900820991,
+        "randomization_seed": 43,
+        "replicates": 100000
+      },
+      "problem_count": 332,
+      "seeds": [
+        13,
+        42,
+        87
+      ]
+    },
+    "region_adaptive_no_graph": {
+      "bootstrap": {
+        "baseline_mean_task_score": 0.28078982597054886,
+        "bootstrap_seed": 42,
+        "ci95": [
+          -0.059245314591700134,
+          0.03313253012048192
+        ],
+        "ci95_percentage_points": [
+          -5.924531459170013,
+          3.3132530120481922
+        ],
+        "difference": -0.014558232931726908,
+        "difference_percentage_points": -1.4558232931726909,
+        "model_a_mean_task_score": 0.266231593038822,
+        "relative_error_reduction": -0.02024197301070265,
+        "replicates": 10000
+      },
+      "directions": [
+        "C++-to-Java",
+        "C++-to-Python",
+        "Java-to-C++",
+        "Java-to-Python",
+        "Python-to-C++",
+        "Python-to-Java"
+      ],
+      "model_a": "uniform_token_loop",
+      "model_b": "region_adaptive_no_graph",
+      "paired_cluster_randomization": {
+        "cluster_count": 332,
+        "difference": -0.014558232931726905,
+        "p_value_two_sided": 0.016469835301646984,
+        "randomization_seed": 43,
+        "replicates": 100000
+      },
+      "problem_count": 332,
+      "seeds": [
+        13,
+        42,
+        87
+      ]
+    }
+  },
+  "holm_adjusted_p_values": {
+    "dense": 0.6721032789672103,
+    "mor_style": 0.2993370066299337,
+    "random_region": 0.032839671603283965,
+    "region_adaptive_no_graph": 0.04940950590494095
+  },
+  "multiplicity_family": "four user-requested looped comparisons; separate from preregistered Full-SART family",
+  "split": "common_core"
+}

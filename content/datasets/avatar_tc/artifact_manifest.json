@@ -1,0 +1,163 @@
+{
+  "data_subdirectory": "AVATAR-TC",
+  "file_count": 38,
+  "files": {
+    ".gitignore": {
+      "sha256": "78bbeadbde0ddfc063dccd590ddf14f52d87114be39ee5ace13fa5413cf68952",
+      "size_bytes": 480
+    },
+    "AVATAR-TC/io_testcases_aizu.json": {
+      "sha256": "7d1f48582d8fec251881530ac5e8c4c7988b849943c370792dc1aa2691496f67",
+      "size_bytes": 160900
+    },
+    "AVATAR-TC/io_testcases_aizuORIG.json": {
+      "sha256": "434f7aaded30e0549993c1e77a5159fd1e8d72127d3f849daa16656523168672",
+      "size_bytes": 1391695
+    },
+    "AVATAR-TC/io_testcases_atcoder.json": {
+      "sha256": "2653941431add302d2c0a78222858b91606465efec38d1593ade1a66f0e1196d",
+      "size_bytes": 329391
+    },
+    "AVATAR-TC/io_testcases_atcoderORIG.json": {
+      "sha256": "7ab55cd680bae3cdf576a0de4624fb22bf2da73a28320906e264dc83fd984747",
+      "size_bytes": 72267272
+    },
+    "AVATAR-TC/io_testcases_codeforces.json": {
+      "sha256": "0527e668d4bbe0e5f5c35114688c62936dae94bfb81cfe85d0ed71b949f3e781",
+      "size_bytes": 286003
+    },
+    "AVATAR-TC/io_testcases_codeforcesORIG.json": {
+      "sha256": "3a654ca8f114ef57bbea625e527fd35f586bc00d9672af351619f081e218a97a",
+      "size_bytes": 220190
+    },
+    "AVATAR-TC/io_testcases_codejam.json": {
+      "sha256": "e888235bcec64abdb55398cd0efc862cc83334b1747493785eb466261bc8741f",
+      "size_bytes": 24073
+    },
+    "AVATAR-TC/io_testcases_geeksforgeeks.json": {
+      "sha256": "7f148cfc66406efdaf7515ada2338bb1fd1168212cb42512935b5daccfae0d98",
+      "size_bytes": 529517
+    },
+    "AVATAR-TC/io_testcases_leetcode.json": {
+      "sha256": "3b65d122b7f578f70f7109242ab15d9ab57fa0390e5ee4eb212389bea5d0b4dc",
+      "size_bytes": 10645
+    },
+    "AVATAR-TC/io_testcases_leetcodeORIG.json": {
+      "sha256": "20ea875ad7fc15d209214410becfdfda6c1155793d8af082236fefa4efddaceb",
+      "size_bytes": 26184
+    },
+    "AVATAR-TC/io_testcases_projecteuler.json": {
+      "sha256": "8a311e13b788b3a52032d6e0d49a34569b8fc7f7415fa834cf5f69d1f023bd77",
+      "size_bytes": 19492
+    },
+    "AVATAR-TC/test.java-python.id": {
+      "sha256": "c5c7f2098d515f1eb8642934f0a44dc2606a9dd5cd25f9e3ea7dd6bee334e9e0",
+      "size_bytes": 33089
+    },
+    "AVATAR-TC/test.java-python.java": {
+      "sha256": "1f09aacfaf17a04b9e5e361d408761e9ebbcceda1292cd5359f037148fe0c2e5",
+      "size_bytes": 1264564
+    },
+    "AVATAR-TC/test.java-python.python": {
+      "sha256": "1958f2d23d02f24f997d5a549aa26fe7972b880f89c28d990c5935790ffb0629",
+      "size_bytes": 1119642
+    },
+    "AVATAR-TC/train.java-python.id": {
+      "sha256": "fb8e2687ecc38d49948f36130bebfa3f07d63cfd6d724987afe804a0bf3aad04",
+      "size_bytes": 1326766
+    },
+    "AVATAR-TC/train.java-python.java": {
+      "sha256": "17954e087cae53c8d3a045b7ada9874a83894de45ac7d063a87149b4336ab401",
+      "size_bytes": 47753092
+    },
+    "AVATAR-TC/train.java-python.python": {
+      "sha256": "6cf92777e73fa906fe99f1c680815c022514150801cd0a3d35e8212f85965312",
+      "size_bytes": 34248483
+    },
+    "AVATAR-TC/valid.java-python.id": {
+      "sha256": "7c4dbdac5d025474cdbb258bc5aab410a79919c9c9d8cab7fef8fcc1fe65517d",
+      "size_bytes": 8471
+    },
+    "AVATAR-TC/valid.java-python.java": {
+      "sha256": "3ad01938cd34403c46bb7b5f1edf836c645abc57bef88cd5a30e4241b5d38872",
+      "size_bytes": 313171
+    },
+    "AVATAR-TC/valid.java-python.python": {
+      "sha256": "17d44721705b5c96df7ae01b94281f672607481443dec0c908c32f005c78f9e8",
+      "size_bytes": 291905
+    },
+    "CoTranBaseline_run_script_TEST.sh": {
+      "sha256": "0fe595d35e64bb43295a3e8b0f93cd01d73e98015d14e155c55c26d432d34b43",
+      "size_bytes": 2078
+    },
+    "CoTranBaseline_run_script_TRAIN.sh": {
+      "sha256": "cc4282d558bc99bb93dc26b7a7b93d8e144bc02b32c17c68d3ad88ff97b6602d",
+      "size_bytes": 2179
+    },
+    "LT_utils_CFLoss.py": {
+      "sha256": "ef7d0b6a633f2a537493c0cb6914f28e9c65feffb9d1e5a6034c817cccd31a1d",
+      "size_bytes": 18273
+    },
+    "README.md": {
+      "sha256": "aa91feafc639322bd7c0cde35249a710aa497551017dc2679f95d8a833f65401",
+      "size_bytes": 8997
+    },
+    "language_translation_ParallelTrain.py": {
+      "sha256": "6cf78a0274f0a3bd4872f7a2ae64f608c308cccf78d104bb077ac84e9529cf44",
+      "size_bytes": 46437
+    },
+    "language_translation_RLSFT_CF.py": {
+      "sha256": "0b7bbcb9c500caac0145765b2d0357770048cf9b6601ce031d187a084b3cd40b",
+      "size_bytes": 25108
+    },
+    "language_translation_RLSFT_CFSF.py": {
+      "sha256": "1dc12c5c35c19af057f1dcd91cfcaec645b52a88a015322c6750821d84625d0b",
+      "size_bytes": 29162
+    },
+    "language_translation_RLSFT_CFSF_runSCRIPT.sh": {
+      "sha256": "e8cee876272d1ebd8223667271ae124058db4ad2ca40f345b3223d2a74b60b63",
+      "size_bytes": 2159
+    },
+    "language_translation_RLSFT_CF_runSCRIPT.sh": {
+      "sha256": "e90c194f5d16f4374ba04fce55d20908bc8c66123cfe9bf9634a9e0b74bf868c",
+      "size_bytes": 2157
+    },
+    "language_translation_RLonly_CF.py": {
+      "sha256": "fd7f28cf3ba702caff6e1523b90d8f090c6643aebe0dd481543dc4387a5b8596",
+      "size_bytes": 25056
+    },
+    "language_translation_RLonly_CF_runSCRIPT.sh": {
+      "sha256": "8026ab8bcf7e3c9725539318e3de7e650055e6637c63a1cedae7ad48d0273cb0",
+      "size_bytes": 2158
+    },
+    "language_translation_RLrewards.py": {
+      "sha256": "4e033559a163f6159abbe2fd9a1c977aec8b8b5be667e09b211061403dd20098",
+      "size_bytes": 40283
+    },
+    "language_translation_Tokenizer.py": {
+      "sha256": "2829dbf4fd6429bb34eb1b5059526a056517ed9b7a91c2e9c44390abdf97fba0",
+      "size_bytes": 3072
+    },
+    "requirements_cotran.txt": {
+      "sha256": "00fafd96cdda350fc2f021471daa4b59a2cf94da2cc7a3b1ed3c5c88a589abe0",
+      "size_bytes": 1568
+    },
+    "requirements_cotranRL.txt": {
+      "sha256": "8bcbe54a50db3c7353f41ddffa1290cbd67a0bc5899f0321926c02c9dad298e2",
+      "size_bytes": 3185
+    },
+    "requirements_cotranRL_createEnv.sh": {
+      "sha256": "28fcb1665537329af9fc055adc9ff259b1594ea4d20fc421c7e0668335c9d272",
+      "size_bytes": 386
+    },
+    "requirements_cotran_createEnv.sh": {
+      "sha256": "2bda8633dac9f98c246eefe68f5459a02d8873a3fae55112d42e16ef2c66b0a9",
+      "size_bytes": 1071
+    }
+  },
+  "license": "UNKNOWN; no separate AVATAR-TC artifact license found in pinned repository materials",
+  "repo": "PrithwishJana/CoTran",
+  "revision": "c02d3b4ef856c676c3924dd720824e581a30f1a5",
+  "status": "COMPLETE_RAW_ACQUISITION",
+  "total_size_bytes": 161838354
+}

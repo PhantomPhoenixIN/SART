@@ -1,0 +1,88 @@
+seed: 42
+convergence_pilot:
+  architectures: [dense, full_sart]
+  max_epochs: 5
+  validation_only: true
+  final_training_sample: content/datasets/xlcost/structural_external_clean/train_sample/manifest.json
+  validation_manifest: content/datasets/xlcost/structural_external_clean
+  rerun_reason: external_problem_leakage_removed_514_training_problem_ids
+  inspect:
+    - train_loss
+    - validation_loss
+    - validation_bleu4_macro
+    - validation_codebleu_macro
+    - validation_exact_match_macro
+    - validation_crystalbleu_macro
+    - mean_recurrent_depth
+    - router_convergence
+  lexical_metrics:
+    crystal_k: 500
+    direction_aggregation: equal_weight_macro
+    checkpoint_selection_metric: validation_target_loss
+  default_frozen_7b_epochs: 2
+confirmatory_7b:
+  frozen_epochs: 2 # Dense and Full-SART seed-42 pilots both minimize validation loss at epoch 2
+  shared_across_architectures: true
+  architectures:
+    - dense
+    - dense_param_match
+    - structure_only
+    - uniform_token_loop
+    - uniform_region_loop
+    - mor_style
+    - random_region
+    - shuffled_structure
+    - region_adaptive_no_graph
+    - ast_sart
+    - sart_no_scalar
+    - sart_no_message
+    - sart_attention_pool
+    - sart_no_language_pair
+    - sart_coarse_ontology
+    - cfg_sart
+    - dfg_sart
+    - ast_cfg_sart
+    - ast_dfg_sart
+    - full_sart
+  three_seed_architectures:
+    - dense
+    - dense_param_match
+    - structure_only
+    - uniform_token_loop
+    - uniform_region_loop
+    - mor_style
+    - random_region
+    - region_adaptive_no_graph
+    - ast_sart
+    - full_sart
+  single_seed_screening_architectures:
+    - shuffled_structure
+    - sart_no_scalar
+    - sart_no_message
+    - sart_attention_pool
+    - sart_no_language_pair
+    - sart_coarse_ontology
+    - cfg_sart
+    - dfg_sart
+    - ast_cfg_sart
+    - ast_dfg_sart
+  approximately_match:
+    - examples
+    - training_tokens
+    - optimizer_steps
+  checkpoint_selection: best_in_domain_validation_within_horizon
+  external_metrics_for_selection: false
+  periodic_checkpoints: true
+confirmatory_14b:
+  initial_epochs: 2
+  extend_to_3_only_if_validation_improves_meaningfully: true
+  extend_all_models_together: true
+  architectures: [dense, mor_style, full_sart]
+backbone_trainability_confirmatory:
+  status: PLANNED_PENDING_A100_MEMORY_PROFILE
+  architectures: [dense, mor_style, full_sart]
+  unfreeze_last_layers: 1
+  shared_lora_configuration: true
+  common_training_horizon: true
+  common_data_sampling: true
+  require_memory_profile_before_training: true

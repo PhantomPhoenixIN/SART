@@ -1,0 +1,33 @@
+dataset: xlcost
+languages: [Python, Java, C++]
+directions:
+  - [Python, Java]
+  - [Java, Python]
+  - [Python, C++]
+  - [C++, Python]
+  - [Java, C++]
+  - [C++, Java]
+problem_level_split_check: true
+cross_language_problem_grouping: true
+max_pairs_per_problem_direction: 1
+pair_selection:
+  source: official_aligned_program_pair
+  tie_break: stable_problem_id_then_file_row_index
+  unique_aligned_pair_per_problem_direction: true
+direction_sampling:
+  method: equal_direction_probability
+  shared_across_architectures: true
+  seed: 42
+leakage:
+  exact_hash: true
+  lexical_canonicalization: true
+  identifier_normalization: true
+  ast_fingerprint: true
+  near_duplicate: token_minhash
+  thresholds:
+    token_ngram_size: 5
+    minhash_permutations: 256
+    jaccard_candidate: 0.80
+    identifier_normalized_exact: 1.0
+    ast_fingerprint_exact: 1.0
+    decision_before_test_scores: true

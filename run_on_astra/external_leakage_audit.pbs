@@ -1,0 +1,12 @@
+#!/bin/bash
+#PBS -N sart_ext_leakage
+#PBS -q cpuq
+#PBS -l select=1:ncpus=8:mem=64gb
+#PBS -l walltime=96:00:00
+#PBS -j oe
+#PBS -o sart_external_leakage_audit.log
+set -euo pipefail
+cd "$PBS_O_WORKDIR"
+export OMP_NUM_THREADS=1
+export TOKENIZERS_PARALLELISM=false
+env/bin/python scripts/preprocess/audit_external_leakage.py

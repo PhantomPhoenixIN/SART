@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+#PBS -N sart_python2_build
+#PBS -q cpuq
+#PBS -l select=1:ncpus=4:mem=8gb
+#PBS -l walltime=02:00:00
+#PBS -o /home/swaminathanj/research_artifacts/SART/logs/python2_build.pbs.stdout
+#PBS -e /home/swaminathanj/research_artifacts/SART/logs/python2_build.pbs.stderr
+set -euo pipefail
+
+project_root="/home/swaminathanj/research_artifacts/SART"
+python_root="${project_root}/content/tools/python2.7.18"
+archive="${python_root}/source/Python-2.7.18.tar.xz"
+expected_sha="b62c0e7937551d0cc02b8fd5cb0f544f9405bafc9a54d3808ed4594812edef43"
+cd "${project_root}"
+mkdir -p logs "${python_root}/build" "${python_root}/stage"
+actual_sha="$(sha256sum "${archive}" | awk '{print $1}')"
+[[ "${actual_sha}" == "${expected_sha}" ]]
+rm -rf "${python_root}/build/Python-2.7.18"
+tar -xJf "${archive}" -C "${python_root}/build"
+cd "${python_root}/build/Python-2.7.18"
+./configure --prefix=/opt/python2 --enable-unicode=ucs4 --disable-shared \
+  >"${project_root}/logs/python2_configure.log" 2>&1
+make -j4 >"${project_root}/logs/python2_make.log" 2>&1
+make install DESTDIR="${python_root}/stage" \
+  >"${project_root}/logs/python2_install.log" 2>&1
+"${python_root}/stage/opt/python2/bin/python2.7" --version
+cat >"${python_root}/artifact_manifest.json.tmp" <<EOF
+{
+  "runtime": "CPython 2.7.18",
+  "upstream": "https://www.python.org/ftp/python/2.7.18/Python-2.7.18.tar.xz",
+  "upstream_sha256": "${actual_sha}",
+  "prefix_in_sandbox": "/opt/python2",
+  "build_job": "${PBS_JOBID}",
+  "build_flags": "--enable-unicode=ucs4 --disable-shared; make -j4"
+}
+EOF
+mv "${python_root}/artifact_manifest.json.tmp" "${python_root}/artifact_manifest.json"
+touch "${python_root}/BUILD_COMPLETE"

@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+#PBS -N sart_joern_extract
+#PBS -q cpuq
+#PBS -l select=1:ncpus=16:mem=96gb
+#PBS -l walltime=48:00:00
+set -euo pipefail
+
+project_root="/home/swaminathanj/research_artifacts/SART"
+cd "${project_root}"
+mkdir -p logs/joern
+
+export JAVA_HOME="${project_root}/content/tools/temurin/21.0.12.1+1/runtime"
+export PATH="${project_root}/env/bin:${JAVA_HOME}/bin:${PATH}"
+export JAVA_OPTS="-Xmx6g -XX:ActiveProcessorCount=2"
+export OMP_NUM_THREADS=1
+export OPENBLAS_NUM_THREADS=1
+
+bash scripts/reproduce/capture_environment.sh joern_full_20261002
+env/bin/python scripts/preprocess/extract_joern_edges.py \
+  --ast-root content/datasets/xlcost/structural_ast_qwen \
+  --source-root content/datasets/xlcost/joern_sources \
+  --output-root content/datasets/xlcost/joern_edges \
+  --joern-root content/tools/joern/v4.0.644/joern-cli \
+  --java-home content/tools/temurin/21.0.12.1+1/runtime \
+  --shard-size 64 \
+  --workers 8
+env/bin/python scripts/preprocess/merge_joern_edges.py \
+  --ast-root content/datasets/xlcost/structural_ast_qwen \
+  --edges-root content/datasets/xlcost/joern_edges \
+  --train-sample-manifest content/datasets/xlcost/train_sample_manifest.json \
+  --output-root content/datasets/xlcost/structural_full
+env/bin/python scripts/preprocess/audit_joern_coverage.py \
+  --structural-root content/datasets/xlcost/structural_full
+touch logs/joern/JOERN_EXTRACTION_COMPLETE

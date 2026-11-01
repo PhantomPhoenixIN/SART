@@ -1,0 +1,70 @@
+{
+  "directional_row_counts": {
+    "test/C++": 1550,
+    "test/Java": 1553,
+    "test/Python": 1515,
+    "train/C++": 15920,
+    "train/Java": 15862,
+    "train/Python": 15334,
+    "validation/C++": 807,
+    "validation/Java": 810,
+    "validation/Python": 781
+  },
+  "directional_task_counts": {
+    "test/C++-to-Java": 794,
+    "test/C++-to-Python": 756,
+    "test/Java-to-C++": 794,
+    "test/Java-to-Python": 759,
+    "test/Python-to-C++": 756,
+    "test/Python-to-Java": 759,
+    "train/C++-to-Java": 8224,
+    "train/C++-to-Python": 7696,
+    "train/Java-to-C++": 8224,
+    "train/Java-to-Python": 7638,
+    "train/Python-to-C++": 7696,
+    "train/Python-to-Java": 7638,
+    "validation/C++-to-Java": 418,
+    "validation/C++-to-Python": 389,
+    "validation/Java-to-C++": 418,
+    "validation/Java-to-Python": 392,
+    "validation/Python-to-C++": 389,
+    "validation/Python-to-Java": 392
+  },
+  "languages": {
+    "C++": {
+      "cfg_available": 9714,
+      "cfg_region_edges": 460429,
+      "cpg_nodes": 1123260,
+      "dfg_available": 9714,
+      "dfg_region_edges": 879016,
+      "joern_available": 9714,
+      "mapped_cpg_nodes": 1092850,
+      "node_mapping_coverage": 0.9729270160069797,
+      "unique_source_programs": 9714
+    },
+    "Java": {
+      "cfg_available": 9654,
+      "cfg_region_edges": 341644,
+      "cpg_nodes": 829694,
+      "dfg_available": 9654,
+      "dfg_region_edges": 689137,
+      "joern_available": 9654,
+      "mapped_cpg_nodes": 829672,
+      "node_mapping_coverage": 0.9999734842001992,
+      "unique_source_programs": 9660
+    },
+    "Python": {
+      "cfg_available": 9073,
+      "cfg_region_edges": 417925,
+      "cpg_nodes": 1472386,
+      "dfg_available": 9073,
+      "dfg_region_edges": 504998,
+      "joern_available": 9073,
+      "mapped_cpg_nodes": 1193666,
+      "node_mapping_coverage": 0.8107018132473414,
+      "unique_source_programs": 9073
+    }
+  },
+  "status": "COMPLETE",
+  "unique_source_count": 28447
+}

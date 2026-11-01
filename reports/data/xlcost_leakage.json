@@ -1,0 +1,1279 @@
+{
+  "configuration": {
+    "exact_normalization": "line endings only",
+    "exclusion": "drop complete XLCoST training problem on any protected match",
+    "identifier_normalized": "first-occurrence local-like identifier renaming",
+    "lexical": "Tree-sitter leaves excluding comments",
+    "near_duplicate": {
+      "candidate_estimated_jaccard": 0.8,
+      "lsh_bands": 64,
+      "min_tokens": 40,
+      "minhash_permutations": 256,
+      "required_exact_jaccard": 0.85,
+      "rows_per_band": 4,
+      "tokens": "lexical token 5-grams"
+    },
+    "structural": "Tree-sitter node-type preorder, values/comments removed"
+  },
+  "dropped_training_problem_count": 39,
+  "dropped_training_problem_ids": [
+    "10380",
+    "10439",
+    "10473",
+    "10476",
+    "10477",
+    "10478",
+    "10479",
+    "10480",
+    "10481",
+    "10978",
+    "11499",
+    "11836",
+    "11838",
+    "12122",
+    "12132",
+    "12148",
+    "12164",
+    "12579",
+    "13001",
+    "13149",
+    "13814",
+    "14001",
+    "6340",
+    "8740",
+    "9109",
+    "9110",
+    "9112",
+    "9168",
+    "9178",
+    "9205",
+    "9236",
+    "9242",
+    "9243",
+    "9245",
+    "9247",
+    "9248",
+    "9475",
+    "9521",
+    "9806"
+  ],
+  "match_counts_by_rule": {
+    "ast": 91,
+    "exact": 7,
+    "identifier_normalized": 8,
+    "lexical": 7,
+    "near_duplicate": 8
+  },
+  "matches": [
+    {
+      "language": "C++",
+      "protected_code_sha256": "b13db323a61d84e36406f3e4c94017a3654cfe1ddfa57ae71269ef001d6e5f1c",
+      "protected_problem_id": "10474",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "526470a1878bf283d82e9b70d106ec7e43fce76569ee79f5bc8a88c2be2a070d",
+      "train_problem_id": "10380"
+    },
+    {
+      "language": "C++",
+      "protected_code_sha256": "335fbe9afa4ad0d2792d1acccfcd06e5925e341d310ec6bbb4bfb6ae9c0cabfd",
+      "protected_problem_id": "10475",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "526470a1878bf283d82e9b70d106ec7e43fce76569ee79f5bc8a88c2be2a070d",
+      "train_problem_id": "10380"
+    },
+    {
+      "language": "C++",
+      "protected_code_sha256": "b13db323a61d84e36406f3e4c94017a3654cfe1ddfa57ae71269ef001d6e5f1c",
+      "protected_problem_id": "10474",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "17b8d515ecf5c5f078e1211a90ca123b6895f61a06f7b69bffc3d27e605ed458",
+      "train_problem_id": "10439"
+    },
+    {
+      "language": "Java",
+      "protected_code_sha256": "88cafc55a4332d74f70ebfa43a0019e6bde7844b99ec7a31939d4c80d7aca211",
+      "protected_problem_id": "10474",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "78af4a12dcb055c09944ed54806ec59ad3db864348c1480c9153386cdcd1b2be",
+      "train_problem_id": "10439"
+    },
+    {
+      "language": "Python",
+      "protected_code_sha256": "a7667c9b7af6cc4009001ce9e0494e084fb1d3c453cce373cc484d75b8faebea",
+      "protected_problem_id": "10474",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "f6e8ec81e4ac8e55616b78fc8981d47e36aba76c08416f23f518afa3bc8e0261",
+      "train_problem_id": "10439"
+    },
+    {
+      "language": "C++",
+      "protected_code_sha256": "335fbe9afa4ad0d2792d1acccfcd06e5925e341d310ec6bbb4bfb6ae9c0cabfd",
+      "protected_problem_id": "10475",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "17b8d515ecf5c5f078e1211a90ca123b6895f61a06f7b69bffc3d27e605ed458",
+      "train_problem_id": "10439"
+    },
+    {
+      "language": "Java",
+      "protected_code_sha256": "8edb91225a14a665b0c0f00ba177898ac0e5fbb0d2eb4c6f6b68a93ca7d98414",
+      "protected_problem_id": "10475",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "78af4a12dcb055c09944ed54806ec59ad3db864348c1480c9153386cdcd1b2be",
+      "train_problem_id": "10439"
+    },
+    {
+      "language": "Python",
+      "protected_code_sha256": "1160545905da9c35d1ce32da8b5ea516ae99c2ee4a42bf700f7aa1954bda127a",
+      "protected_problem_id": "10475",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "f6e8ec81e4ac8e55616b78fc8981d47e36aba76c08416f23f518afa3bc8e0261",
+      "train_problem_id": "10439"
+    },
+    {
+      "language": "C++",
+      "protected_code_sha256": "b13db323a61d84e36406f3e4c94017a3654cfe1ddfa57ae71269ef001d6e5f1c",
+      "protected_problem_id": "10474",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "9c1b4824e0090f11d37c40266919db2214622379135b1df7fbfd02cc87d915c0",
+      "train_problem_id": "10473"
+    },
+    {
+      "language": "Java",
+      "protected_code_sha256": "88cafc55a4332d74f70ebfa43a0019e6bde7844b99ec7a31939d4c80d7aca211",
+      "protected_problem_id": "10474",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "291ad930ae4bb29cf9b7680e31ae92b19d97b4d0d2cf0476b0284145626ac62d",
+      "train_problem_id": "10473"
+    },
+    {
+      "language": "Python",
+      "protected_code_sha256": "a7667c9b7af6cc4009001ce9e0494e084fb1d3c453cce373cc484d75b8faebea",
+      "protected_problem_id": "10474",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "f226bb23d9b6efc999ceb6d2c4764b204d489fe7f5a9aeccee70563b7aa1acea",
+      "train_problem_id": "10473"
+    },
+    {
+      "language": "C++",
+      "protected_code_sha256": "335fbe9afa4ad0d2792d1acccfcd06e5925e341d310ec6bbb4bfb6ae9c0cabfd",
+      "protected_problem_id": "10475",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "9c1b4824e0090f11d37c40266919db2214622379135b1df7fbfd02cc87d915c0",
+      "train_problem_id": "10473"
+    },
+    {
+      "language": "Java",
+      "protected_code_sha256": "8edb91225a14a665b0c0f00ba177898ac0e5fbb0d2eb4c6f6b68a93ca7d98414",
+      "protected_problem_id": "10475",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "291ad930ae4bb29cf9b7680e31ae92b19d97b4d0d2cf0476b0284145626ac62d",
+      "train_problem_id": "10473"
+    },
+    {
+      "language": "Python",
+      "protected_code_sha256": "1160545905da9c35d1ce32da8b5ea516ae99c2ee4a42bf700f7aa1954bda127a",
+      "protected_problem_id": "10475",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "f226bb23d9b6efc999ceb6d2c4764b204d489fe7f5a9aeccee70563b7aa1acea",
+      "train_problem_id": "10473"
+    },
+    {
+      "language": "C++",
+      "protected_code_sha256": "b13db323a61d84e36406f3e4c94017a3654cfe1ddfa57ae71269ef001d6e5f1c",
+      "protected_problem_id": "10474",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "b6edee14d60c883f2b21a0f694d48679abe04abf638f693a02a5ac637d4c87ca",
+      "train_problem_id": "10476"
+    },
+    {
+      "language": "Java",
+      "protected_code_sha256": "88cafc55a4332d74f70ebfa43a0019e6bde7844b99ec7a31939d4c80d7aca211",
+      "protected_problem_id": "10474",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "a26d4b21f478cc71f7b3b5fb31c9a7e619a9f99ec46333b5ca8e9ae7aa83a354",
+      "train_problem_id": "10476"
+    },
+    {
+      "language": "Python",
+      "protected_code_sha256": "a7667c9b7af6cc4009001ce9e0494e084fb1d3c453cce373cc484d75b8faebea",
+      "protected_problem_id": "10474",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "bb89c942b6c032e4158c718b3ea423f649c04a7996d028476b8e68527ea3d275",
+      "train_problem_id": "10476"
+    },
+    {
+      "language": "C++",
+      "protected_code_sha256": "335fbe9afa4ad0d2792d1acccfcd06e5925e341d310ec6bbb4bfb6ae9c0cabfd",
+      "protected_problem_id": "10475",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "b6edee14d60c883f2b21a0f694d48679abe04abf638f693a02a5ac637d4c87ca",
+      "train_problem_id": "10476"
+    },
+    {
+      "language": "Java",
+      "protected_code_sha256": "8edb91225a14a665b0c0f00ba177898ac0e5fbb0d2eb4c6f6b68a93ca7d98414",
+      "protected_problem_id": "10475",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "a26d4b21f478cc71f7b3b5fb31c9a7e619a9f99ec46333b5ca8e9ae7aa83a354",
+      "train_problem_id": "10476"
+    },
+    {
+      "language": "Python",
+      "protected_code_sha256": "1160545905da9c35d1ce32da8b5ea516ae99c2ee4a42bf700f7aa1954bda127a",
+      "protected_problem_id": "10475",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "bb89c942b6c032e4158c718b3ea423f649c04a7996d028476b8e68527ea3d275",
+      "train_problem_id": "10476"
+    },
+    {
+      "language": "C++",
+      "protected_code_sha256": "b13db323a61d84e36406f3e4c94017a3654cfe1ddfa57ae71269ef001d6e5f1c",
+      "protected_problem_id": "10474",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "37201cc87e41c50b30dc47e77bef61f411d381243a60a28138e2d773825b9057",
+      "train_problem_id": "10477"
+    },
+    {
+      "language": "Java",
+      "protected_code_sha256": "88cafc55a4332d74f70ebfa43a0019e6bde7844b99ec7a31939d4c80d7aca211",
+      "protected_problem_id": "10474",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "53654ba929d6f7dcc2f85bfb38c91c5bf9c54ec0904ac1e190553f0c3d60b295",
+      "train_problem_id": "10477"
+    },
+    {
+      "language": "Python",
+      "protected_code_sha256": "a7667c9b7af6cc4009001ce9e0494e084fb1d3c453cce373cc484d75b8faebea",
+      "protected_problem_id": "10474",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "739492774bd5fdbe09a4093a13eade4a08f988869db8c62d010378cbdb84052b",
+      "train_problem_id": "10477"
+    },
+    {
+      "language": "C++",
+      "protected_code_sha256": "335fbe9afa4ad0d2792d1acccfcd06e5925e341d310ec6bbb4bfb6ae9c0cabfd",
+      "protected_problem_id": "10475",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "37201cc87e41c50b30dc47e77bef61f411d381243a60a28138e2d773825b9057",
+      "train_problem_id": "10477"
+    },
+    {
+      "language": "Java",
+      "protected_code_sha256": "8edb91225a14a665b0c0f00ba177898ac0e5fbb0d2eb4c6f6b68a93ca7d98414",
+      "protected_problem_id": "10475",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "53654ba929d6f7dcc2f85bfb38c91c5bf9c54ec0904ac1e190553f0c3d60b295",
+      "train_problem_id": "10477"
+    },
+    {
+      "language": "Python",
+      "protected_code_sha256": "1160545905da9c35d1ce32da8b5ea516ae99c2ee4a42bf700f7aa1954bda127a",
+      "protected_problem_id": "10475",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "739492774bd5fdbe09a4093a13eade4a08f988869db8c62d010378cbdb84052b",
+      "train_problem_id": "10477"
+    },
+    {
+      "language": "C++",
+      "protected_code_sha256": "b13db323a61d84e36406f3e4c94017a3654cfe1ddfa57ae71269ef001d6e5f1c",
+      "protected_problem_id": "10474",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "9e362ec87911202f1e52904ba9136f5495a029645f78f4e70db28c3114522b27",
+      "train_problem_id": "10478"
+    },
+    {
+      "language": "Java",
+      "protected_code_sha256": "88cafc55a4332d74f70ebfa43a0019e6bde7844b99ec7a31939d4c80d7aca211",
+      "protected_problem_id": "10474",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "d1b1ebaf48405d0f7302465c6f17fc1a611f94f91d66946f3d98dc49443427dc",
+      "train_problem_id": "10478"
+    },
+    {
+      "language": "C++",
+      "protected_code_sha256": "335fbe9afa4ad0d2792d1acccfcd06e5925e341d310ec6bbb4bfb6ae9c0cabfd",
+      "protected_problem_id": "10475",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "9e362ec87911202f1e52904ba9136f5495a029645f78f4e70db28c3114522b27",
+      "train_problem_id": "10478"
+    },
+    {
+      "language": "Java",
+      "protected_code_sha256": "8edb91225a14a665b0c0f00ba177898ac0e5fbb0d2eb4c6f6b68a93ca7d98414",
+      "protected_problem_id": "10475",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "d1b1ebaf48405d0f7302465c6f17fc1a611f94f91d66946f3d98dc49443427dc",
+      "train_problem_id": "10478"
+    },
+    {
+      "language": "C++",
+      "protected_code_sha256": "b13db323a61d84e36406f3e4c94017a3654cfe1ddfa57ae71269ef001d6e5f1c",
+      "protected_problem_id": "10474",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "9d7d9ebcda1c3c08e9a4aaaa0cfffece692d308970540eb22d55b81aea411e0f",
+      "train_problem_id": "10479"
+    },
+    {
+      "language": "Java",
+      "protected_code_sha256": "88cafc55a4332d74f70ebfa43a0019e6bde7844b99ec7a31939d4c80d7aca211",
+      "protected_problem_id": "10474",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "42450be758f2a5a97379a532999ef6c268f387e80b5bb9df93b3aa43120c1b9f",
+      "train_problem_id": "10479"
+    },
+    {
+      "language": "Python",
+      "protected_code_sha256": "a7667c9b7af6cc4009001ce9e0494e084fb1d3c453cce373cc484d75b8faebea",
+      "protected_problem_id": "10474",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "af71dff450cbc23179549b0ea41b7410db826d0b75a0813c94355fe790a85f05",
+      "train_problem_id": "10479"
+    },
+    {
+      "language": "C++",
+      "protected_code_sha256": "335fbe9afa4ad0d2792d1acccfcd06e5925e341d310ec6bbb4bfb6ae9c0cabfd",
+      "protected_problem_id": "10475",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "9d7d9ebcda1c3c08e9a4aaaa0cfffece692d308970540eb22d55b81aea411e0f",
+      "train_problem_id": "10479"
+    },
+    {
+      "language": "Java",
+      "protected_code_sha256": "8edb91225a14a665b0c0f00ba177898ac0e5fbb0d2eb4c6f6b68a93ca7d98414",
+      "protected_problem_id": "10475",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "42450be758f2a5a97379a532999ef6c268f387e80b5bb9df93b3aa43120c1b9f",
+      "train_problem_id": "10479"
+    },
+    {
+      "language": "Python",
+      "protected_code_sha256": "1160545905da9c35d1ce32da8b5ea516ae99c2ee4a42bf700f7aa1954bda127a",
+      "protected_problem_id": "10475",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "af71dff450cbc23179549b0ea41b7410db826d0b75a0813c94355fe790a85f05",
+      "train_problem_id": "10479"
+    },
+    {
+      "language": "C++",
+      "protected_code_sha256": "b13db323a61d84e36406f3e4c94017a3654cfe1ddfa57ae71269ef001d6e5f1c",
+      "protected_problem_id": "10474",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "06b43e2e20e7e1a5d52779571ed83c02f8f0ed40b349f0e23ccc4827965e597f",
+      "train_problem_id": "10480"
+    },
+    {
+      "language": "C++",
+      "protected_code_sha256": "335fbe9afa4ad0d2792d1acccfcd06e5925e341d310ec6bbb4bfb6ae9c0cabfd",
+      "protected_problem_id": "10475",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "06b43e2e20e7e1a5d52779571ed83c02f8f0ed40b349f0e23ccc4827965e597f",
+      "train_problem_id": "10480"
+    },
+    {
+      "language": "C++",
+      "protected_code_sha256": "b13db323a61d84e36406f3e4c94017a3654cfe1ddfa57ae71269ef001d6e5f1c",
+      "protected_problem_id": "10474",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "644eb274cbf79b6ee86aecf0025aaa5c86928c53dbeec804d6f5e439858e9f78",
+      "train_problem_id": "10481"
+    },
+    {
+      "language": "Java",
+      "protected_code_sha256": "88cafc55a4332d74f70ebfa43a0019e6bde7844b99ec7a31939d4c80d7aca211",
+      "protected_problem_id": "10474",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "addf8a91e6c24a6a2d7fb432befbaf241a172dbdb6390735c8638073dbf1c956",
+      "train_problem_id": "10481"
+    },
+    {
+      "language": "C++",
+      "protected_code_sha256": "335fbe9afa4ad0d2792d1acccfcd06e5925e341d310ec6bbb4bfb6ae9c0cabfd",
+      "protected_problem_id": "10475",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "644eb274cbf79b6ee86aecf0025aaa5c86928c53dbeec804d6f5e439858e9f78",
+      "train_problem_id": "10481"
+    },
+    {
+      "language": "Java",
+      "protected_code_sha256": "8edb91225a14a665b0c0f00ba177898ac0e5fbb0d2eb4c6f6b68a93ca7d98414",
+      "protected_problem_id": "10475",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "addf8a91e6c24a6a2d7fb432befbaf241a172dbdb6390735c8638073dbf1c956",
+      "train_problem_id": "10481"
+    },
+    {
+      "language": "C++",
+      "protected_code_sha256": "75b9b125b2e6e27d1ebdc67c2945fa5777697608223c474b259cd67a4e276e9b",
+      "protected_problem_id": "12604",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "489fcf8ddaa61a1d5f47c1d1092bc2eceeb0080c7287096a39293c516796b41a",
+      "train_problem_id": "10978"
+    },
+    {
+      "language": "Java",
+      "protected_code_sha256": "dc14bd946d6243a93a293feee0e2c8b60c85db4668ee5383c420aeb4e0d79d85",
+      "protected_problem_id": "9130",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "3cd834cea444001c7c18dde27070724e89ead8ffc79f26a70535c2e76ed48031",
+      "train_problem_id": "11499"
+    },
+    {
+      "language": "Python",
+      "protected_code_sha256": "71c9513c87c010925ae1b9c8ddf8140adf497096be1255d414f687d2ea3c50d9",
+      "protected_problem_id": "9130",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "bad250c5bc072693f6c1ee6ee5dd162f28f5e2dba1281ad261326db9d961cf02",
+      "train_problem_id": "11499"
+    },
+    {
+      "language": "Java",
+      "protected_code_sha256": "7a834a71050304683ce685a6064b973eb744572a07222bd2cbbc815d0fb268c1",
+      "protected_problem_id": "2030",
+      "protected_split": "validation",
+      "rule": "ast",
+      "train_code_sha256": "7a834a71050304683ce685a6064b973eb744572a07222bd2cbbc815d0fb268c1",
+      "train_problem_id": "11836"
+    },
+    {
+      "language": "Java",
+      "protected_code_sha256": "7a834a71050304683ce685a6064b973eb744572a07222bd2cbbc815d0fb268c1",
+      "protected_problem_id": "2030",
+      "protected_split": "validation",
+      "rule": "exact",
+      "train_code_sha256": "7a834a71050304683ce685a6064b973eb744572a07222bd2cbbc815d0fb268c1",
+      "train_problem_id": "11836"
+    },
+    {
+      "language": "Java",
+      "protected_code_sha256": "7a834a71050304683ce685a6064b973eb744572a07222bd2cbbc815d0fb268c1",
+      "protected_problem_id": "2030",
+      "protected_split": "validation",
+      "rule": "identifier_normalized",
+      "train_code_sha256": "7a834a71050304683ce685a6064b973eb744572a07222bd2cbbc815d0fb268c1",
+      "train_problem_id": "11836"
+    },
+    {
+      "language": "Java",
+      "protected_code_sha256": "7a834a71050304683ce685a6064b973eb744572a07222bd2cbbc815d0fb268c1",
+      "protected_problem_id": "2030",
+      "protected_split": "validation",
+      "rule": "lexical",
+      "train_code_sha256": "7a834a71050304683ce685a6064b973eb744572a07222bd2cbbc815d0fb268c1",
+      "train_problem_id": "11836"
+    },
+    {
+      "estimated_jaccard": 1.0,
+      "exact_jaccard": 1.0,
+      "language": "Java",
+      "protected_code_sha256": "7a834a71050304683ce685a6064b973eb744572a07222bd2cbbc815d0fb268c1",
+      "protected_problem_id": "2030",
+      "protected_split": "validation",
+      "rule": "near_duplicate",
+      "train_code_sha256": "7a834a71050304683ce685a6064b973eb744572a07222bd2cbbc815d0fb268c1",
+      "train_problem_id": "11836"
+    },
+    {
+      "language": "Python",
+      "protected_code_sha256": "409843b1e690d5d437655a7fb27e6d51cc292a15a2d83fd3a6be2d1214df16af",
+      "protected_problem_id": "2030",
+      "protected_split": "validation",
+      "rule": "ast",
+      "train_code_sha256": "409843b1e690d5d437655a7fb27e6d51cc292a15a2d83fd3a6be2d1214df16af",
+      "train_problem_id": "11836"
+    },
+    {
+      "language": "Python",
+      "protected_code_sha256": "409843b1e690d5d437655a7fb27e6d51cc292a15a2d83fd3a6be2d1214df16af",
+      "protected_problem_id": "2030",
+      "protected_split": "validation",
+      "rule": "exact",
+      "train_code_sha256": "409843b1e690d5d437655a7fb27e6d51cc292a15a2d83fd3a6be2d1214df16af",
+      "train_problem_id": "11836"
+    },
+    {
+      "language": "Python",
+      "protected_code_sha256": "409843b1e690d5d437655a7fb27e6d51cc292a15a2d83fd3a6be2d1214df16af",
+      "protected_problem_id": "2030",
+      "protected_split": "validation",
+      "rule": "identifier_normalized",
+      "train_code_sha256": "409843b1e690d5d437655a7fb27e6d51cc292a15a2d83fd3a6be2d1214df16af",
+      "train_problem_id": "11836"
+    },
+    {
+      "language": "Python",
+      "protected_code_sha256": "409843b1e690d5d437655a7fb27e6d51cc292a15a2d83fd3a6be2d1214df16af",
+      "protected_problem_id": "2030",
+      "protected_split": "validation",
+      "rule": "lexical",
+      "train_code_sha256": "409843b1e690d5d437655a7fb27e6d51cc292a15a2d83fd3a6be2d1214df16af",
+      "train_problem_id": "11836"
+    },
+    {
+      "estimated_jaccard": 1.0,
+      "exact_jaccard": 1.0,
+      "language": "Python",
+      "protected_code_sha256": "409843b1e690d5d437655a7fb27e6d51cc292a15a2d83fd3a6be2d1214df16af",
+      "protected_problem_id": "2030",
+      "protected_split": "validation",
+      "rule": "near_duplicate",
+      "train_code_sha256": "409843b1e690d5d437655a7fb27e6d51cc292a15a2d83fd3a6be2d1214df16af",
+      "train_problem_id": "11836"
+    },
+    {
+      "language": "C++",
+      "protected_code_sha256": "a804cb359770ac0ef06968bc430bd6c01ff861437950131a37e7366ada2bcab6",
+      "protected_problem_id": "2379",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "a804cb359770ac0ef06968bc430bd6c01ff861437950131a37e7366ada2bcab6",
+      "train_problem_id": "11838"
+    },
+    {
+      "language": "C++",
+      "protected_code_sha256": "a804cb359770ac0ef06968bc430bd6c01ff861437950131a37e7366ada2bcab6",
+      "protected_problem_id": "2379",
+      "protected_split": "test",
+      "rule": "exact",
+      "train_code_sha256": "a804cb359770ac0ef06968bc430bd6c01ff861437950131a37e7366ada2bcab6",
+      "train_problem_id": "11838"
+    },
+    {
+      "language": "C++",
+      "protected_code_sha256": "a804cb359770ac0ef06968bc430bd6c01ff861437950131a37e7366ada2bcab6",
+      "protected_problem_id": "2379",
+      "protected_split": "test",
+      "rule": "identifier_normalized",
+      "train_code_sha256": "a804cb359770ac0ef06968bc430bd6c01ff861437950131a37e7366ada2bcab6",
+      "train_problem_id": "11838"
+    },
+    {
+      "language": "C++",
+      "protected_code_sha256": "a804cb359770ac0ef06968bc430bd6c01ff861437950131a37e7366ada2bcab6",
+      "protected_problem_id": "2379",
+      "protected_split": "test",
+      "rule": "lexical",
+      "train_code_sha256": "a804cb359770ac0ef06968bc430bd6c01ff861437950131a37e7366ada2bcab6",
+      "train_problem_id": "11838"
+    },
+    {
+      "estimated_jaccard": 1.0,
+      "exact_jaccard": 1.0,
+      "language": "C++",
+      "protected_code_sha256": "a804cb359770ac0ef06968bc430bd6c01ff861437950131a37e7366ada2bcab6",
+      "protected_problem_id": "2379",
+      "protected_split": "test",
+      "rule": "near_duplicate",
+      "train_code_sha256": "a804cb359770ac0ef06968bc430bd6c01ff861437950131a37e7366ada2bcab6",
+      "train_problem_id": "11838"
+    },
+    {
+      "language": "Java",
+      "protected_code_sha256": "15d9fd2113f82d1f0e2925047cd1d000dc733176539cfe9afa25803cd8eb0612",
+      "protected_problem_id": "2379",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "15d9fd2113f82d1f0e2925047cd1d000dc733176539cfe9afa25803cd8eb0612",
+      "train_problem_id": "11838"
+    },
+    {
+      "language": "Java",
+      "protected_code_sha256": "15d9fd2113f82d1f0e2925047cd1d000dc733176539cfe9afa25803cd8eb0612",
+      "protected_problem_id": "2379",
+      "protected_split": "test",
+      "rule": "exact",
+      "train_code_sha256": "15d9fd2113f82d1f0e2925047cd1d000dc733176539cfe9afa25803cd8eb0612",
+      "train_problem_id": "11838"
+    },
+    {
+      "language": "Java",
+      "protected_code_sha256": "15d9fd2113f82d1f0e2925047cd1d000dc733176539cfe9afa25803cd8eb0612",
+      "protected_problem_id": "2379",
+      "protected_split": "test",
+      "rule": "identifier_normalized",
+      "train_code_sha256": "15d9fd2113f82d1f0e2925047cd1d000dc733176539cfe9afa25803cd8eb0612",
+      "train_problem_id": "11838"
+    },
+    {
+      "language": "Java",
+      "protected_code_sha256": "15d9fd2113f82d1f0e2925047cd1d000dc733176539cfe9afa25803cd8eb0612",
+      "protected_problem_id": "2379",
+      "protected_split": "test",
+      "rule": "lexical",
+      "train_code_sha256": "15d9fd2113f82d1f0e2925047cd1d000dc733176539cfe9afa25803cd8eb0612",
+      "train_problem_id": "11838"
+    },
+    {
+      "estimated_jaccard": 1.0,
+      "exact_jaccard": 1.0,
+      "language": "Java",
+      "protected_code_sha256": "15d9fd2113f82d1f0e2925047cd1d000dc733176539cfe9afa25803cd8eb0612",
+      "protected_problem_id": "2379",
+      "protected_split": "test",
+      "rule": "near_duplicate",
+      "train_code_sha256": "15d9fd2113f82d1f0e2925047cd1d000dc733176539cfe9afa25803cd8eb0612",
+      "train_problem_id": "11838"
+    },
+    {
+      "language": "Python",
+      "protected_code_sha256": "aa9fc55b71cf626638f3b96418956d8d1de77391d6a5ab975e2221c3c21ee0cc",
+      "protected_problem_id": "2379",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "aa9fc55b71cf626638f3b96418956d8d1de77391d6a5ab975e2221c3c21ee0cc",
+      "train_problem_id": "11838"
+    },
+    {
+      "language": "Python",
+      "protected_code_sha256": "aa9fc55b71cf626638f3b96418956d8d1de77391d6a5ab975e2221c3c21ee0cc",
+      "protected_problem_id": "2379",
+      "protected_split": "test",
+      "rule": "exact",
+      "train_code_sha256": "aa9fc55b71cf626638f3b96418956d8d1de77391d6a5ab975e2221c3c21ee0cc",
+      "train_problem_id": "11838"
+    },
+    {
+      "language": "Python",
+      "protected_code_sha256": "aa9fc55b71cf626638f3b96418956d8d1de77391d6a5ab975e2221c3c21ee0cc",
+      "protected_problem_id": "2379",
+      "protected_split": "test",
+      "rule": "identifier_normalized",
+      "train_code_sha256": "aa9fc55b71cf626638f3b96418956d8d1de77391d6a5ab975e2221c3c21ee0cc",
+      "train_problem_id": "11838"
+    },
+    {
+      "language": "Python",
+      "protected_code_sha256": "aa9fc55b71cf626638f3b96418956d8d1de77391d6a5ab975e2221c3c21ee0cc",
+      "protected_problem_id": "2379",
+      "protected_split": "test",
+      "rule": "lexical",
+      "train_code_sha256": "aa9fc55b71cf626638f3b96418956d8d1de77391d6a5ab975e2221c3c21ee0cc",
+      "train_problem_id": "11838"
+    },
+    {
+      "estimated_jaccard": 1.0,
+      "exact_jaccard": 1.0,
+      "language": "Python",
+      "protected_code_sha256": "aa9fc55b71cf626638f3b96418956d8d1de77391d6a5ab975e2221c3c21ee0cc",
+      "protected_problem_id": "2379",
+      "protected_split": "test",
+      "rule": "near_duplicate",
+      "train_code_sha256": "aa9fc55b71cf626638f3b96418956d8d1de77391d6a5ab975e2221c3c21ee0cc",
+      "train_problem_id": "11838"
+    },
+    {
+      "language": "Python",
+      "protected_code_sha256": "6954946400efcfa4fb6866296d19e50105d42b2b91bf09010de13ded0a706776",
+      "protected_problem_id": "12134",
+      "protected_split": "validation",
+      "rule": "ast",
+      "train_code_sha256": "69d74beaac758c570896552b00bcb14ede574ab7869f493d09274adc9a9bb1df",
+      "train_problem_id": "12122"
+    },
+    {
+      "language": "Python",
+      "protected_code_sha256": "6954946400efcfa4fb6866296d19e50105d42b2b91bf09010de13ded0a706776",
+      "protected_problem_id": "12134",
+      "protected_split": "validation",
+      "rule": "identifier_normalized",
+      "train_code_sha256": "69d74beaac758c570896552b00bcb14ede574ab7869f493d09274adc9a9bb1df",
+      "train_problem_id": "12122"
+    },
+    {
+      "language": "C++",
+      "protected_code_sha256": "a32896949cd6faf1dc0a3c0ba7b07cb9cbf244150ceb29ee368450fd33854d2e",
+      "protected_problem_id": "7204",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "576474dbcfa059650ec2a465b3773fcdab4669a499e0188993138db1b96a5a0d",
+      "train_problem_id": "12132"
+    },
+    {
+      "language": "C++",
+      "protected_code_sha256": "994807e3f9e83d97ecd0603940f9d0e1fdbbc5ad32dbc9eecf2391b4571fd100",
+      "protected_problem_id": "12147",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "74b1bc11da7610f2a4301046e568557e80350a2b4f0f44308ed1568b8634bf51",
+      "train_problem_id": "12148"
+    },
+    {
+      "language": "Java",
+      "protected_code_sha256": "06f3ddcce2a3f1a40a9f83d0641aeafc7a4189d4bef6541086ba056fa0c4281e",
+      "protected_problem_id": "12147",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "34255d2e79d32cb50b7756fd7eaf10bb497ed472ffd19f2d649fd3b149f4b3a0",
+      "train_problem_id": "12148"
+    },
+    {
+      "language": "Python",
+      "protected_code_sha256": "90b61ba89ce66cab814f266c70e23f6d81d62dd30f6d7b7368cdafd732ec513f",
+      "protected_problem_id": "12147",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "c3807f0443c6cd0c2228d3c3e2b1c8c8dc05a0db2b2e039542099158a484fc35",
+      "train_problem_id": "12148"
+    },
+    {
+      "language": "Python",
+      "protected_code_sha256": "90b61ba89ce66cab814f266c70e23f6d81d62dd30f6d7b7368cdafd732ec513f",
+      "protected_problem_id": "12147",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "e90e58e9ea8044b35a2e16d4cdeb2b75e25aa094cda974004d7d3113291d2b12",
+      "train_problem_id": "12164"
+    },
+    {
+      "language": "C++",
+      "protected_code_sha256": "4a25e6e6bb275883de2f9706d7feeb2679f0d703387cf91a912c0652a215aa15",
+      "protected_problem_id": "11139",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "ce1e26573517683f7f856730fc445a28cb1f7ac2f43fe4a5275625d05c552921",
+      "train_problem_id": "12579"
+    },
+    {
+      "language": "C++",
+      "protected_code_sha256": "3e539636f018a3565b86a012366e698eb00d7caf8c676fbd8fb270b580d24ebb",
+      "protected_problem_id": "12170",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "2333bef271fbadf11f038594ffab0e5763b30206288901c1c3c7ea8f3ce41ace",
+      "train_problem_id": "13001"
+    },
+    {
+      "language": "Java",
+      "protected_code_sha256": "649d87bb20da52a64250250167636fec71529934d6cb196a5dd5ec75d8d53fcd",
+      "protected_problem_id": "12170",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "c7bcc147f12d63d3634b88e1070404f1147518af21d7ac9dc4c6f289f297c3cb",
+      "train_problem_id": "13001"
+    },
+    {
+      "language": "Python",
+      "protected_code_sha256": "651ad76bd4f2027dfb47a9d6787348770379e365212a57b32f8b28ba920e097f",
+      "protected_problem_id": "12170",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "95a272affdcac2920d3c60e7d31b1da5207cab743b70f8dd4ae9b0206612dd98",
+      "train_problem_id": "13001"
+    },
+    {
+      "language": "C++",
+      "protected_code_sha256": "c182fc15734b7a0ea677ef453bb44a3b4b74d64efa29de751d3b8f9977d01ca9",
+      "protected_problem_id": "12180",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "85bef4814d55900115889e7c44fc0cdcea1a9d20c5f8d49411b56a65422b37fe",
+      "train_problem_id": "13149"
+    },
+    {
+      "language": "Java",
+      "protected_code_sha256": "236e7bb5d72ff5f8b7d8e08918a381e6c8ca4d7e6bc0f0d7bccdf599a6235f8d",
+      "protected_problem_id": "12180",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "0734ba9bfff65937032c148ec3882bbbcbda05907e225adade18537d889270d0",
+      "train_problem_id": "13149"
+    },
+    {
+      "language": "Python",
+      "protected_code_sha256": "88a89594164bb624254ea4ee1f183cb29b96ce5c46c128516c435cf7f9965de9",
+      "protected_problem_id": "12180",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "88e549096ff8037d549f13eebc6ebd9d1afbb2fb9e31124520b1b01949b81d45",
+      "train_problem_id": "13149"
+    },
+    {
+      "language": "C++",
+      "protected_code_sha256": "b959f5fd5f2088dfd684458d3f48863109320fa75779fe6a42f25834ef82cf74",
+      "protected_problem_id": "2114",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "9a939b8fc34f2262225b5afb205380be6b8c5b4f3035f01d228e0f9b1da03e2e",
+      "train_problem_id": "13814"
+    },
+    {
+      "language": "Python",
+      "protected_code_sha256": "fc14f966cd92e20284972166705cb1645f0ca53f324e159601b77a3d90506cf8",
+      "protected_problem_id": "2114",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "858fdc0e7ce37edf77ae7e5540260d9ce3d7f31886396b23eb88f92c9f402b96",
+      "train_problem_id": "13814"
+    },
+    {
+      "language": "C++",
+      "protected_code_sha256": "bf550ec3d7519b5023159422bf804be5f2f5aa842e92f2a337b8eff7e60f8ee4",
+      "protected_problem_id": "2119",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "bf550ec3d7519b5023159422bf804be5f2f5aa842e92f2a337b8eff7e60f8ee4",
+      "train_problem_id": "14001"
+    },
+    {
+      "language": "C++",
+      "protected_code_sha256": "bf550ec3d7519b5023159422bf804be5f2f5aa842e92f2a337b8eff7e60f8ee4",
+      "protected_problem_id": "2119",
+      "protected_split": "test",
+      "rule": "exact",
+      "train_code_sha256": "bf550ec3d7519b5023159422bf804be5f2f5aa842e92f2a337b8eff7e60f8ee4",
+      "train_problem_id": "14001"
+    },
+    {
+      "language": "C++",
+      "protected_code_sha256": "bf550ec3d7519b5023159422bf804be5f2f5aa842e92f2a337b8eff7e60f8ee4",
+      "protected_problem_id": "2119",
+      "protected_split": "test",
+      "rule": "identifier_normalized",
+      "train_code_sha256": "bf550ec3d7519b5023159422bf804be5f2f5aa842e92f2a337b8eff7e60f8ee4",
+      "train_problem_id": "14001"
+    },
+    {
+      "language": "C++",
+      "protected_code_sha256": "bf550ec3d7519b5023159422bf804be5f2f5aa842e92f2a337b8eff7e60f8ee4",
+      "protected_problem_id": "2119",
+      "protected_split": "test",
+      "rule": "lexical",
+      "train_code_sha256": "bf550ec3d7519b5023159422bf804be5f2f5aa842e92f2a337b8eff7e60f8ee4",
+      "train_problem_id": "14001"
+    },
+    {
+      "estimated_jaccard": 0.89453125,
+      "exact_jaccard": 0.9090909090909091,
+      "language": "C++",
+      "protected_code_sha256": "ffa32cdd904d8d09b996165c45cd69fc303b63d9f007cdede75b4f32147bd3bf",
+      "protected_problem_id": "6395",
+      "protected_split": "test",
+      "rule": "near_duplicate",
+      "train_code_sha256": "029890cf9715e380f13eea8f2694483c71c5cc29e7d84e59ed5c375520d30e72",
+      "train_problem_id": "6340"
+    },
+    {
+      "language": "C++",
+      "protected_code_sha256": "86c286b5866690e8037a95c1cf269d5c48cfdeabbd62537506a401ec5e1d03b0",
+      "protected_problem_id": "8460",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "0bbeb9e6a40399df9773842df06509fe768f625b3213d4010ae493ad1d0f8a4a",
+      "train_problem_id": "8740"
+    },
+    {
+      "estimated_jaccard": 0.9453125,
+      "exact_jaccard": 0.96875,
+      "language": "C++",
+      "protected_code_sha256": "86c286b5866690e8037a95c1cf269d5c48cfdeabbd62537506a401ec5e1d03b0",
+      "protected_problem_id": "8460",
+      "protected_split": "test",
+      "rule": "near_duplicate",
+      "train_code_sha256": "0bbeb9e6a40399df9773842df06509fe768f625b3213d4010ae493ad1d0f8a4a",
+      "train_problem_id": "8740"
+    },
+    {
+      "language": "Python",
+      "protected_code_sha256": "ae2aaed55c34ab20f2bf7b637b9803880c55e45992201b70eea0abf60e752411",
+      "protected_problem_id": "9113",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "8c90965f01925f816e7c42121f3dfab5c57febf05d58a4af0da0f73efb11ed3f",
+      "train_problem_id": "9109"
+    },
+    {
+      "language": "C++",
+      "protected_code_sha256": "d219e9630e67854fe2b86158cd38655aea87dc260d566593aa135458fe5f0e7c",
+      "protected_problem_id": "9114",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "3b48aecc16f28de126d6016f116c25a014e69e01594bb027da4f370094b090f4",
+      "train_problem_id": "9109"
+    },
+    {
+      "language": "Python",
+      "protected_code_sha256": "91dd6a9d9ad5446a2f7685bcd24533e87958c0cba43f600839cfc009a1467906",
+      "protected_problem_id": "9114",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "8c90965f01925f816e7c42121f3dfab5c57febf05d58a4af0da0f73efb11ed3f",
+      "train_problem_id": "9109"
+    },
+    {
+      "language": "C++",
+      "protected_code_sha256": "aca64470aaad22925be54fee9d7b770251aecd94123fa81b585caf77baaeba1c",
+      "protected_problem_id": "9108",
+      "protected_split": "validation",
+      "rule": "ast",
+      "train_code_sha256": "3b48aecc16f28de126d6016f116c25a014e69e01594bb027da4f370094b090f4",
+      "train_problem_id": "9109"
+    },
+    {
+      "language": "Python",
+      "protected_code_sha256": "b396db98d54f0042fbfa4196a9bfebba4a5a6061b0810967e797495bb33419db",
+      "protected_problem_id": "9108",
+      "protected_split": "validation",
+      "rule": "ast",
+      "train_code_sha256": "8c90965f01925f816e7c42121f3dfab5c57febf05d58a4af0da0f73efb11ed3f",
+      "train_problem_id": "9109"
+    },
+    {
+      "language": "Python",
+      "protected_code_sha256": "ae2aaed55c34ab20f2bf7b637b9803880c55e45992201b70eea0abf60e752411",
+      "protected_problem_id": "9113",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "3c0431f858923331c072a84cb598ee954226d0d270437cc8b0a953c5dff914d6",
+      "train_problem_id": "9110"
+    },
+    {
+      "language": "C++",
+      "protected_code_sha256": "d219e9630e67854fe2b86158cd38655aea87dc260d566593aa135458fe5f0e7c",
+      "protected_problem_id": "9114",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "842d6aee3ab4fb564dccf0df34ed19cb844c669ad8782a1eff2a5256bf622b44",
+      "train_problem_id": "9110"
+    },
+    {
+      "language": "Python",
+      "protected_code_sha256": "91dd6a9d9ad5446a2f7685bcd24533e87958c0cba43f600839cfc009a1467906",
+      "protected_problem_id": "9114",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "3c0431f858923331c072a84cb598ee954226d0d270437cc8b0a953c5dff914d6",
+      "train_problem_id": "9110"
+    },
+    {
+      "language": "C++",
+      "protected_code_sha256": "aca64470aaad22925be54fee9d7b770251aecd94123fa81b585caf77baaeba1c",
+      "protected_problem_id": "9108",
+      "protected_split": "validation",
+      "rule": "ast",
+      "train_code_sha256": "842d6aee3ab4fb564dccf0df34ed19cb844c669ad8782a1eff2a5256bf622b44",
+      "train_problem_id": "9110"
+    },
+    {
+      "language": "Python",
+      "protected_code_sha256": "b396db98d54f0042fbfa4196a9bfebba4a5a6061b0810967e797495bb33419db",
+      "protected_problem_id": "9108",
+      "protected_split": "validation",
+      "rule": "ast",
+      "train_code_sha256": "3c0431f858923331c072a84cb598ee954226d0d270437cc8b0a953c5dff914d6",
+      "train_problem_id": "9110"
+    },
+    {
+      "language": "C++",
+      "protected_code_sha256": "bd63565eaf200677e10a0257a0168c1417c0579df19b9cc3d5d6c54514d0aec8",
+      "protected_problem_id": "9113",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "be8ffc78eda829c4aa3e3f2b86531c59246f2c12f408ade0e68b535b22210bfd",
+      "train_problem_id": "9112"
+    },
+    {
+      "language": "C++",
+      "protected_code_sha256": "fa59cc47db9150c82ce8236e6c8a953cc9ecee0ca7d608ba5cc18701ccd84e61",
+      "protected_problem_id": "9169",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "9d352212522c37b0552fffc38132e6002dcacf76b4a631e97eec0f6be8b48146",
+      "train_problem_id": "9168"
+    },
+    {
+      "language": "C++",
+      "protected_code_sha256": "9fdece8f1a784a92339e1b890b48020fab25f84c061cc85688adaa44a0e535fd",
+      "protected_problem_id": "9181",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "4c7ec2e0f4717ff2fb4830cfee4c57a8641569a0944822b0262bf022dcd8bcb1",
+      "train_problem_id": "9178"
+    },
+    {
+      "language": "Java",
+      "protected_code_sha256": "733d2c8d4198d9c6187a1f056f6070dbcc9365252c511a51891935630f506aa5",
+      "protected_problem_id": "9181",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "daccc27238ef46ec9337fbc2e577869250d51188ebc0926b5b4658864b2d359d",
+      "train_problem_id": "9178"
+    },
+    {
+      "language": "C++",
+      "protected_code_sha256": "75b9b125b2e6e27d1ebdc67c2945fa5777697608223c474b259cd67a4e276e9b",
+      "protected_problem_id": "12604",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "21f93a1c48558c81a7f26200557eb2e41c5aad3738f0e0994d2f1be2c4a986ff",
+      "train_problem_id": "9205"
+    },
+    {
+      "language": "C++",
+      "protected_code_sha256": "ade63def5bc913772fd98294aa5f026081a4ba109913315c8e642362732a863d",
+      "protected_problem_id": "9232",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "28524f2ae2fd2df21ada128d873b13161d0cbd65e0377a7e06af3f1975faf15d",
+      "train_problem_id": "9236"
+    },
+    {
+      "language": "C++",
+      "protected_code_sha256": "ade63def5bc913772fd98294aa5f026081a4ba109913315c8e642362732a863d",
+      "protected_problem_id": "9232",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "d49bd1637c3ab1561fc20ea46b5a6c950ea46c54f2fc68cf673215f866b58400",
+      "train_problem_id": "9242"
+    },
+    {
+      "language": "C++",
+      "protected_code_sha256": "ade63def5bc913772fd98294aa5f026081a4ba109913315c8e642362732a863d",
+      "protected_problem_id": "9232",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "c461c0ea84c5b66f3a0bf8b4e422b7ce8ca3c0dc47390dab3513cf22ba08800a",
+      "train_problem_id": "9243"
+    },
+    {
+      "language": "C++",
+      "protected_code_sha256": "ade63def5bc913772fd98294aa5f026081a4ba109913315c8e642362732a863d",
+      "protected_problem_id": "9232",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "820daf2851f017fb857096c761f437502044b2878cca0d36dc8f625ee9d5a2ee",
+      "train_problem_id": "9245"
+    },
+    {
+      "language": "C++",
+      "protected_code_sha256": "ade63def5bc913772fd98294aa5f026081a4ba109913315c8e642362732a863d",
+      "protected_problem_id": "9232",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "919b0acf1baf9b9ec78f29d8982cb6b0d92644138eac7be26ffe4b116ba915ad",
+      "train_problem_id": "9247"
+    },
+    {
+      "language": "C++",
+      "protected_code_sha256": "ade63def5bc913772fd98294aa5f026081a4ba109913315c8e642362732a863d",
+      "protected_problem_id": "9232",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "d9e56dadd1e763a67d229d1602dcc22b362f6f415b3dd039c03ae8b546afd392",
+      "train_problem_id": "9248"
+    },
+    {
+      "language": "C++",
+      "protected_code_sha256": "2b525d82174b7b8dc409670ee0593ced8c17b70144063eccc5dde80db7fd8caa",
+      "protected_problem_id": "9070",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "de6be4f3c85601bc28e2ad6623175f723594e498b9f7fb00f8d6d42517100840",
+      "train_problem_id": "9475"
+    },
+    {
+      "language": "C++",
+      "protected_code_sha256": "6bb5587203cb561c4ee93ed66d42c70091d612a89d741a40afb8e49cd6f2fa8f",
+      "protected_problem_id": "9528",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "6bb5587203cb561c4ee93ed66d42c70091d612a89d741a40afb8e49cd6f2fa8f",
+      "train_problem_id": "9521"
+    },
+    {
+      "language": "C++",
+      "protected_code_sha256": "6bb5587203cb561c4ee93ed66d42c70091d612a89d741a40afb8e49cd6f2fa8f",
+      "protected_problem_id": "9528",
+      "protected_split": "test",
+      "rule": "exact",
+      "train_code_sha256": "6bb5587203cb561c4ee93ed66d42c70091d612a89d741a40afb8e49cd6f2fa8f",
+      "train_problem_id": "9521"
+    },
+    {
+      "language": "C++",
+      "protected_code_sha256": "6bb5587203cb561c4ee93ed66d42c70091d612a89d741a40afb8e49cd6f2fa8f",
+      "protected_problem_id": "9528",
+      "protected_split": "test",
+      "rule": "identifier_normalized",
+      "train_code_sha256": "6bb5587203cb561c4ee93ed66d42c70091d612a89d741a40afb8e49cd6f2fa8f",
+      "train_problem_id": "9521"
+    },
+    {
+      "language": "C++",
+      "protected_code_sha256": "6bb5587203cb561c4ee93ed66d42c70091d612a89d741a40afb8e49cd6f2fa8f",
+      "protected_problem_id": "9528",
+      "protected_split": "test",
+      "rule": "lexical",
+      "train_code_sha256": "6bb5587203cb561c4ee93ed66d42c70091d612a89d741a40afb8e49cd6f2fa8f",
+      "train_problem_id": "9521"
+    },
+    {
+      "estimated_jaccard": 1.0,
+      "exact_jaccard": 1.0,
+      "language": "C++",
+      "protected_code_sha256": "6bb5587203cb561c4ee93ed66d42c70091d612a89d741a40afb8e49cd6f2fa8f",
+      "protected_problem_id": "9528",
+      "protected_split": "test",
+      "rule": "near_duplicate",
+      "train_code_sha256": "6bb5587203cb561c4ee93ed66d42c70091d612a89d741a40afb8e49cd6f2fa8f",
+      "train_problem_id": "9521"
+    },
+    {
+      "language": "C++",
+      "protected_code_sha256": "75b9b125b2e6e27d1ebdc67c2945fa5777697608223c474b259cd67a4e276e9b",
+      "protected_problem_id": "12604",
+      "protected_split": "test",
+      "rule": "ast",
+      "train_code_sha256": "150823f8f6ca6fa43523b2ba5b8263af004a8e6ba0c8ef8e860747450c3fd8d5",
+      "train_problem_id": "9806"
+    }
+  ],
+  "output_files": {
+    "test": {
+      "C++-to-Java.jsonl": {
+        "kept": 794,
+        "removed": 0,
+        "sha256": "96c069c05ed875a56b8a2eaf170748dd32924047872e2b3ec3b738513e7f2a99"
+      },
+      "C++-to-Python.jsonl": {
+        "kept": 756,
+        "removed": 0,
+        "sha256": "a2d719397127ef59fdccbb342c612ed8fb99e0ac73397135c478804de81f0e08"
+      },
+      "Java-to-C++.jsonl": {
+        "kept": 794,
+        "removed": 0,
+        "sha256": "67f5f267cea31d1c7c0b8aaf2810a1c2e16a9d119c0625a22f1b19fa10be3a19"
+      },
+      "Java-to-Python.jsonl": {
+        "kept": 759,
+        "removed": 0,
+        "sha256": "bcf62e86e60a214222e2bdda4ed557aa521370becd7c2142235eee36f2917898"
+      },
+      "Python-to-C++.jsonl": {
+        "kept": 756,
+        "removed": 0,
+        "sha256": "0f3e537bceb8054c37c227bde65743e814fe21103cebf18d015cb8ad40bb4943"
+      },
+      "Python-to-Java.jsonl": {
+        "kept": 759,
+        "removed": 0,
+        "sha256": "7adce70669fe3064737da1a77544dd758dc01710180d4560bc2e5a1f433288f9"
+      }
+    },
+    "train": {
+      "C++-to-Java.jsonl": {
+        "kept": 8227,
+        "removed": 39,
+        "sha256": "9ed02ba0486494ec5537a9ec9c6954b20ec707be1d2e0c829c421c736e549b1a"
+      },
+      "C++-to-Python.jsonl": {
+        "kept": 7699,
+        "removed": 38,
+        "sha256": "7d658e1f2961618101fa232d4a24f04e7f239401d93a7126edd95b5ab3813efe"
+      },
+      "Java-to-C++.jsonl": {
+        "kept": 8227,
+        "removed": 39,
+        "sha256": "8a0002db883be389181b2ea07adff3b17ac3ea6f454e52c50498c8871f45b838"
+      },
+      "Java-to-Python.jsonl": {
+        "kept": 7641,
+        "removed": 38,
+        "sha256": "26896ab02440de4a8e859d3454eda5d7f9995529a4418ff8de344eb27dba564d"
+      },
+      "Python-to-C++.jsonl": {
+        "kept": 7699,
+        "removed": 38,
+        "sha256": "ce8af9b71f1401e10a79ecb2f597eb5eac753fafdce24b050345eebd2232043e"
+      },
+      "Python-to-Java.jsonl": {
+        "kept": 7641,
+        "removed": 38,
+        "sha256": "0bc860d224ec6da2cfa463a5e7fbc021103d766c6be8ec1591938dbf4f23cbab"
+      }
+    },
+    "validation": {
+      "C++-to-Java.jsonl": {
+        "kept": 420,
+        "removed": 0,
+        "sha256": "f0a2eb7ec51c057d4aee95aef6dbcdedb89938512133868f38db83a468fe8104"
+      },
+      "C++-to-Python.jsonl": {
+        "kept": 390,
+        "removed": 0,
+        "sha256": "9438189e3767d5792f7a9c8e32cfaad0225c3ee7b5d7b4109f6f2ced517296b3"
+      },
+      "Java-to-C++.jsonl": {
+        "kept": 420,
+        "removed": 0,
+        "sha256": "f462981734bd4a9f0a70090fb6a630e8aa5f8d171c88273a875874fbeeaad0c8"
+      },
+      "Java-to-Python.jsonl": {
+        "kept": 393,
+        "removed": 0,
+        "sha256": "12e97a4b0da15abc7a5551c1731d460a85af5d00cb50bc0dce7a9f9022b90665"
+      },
+      "Python-to-C++.jsonl": {
+        "kept": 390,
+        "removed": 0,
+        "sha256": "edbd3d167fe393a1b3ffb06eeb7805ae33951eb8204881558b5a1c0e696687d0"
+      },
+      "Python-to-Java.jsonl": {
+        "kept": 393,
+        "removed": 0,
+        "sha256": "79c82cfb452e7c7c7f6216f1ac5f6663d9cc69afa73cecf950a4b446a3313322"
+      }
+    }
+  },
+  "schema_version": 1,
+  "source_manifest_sha256": "a7fa602513dacdf37135d1deb0245e39cbfd34e919bb8b8f7b8e9cfd65e7171a",
+  "unique_program_counts": {
+    "test": 2401,
+    "train": 25122,
+    "validation": 1266
+  }
+}
